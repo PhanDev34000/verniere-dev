@@ -174,32 +174,27 @@ section {
 }
 
 .badge-angular {
-  background-color: #dd0031;
+  background-color: #080bb9;
   color: white;
 }
 
 .badge-php {
-  background-color: #777bb4;
+  background-color: #1d20f0;
   color: white;
 }
 
 .badge-wordpress {
-  background-color: #21759b;
-  color: white;
-}
-
-.badge-mean {
-  background-color: #4db33d;
+  background-color: #529fc4;
   color: white;
 }
 
 .badge-mongodb {
-  background-color: #47a248;
+  background-color: #62abf0;
   color: white;
 }
 
 .badge-node {
-  background-color: #339933;
+  background-color: #4075d8;
   color: white;
 }
 
