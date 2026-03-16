@@ -162,7 +162,54 @@ section {
   color:white;
 }
 
+/*  Badge projet   */
+/* Badges de technologie */
+.tech-badge {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 15px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin: 2px;
+}
 
+.badge-angular {
+  background-color: #dd0031;
+  color: white;
+}
+
+.badge-php {
+  background-color: #777bb4;
+  color: white;
+}
+
+.badge-wordpress {
+  background-color: #21759b;
+  color: white;
+}
+
+.badge-mean {
+  background-color: #4db33d;
+  color: white;
+}
+
+.badge-mongodb {
+  background-color: #47a248;
+  color: white;
+}
+
+.badge-node {
+  background-color: #339933;
+  color: white;
+}
+
+.tech-badges-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 4px;
+  margin-bottom: 1rem;
+}
 
 /*  Media Screen   */
 @media screen and (max-width: 780px) {
