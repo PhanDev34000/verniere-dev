@@ -8,8 +8,12 @@
     <link href="style.css" rel="stylesheet">
     <link href="output.css" rel="stylesheet">
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <title>Portefolio SV</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Electrolize&family=Oxygen+Mono&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
 
-    <!-- CSS Portfolio — chargé après Tailwind pour avoir priorité -->
+    <!-- CSS Portfolio — chargé après Tailwind pour avoir priorité absolue -->
     <style>
       .projet-grille {
         display: grid !important;
@@ -49,23 +53,22 @@
         font-family: 'Oxygen Mono', monospace !important;
         font-size: 0.75rem !important;
         color: #1F3A93 !important;
-        opacity: 0.6 !important;
+        opacity: 0.5 !important;
         flex-shrink: 0 !important;
       }
 
       .carte-titre {
-        font-family: 'Electrolize', sans-serif !important;
-        font-size: 0.9rem !important;
-        font-weight: 600 !important;
+        font-family: 'Nunito', sans-serif !important;
+        font-size: 0.95rem !important;
+        font-weight: 700 !important;
         color: #1F3A93 !important;
         flex: 1 !important;
         text-align: left !important;
         margin: 0 !important;
+        line-height: 1.3 !important;
       }
 
-      .carte-badge {
-        flex-shrink: 0 !important;
-      }
+      .carte-badge { flex-shrink: 0 !important; }
 
       .carte-badge-img {
         height: 28px !important;
@@ -89,16 +92,12 @@
         margin: 0 !important;
       }
 
-      .carte-projet:hover .carte-img {
-        transform: scale(1.04) !important;
-      }
+      .carte-projet:hover .carte-img { transform: scale(1.04) !important; }
 
       .carte-overlay {
         position: absolute !important;
-        top: 0 !important;
-        left: 0 !important;
-        right: 0 !important;
-        bottom: 0 !important;
+        top: 0 !important; left: 0 !important;
+        right: 0 !important; bottom: 0 !important;
         background: rgba(31,58,147,0.85) !important;
         display: flex !important;
         align-items: center !important;
@@ -107,9 +106,7 @@
         transition: opacity 0.3s ease !important;
       }
 
-      .carte-projet:hover .carte-overlay {
-        opacity: 1 !important;
-      }
+      .carte-projet:hover .carte-overlay { opacity: 1 !important; }
 
       .carte-links {
         display: flex !important;
@@ -125,15 +122,14 @@
         border-radius: 20px !important;
         color: white !important;
         font-size: 0.8rem !important;
-        font-family: 'Electrolize', sans-serif !important;
+        font-family: 'Nunito', sans-serif !important;
+        font-weight: 600 !important;
         text-decoration: none !important;
         transition: background 0.2s ease !important;
         background: transparent !important;
       }
 
-      .carte-lien:hover {
-        background: rgba(255,255,255,0.2) !important;
-      }
+      .carte-lien:hover { background: rgba(255,255,255,0.2) !important; }
 
       .carte-lien--primary {
         background: white !important;
@@ -159,6 +155,7 @@
         line-height: 1.5 !important;
         margin: 0 !important;
         text-align: left !important;
+        font-family: 'Nunito', sans-serif !important;
       }
 
       .carte-tech {
@@ -166,50 +163,36 @@
         flex-wrap: wrap !important;
         gap: 0.4rem !important;
         margin-top: auto !important;
-        padding-top: 0.5rem !important;
+        padding-top: 0.6rem !important;
       }
 
       .carte-tech span {
-        font-size: 0.7rem !important;
-        font-family: 'Oxygen Mono', monospace !important;
+        font-size: 0.72rem !important;
+        font-family: 'Nunito', sans-serif !important;
+        font-weight: 600 !important;
         background: #eef1fb !important;
         color: #1F3A93 !important;
-        border-radius: 4px !important;
-        padding: 0.2rem 0.5rem !important;
+        border-radius: 20px !important;
+        padding: 0.2rem 0.65rem !important;
         border: 1px solid #c5cff0 !important;
       }
 
-      /* Dark mode cartes */
-      .dark .carte-projet {
-        background: #1a1a2e !important;
-        border-color: rgb(148,147,147) !important;
-      }
+      /* Dark mode */
+      .dark .carte-projet { background: #1a1a2e !important; border-color: rgb(148,147,147) !important; }
       .dark .carte-titre { color: #93b4ff !important; }
       .dark .carte-numero { color: #93b4ff !important; }
       .dark .carte-description { color: #ccc !important; }
-      .dark .carte-tech span {
-        background: #2a2a4a !important;
-        color: #93b4ff !important;
-        border-color: #3a3a6a !important;
-      }
+      .dark .carte-tech span { background: #2a2a4a !important; color: #93b4ff !important; border-color: #3a3a6a !important; }
       .dark .carte-header { border-bottom-color: #2a2a4a !important; }
 
       /* Responsive */
       @media screen and (max-width: 1024px) {
-        .projet-grille {
-          grid-template-columns: repeat(2, 1fr) !important;
-        }
+        .projet-grille { grid-template-columns: repeat(2, 1fr) !important; }
       }
       @media screen and (max-width: 600px) {
-        .projet-grille {
-          grid-template-columns: 1fr !important;
-        }
+        .projet-grille { grid-template-columns: 1fr !important; }
       }
     </style>
-    <title>Portefolio SV</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Electrolize&family=Oxygen+Mono&display=swap" rel="stylesheet">
   </head>
   <body>
 
@@ -241,19 +224,14 @@
           <h1 class="font-sans mb-4 text-3xl">Portefolio de Stéphane Vernière</h1>
           <h2 class="font-sans text-black text-2xl">Développeur Jr - Full-Stack - MEAN</h2>
           <script src="https://cdn.lordicon.com/lordicon.js"></script>
-          <lord-icon
-              id="animated-icon"
-              src="https://cdn.lordicon.com/vlycxjwx.json"
-              trigger="in"
-              delay="2500"
-              stroke="light"
-              state="in-reveal"
-              colors="primary:#1f3a93,secondary:#1f3a93"
-              style="width:75px;height:75px">
+          <lord-icon id="animated-icon" src="https://cdn.lordicon.com/vlycxjwx.json"
+              trigger="in" delay="2500" stroke="light" state="in-reveal"
+              colors="primary:#1f3a93,secondary:#1f3a93" style="width:75px;height:75px">
           </lord-icon>
         </div>
         <div class="flex justify-center">
-          <video width="150" height="150" src="visuels/perso.mp4" loop autoplay muted frameborder="0" class="rounded-full overflow-hidden" style="margin-bottom: 2rem;" id="cadreV"></video>
+          <video width="150" height="150" src="visuels/perso.mp4" loop autoplay muted frameborder="0"
+            class="rounded-full overflow-hidden" style="margin-bottom: 2rem;" id="cadreV"></video>
         </div>
         <div id="message-container" class="text-black text-lg mb-4"></div>
         <script>
@@ -286,478 +264,477 @@
                 tooltip.style.left = `${e.pageX + 10}px`;
                 tooltip.style.top = `${e.pageY + 10}px`;
             });
-            video.addEventListener('mouseout', () => {
-                tooltip.style.display = 'none';
-            });
+            video.addEventListener('mouseout', () => { tooltip.style.display = 'none'; });
             toggleButton.addEventListener('change', () => {
                 currentVideoIndex = (currentVideoIndex + 1) % videos.length;
                 video.src = videos[currentVideoIndex];
                 video.play();
             });
         </script>
-      </section>
+    </section>
 
-      <div class="flex flex-cadre justify-center space-x-4">
-        <!-- Partie Contact -->
-        <div id="cadre" class="flex flex-col items-center p-6 bg-white"
-            style="transition: transform 0.3s ease, box-shadow 0.3s ease; transform: scale(1); box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);" 
-            onmouseover="this.style.transform='scale(1.1)'; this.style.boxShadow='0 8px 12px rgba(0, 0, 0, 0.5)';"
-            onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 4px 8px rgba(0, 0, 0, 0)';">
-          <div class="text-center">
-              <h2 class="font-sans text-black text-2xl mb-2" id="titre">Contact :</h2>
-              <div class="flex flex-col items-center">
-                  <h3 class="text-black">Basé à Montpellier</h3>
-                  <div class="flex flex-col items-center gap-4 mt-4">
-                      <div class="flex items-center gap-2">
-                          <img src="images/mail.png" alt="icone d'un email" class="w-6 h-6">
-                          <h4 class="text-black">vernierestephane@gmail.com</h4>
-                      </div>
-                      <div class="flex items-center gap-2">
-                          <img src="images/phone.png" alt="icone d'un téléphone" class="w-6 h-6">
-                          <h4 class="text-black">06 61 19 97 54</h4>
-                      </div>
-                  </div>
-              </div>
-          </div>
-        </div>
-    
-        <!-- Partie Liens -->
-        <div id="cadre2" class="max-w-xs flex flex-col items-center gap-6 p-6 bg-white"
-            style="transition: transform 0.3s ease, box-shadow 0.3s ease; transform: scale(1); box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);"
-            onmouseover="this.style.transform='scale(1.1)'; this.style.boxShadow='0 8px 12px rgba(0, 0, 0, 0.5)';"
-            onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 4px 8px rgba(0, 0, 0, 0)';">
-          <h2 class="font-sans text-black text-2xl mb-4" id="titre">Liens :</h2>
-          <div class="flex justify-center gap-8">
-            <div class="flex flex-col items-center">
-              <a href="https://www.linkedin.com/in/stephane-verniere-devmontpellier/" target="_blank">
-                <img src="images/linkedin.png" alt="logo linkedin" class="mx-auto w-8 h-8">
-                <h4 class="text-black mt-2">LinkedIn</h4>
-              </a> 
-            </div>
-            <div class="flex flex-col items-center">
-              <a href="https://github.com/PhanDev34000/portfolio" target="_blank">
-                <img src="images/github.png" alt="logo github" class="mx-auto w-8 h-8">              
-                <h4 class="text-black mt-2">GitHub</h4>
-              </a>
-            </div>
-            <div class="flex flex-col items-center">
-              <a href="visuels/CV.pdf" download>
-                <img src="images/file.png" alt="icone de téléchargement pour uploader mon CV" class="w-8 h-8">              
-                <h4 class="text-black mt-2">CV</h4>
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Mon Parcours -->
-      <section id="parcours">
-        <div class="flex justify-center p-12">
-          <div class="max-w-4xl w-full p-6 bg-white rounded-lg" id="cadre3">
-            <div class="text-center">
-              <h2 class="font-sans text-black text-2xl mb-4" id="titre">Mon parcours :</h2>
-              <div class="flex justify-center gap-6">
-                <div class="flex flex-col items-center">
-                  <img src="images/diplome.png" alt="Diplôme" class="w-12 h-12 mb-2">
-                  <h4 class="text-black">Master de Biologie</h4>
-                  <h5 class="text-customprimary" style="margin-bottom: 3rem;">2002</h5>
-                </div>
-                <div class="flex flex-col items-center">
-                  <img src="images/photographe.png" alt="Photographe" class="w-8 h-12 mb-2">
-                  <h4 class="text-black">Photographe</h4>
-                  <h5 class="text-customprimary" style="margin-bottom: 3rem;">2004-2022</h5>
-                </div>
-                <div class="flex flex-col items-center">
-                  <img src="images/ADRAR.png" alt="Formation Développeur Web" class="w-18 h-14">
-                  <h4 class="text-black">Développeur Web & Web mobile</h4>
-                  <h5 class="text-customprimary" style="margin-bottom: 3rem;">Oct 2023 - Juillet 2024</h5>
-                </div>
-                <div class="flex flex-col items-center">
-                  <img src="images/Studi.png" alt="Bachelor Développeur Angular" class="w-16 h-20">
-                  <h4 class="text-black">Bachelor Développeur Angular</h4>
-                  <h5 class="text-customprimary" style="margin-bottom: 3rem;">Oct 2024 - Janvier 2026</h5>
-                </div>
-                <div class="flex flex-col items-center">
-                  <img src="images/dev.png" alt="Développeur Web Jr" class="w-16 h-14">
-                  <h4 class="text-black">Développeur Web Jr</h4>
-                  <h5 class="text-customprimary">Disponible</h5>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Compétences -->
-      <section id="competences">
-        <div class="px-4 py-8">
-          <h1 class="font-sans text-black text-3xl mb-8">Compétences :</h1>
-          <div id="cadre8" class="flex flex-wrap gap-10 items-stretch max-w-7xl mx-auto p-6 mt-8 bg-white rounded-lg">
-            <div class="flex-1 min-w-[200px]">
-              <h2 class="font-sans text-black text-xl mb-4" id="titre">Front-End</h2>
-              <div class="flex flex-wrap gap-2 justify-center">
-                <img src="icones/html.png" alt="logo html" class="w-12 h-12">
-                <img src="icones/css.png" alt="logo css" class="w-12 h-12">
-                <div class="w-full"></div>
-                <img src="icones/js.png" alt="logo javascript" class="w-12 h-12">
-                <img src="icones/angular.png" alt="logo angular" class="w-12 h-12">
-              </div>
-            </div>
-            <div class="flex-1 min-w-[200px]">
-              <h2 class="font-sans text-black text-xl mb-4" id="titre">Back-End</h2>
-              <div class="flex flex-wrap gap-2 justify-center">
-                <img src="icones/node.png" alt="logo node.js" class="w-14 h-14">
-                <img src="icones/expressN.png" alt="logo Express" class="w-16 h-12">
-                <img src="icones/mongodb.png" alt="logo Mongodb" class="w-12 h-12"> 
-                <div class="w-full"></div>
-                <img src="icones/php.png" alt="logo php" class="h-10 w-auto">             
-                <img src="icones/api.png" alt="logo Api" class="w-12 h-12">
-              </div>
-            </div>
-            <div class="flex-1 min-w-[200px]">
-              <h2 class="font-sans text-black text-xl mb-4" id="titre">Conception et Versionning</h2>
-              <div class="flex flex-wrap gap-4 justify-center">
-                <img src="icones/figma.png" alt="logo figma" class="w-12 h-12">
-                <div class="w-full"></div>
-                <img src="icones/githubN.png" alt="logo github" class="w-12 h-12">
-                <img src="icones/git.png" alt="logo git" class="w-12 h-12">
-              </div>
-            </div>
-            <div class="flex-1 min-w-[200px]">
-              <h2 class="font-sans text-black text-xl mb-4" id="titre">Frameworks</h2>
-              <div class="flex flex-wrap gap-4 justify-center">
-                <img src="icones/TailwindCss.png" alt="logo TailwindCSS" class="w-22 h-10">
-                <div class="w-full"></div>
-                <img src="icones/Bootstrap.png" alt="logo Bootstrap" class="w-10 h-10">
-              </div>
-            </div>          
-          </div>
-        </div>
-      </section>
-    
-      <!-- Portefolio -->
-      <section id="portefolio">
-        <div class="px-4 py-8">
-          <h1 class="font-sans text-black text-3xl mb-8">Portefolio :</h1>
-
-          <div class="projet-grille">
-
-            <!-- Projet n°1 -->
-            <div class="carte-projet">
-              <div class="carte-header">
-                <span class="carte-numero">01</span>
-                <h2 class="carte-titre">Stéphane Vernière Photographe</h2>
-                <div class="carte-badge"><img src="icones/mean.png" alt="MEAN Stack" class="carte-badge-img"></div>
-              </div>
-              <div class="carte-img-wrapper">
-                <img src="images/SC_SV.PNG" alt="Aperçu du site Stéphane Vernière" class="carte-img">
-                <div class="carte-overlay">
-                  <div class="carte-links">
-                    <a href="https://github.com/PhanDev34000/stephaneverniere.fr" target="_blank" class="carte-lien">GitHub</a>
-                    <a href="https://stephaneverniere.fr/" target="_blank" class="carte-lien carte-lien--primary">Visiter →</a>
-                  </div>
-                </div>
-              </div>
-              <div class="carte-body">
-                <p class="carte-description">Site vitrine pour l'activité de photographe avec espace administrateur et client, téléchargement de galeries.</p>
-                <div class="carte-tech">
-                  <span>MongoDB</span><span>Express</span><span>Angular</span><span>Node.js</span>
-                </div>
-              </div>
-            </div>
-
-            <!-- Projet n°2 -->
-            <div class="carte-projet">
-              <div class="carte-header">
-                <span class="carte-numero">02</span>
-                <h2 class="carte-titre">Cinéphoria</h2>
-                <div class="carte-badge"><img src="icones/mean.png" alt="MEAN Stack" class="carte-badge-img"></div>
-              </div>
-              <div class="carte-img-wrapper">
-                <img src="images/SC_Cinephoria.PNG" alt="Aperçu du site Cinephoria" class="carte-img">
-                <div class="carte-overlay">
-                  <div class="carte-links">
-                    <a href="https://github.com/PhanDev34000/cinephoria" target="_blank" class="carte-lien">GitHub</a>
-                  </div>
-                </div>
-              </div>
-              <div class="carte-body">
-                <p class="carte-description">Site pour un cinéma : affichage des films, réservation, espace clients, espace admin, QR code mobile.</p>
-                <div class="carte-tech">
-                  <span>MongoDB</span><span>Express</span><span>Angular</span><span>Node.js</span>
-                </div>
-              </div>
-            </div>
-
-            <!-- Projet n°3 -->
-            <div class="carte-projet">
-              <div class="carte-header">
-                <span class="carte-numero">03</span>
-                <h2 class="carte-titre">Task Manager</h2>
-                <div class="carte-badge"><img src="icones/mean.png" alt="MEAN Stack" class="carte-badge-img"></div>
-              </div>
-              <div class="carte-img-wrapper">
-                <img src="images/SC_TaskManager.PNG" alt="Aperçu du site TaskManager" class="carte-img">
-                <div class="carte-overlay">
-                  <div class="carte-links">
-                    <a href="https://github.com/PhanDev34000/task-manager" target="_blank" class="carte-lien">GitHub Front</a>
-                    <a href="https://github.com/PhanDev34000/task-manager-api" target="_blank" class="carte-lien">GitHub Back</a>
-                    <a href="https://task-manager-app-ten-jet.vercel.app/login" target="_blank" class="carte-lien carte-lien--primary">Visiter →</a>
-                  </div>
-                </div>
-              </div>
-              <div class="carte-body">
-                <p class="carte-description">Gestionnaire de tâches interactif : connexion, multi-utilisateurs, drag & drop, formulaires réactifs.</p>
-                <div class="carte-tech">
-                  <span>MongoDB</span><span>Express</span><span>Angular</span><span>Node.js</span>
-                </div>
-              </div>
-            </div>
-
-            <!-- Projet n°4 -->
-            <div class="carte-projet">
-              <div class="carte-header">
-                <span class="carte-numero">04</span>
-                <h2 class="carte-titre">Galerie App</h2>
-                <div class="carte-badge"><img src="icones/mean.png" alt="MEAN Stack" class="carte-badge-img"></div>
-              </div>
-              <div class="carte-img-wrapper">
-                <img src="images/SC_GalerieApp.PNG" alt="Aperçu du site Galerie App" class="carte-img">
-                <div class="carte-overlay">
-                  <div class="carte-links">
-                    <a href="https://github.com/PhanDev34000/gallery-app" target="_blank" class="carte-lien">GitHub Front</a>
-                    <a href="https://github.com/PhanDev34000/gallery-api" target="_blank" class="carte-lien">GitHub Back</a>
-                    <a href="https://gallery-app-five-iota.vercel.app" target="_blank" class="carte-lien carte-lien--primary">Visiter →</a>
-                  </div>
-                </div>
-              </div>
-              <div class="carte-body">
-                <p class="carte-description">Partage de galeries photos entre photographes et clients : upload, favoris, téléchargement ZIP, envoi email.</p>
-                <div class="carte-tech">
-                  <span>MEAN</span><span>TypeScript</span><span>Angular Material</span><span>JWT</span>
-                </div>
-              </div>
-            </div>
-
-            <!-- Projet n°5 -->
-            <div class="carte-projet">
-              <div class="carte-header">
-                <span class="carte-numero">05</span>
-                <h2 class="carte-titre">Social Media Planner</h2>
-                <div class="carte-badge"><img src="icones/angular.png" alt="Angular" class="carte-badge-img"></div>
-              </div>
-              <div class="carte-img-wrapper">
-                <img src="images/SC_MSP.PNG" alt="Aperçu du site Social Media Planner" class="carte-img">
-                <div class="carte-overlay">
-                  <div class="carte-links">
-                    <a href="https://github.com/PhanDev34000/Social-media-planner" target="_blank" class="carte-lien">GitHub</a>
-                    <a href="https://social-media-planner-wine.vercel.app" target="_blank" class="carte-lien carte-lien--primary">Visiter →</a>
-                  </div>
-                </div>
-              </div>
-              <div class="carte-body">
-                <p class="carte-description">Planificateur de publications réseaux sociaux avec CRUD, calendrier visuel, notifications et statistiques.</p>
-                <div class="carte-tech">
-                  <span>Angular 19</span><span>TypeScript</span><span>RxJS</span><span>SCSS</span>
-                </div>
-              </div>
-            </div>
-
-            <!-- Projet n°6 -->
-            <div class="carte-projet">
-              <div class="carte-header">
-                <span class="carte-numero">06</span>
-                <h2 class="carte-titre">Margaux Julien</h2>
-                <div class="carte-badge"><img src="icones/php.png" alt="PHP" class="carte-badge-img"></div>
-              </div>
-              <div class="carte-img-wrapper">
-                <img src="images/SC_MargauxJ.PNG" alt="Aperçu du site Margaux Julien Ecologue" class="carte-img">
-                <div class="carte-overlay">
-                  <div class="carte-links">
-                    <a href="https://github.com/PhanDev34000/Margaux_Julien" target="_blank" class="carte-lien">GitHub</a>
-                  </div>
-                </div>
-              </div>
-              <div class="carte-body">
-                <p class="carte-description">Site vitrine pour Margaux Julien, Écologue.</p>
-                <div class="carte-tech">
-                  <span>PHP</span><span>JavaScript</span>
-                </div>
-              </div>
-            </div>
-
-            <!-- Projet n°7 -->
-            <div class="carte-projet">
-              <div class="carte-header">
-                <span class="carte-numero">07</span>
-                <h2 class="carte-titre">Verniere-dev</h2>
-                <div class="carte-badge"><img src="icones/php.png" alt="PHP" class="carte-badge-img"></div>
-              </div>
-              <div class="carte-img-wrapper">
-                <img src="images/SC_verniere-dev.PNG" alt="Aperçu du site Verniere-dev" class="carte-img">
-                <div class="carte-overlay">
-                  <div class="carte-links">
-                    <a href="https://github.com/PhanDev34000/verniere-dev" target="_blank" class="carte-lien">GitHub</a>
-                  </div>
-                </div>
-              </div>
-              <div class="carte-body">
-                <p class="carte-description">Site vitrine de développeur Full Stack pour Stéphane Vernière.</p>
-                <div class="carte-tech">
-                  <span>PHP</span><span>JavaScript</span>
-                </div>
-              </div>
-            </div>
-
-            <!-- Projet n°8 -->
-            <div class="carte-projet">
-              <div class="carte-header">
-                <span class="carte-numero">08</span>
-                <h2 class="carte-titre">Cook4U</h2>
-                <div class="carte-badge"><img src="icones/php.png" alt="PHP" class="carte-badge-img"></div>
-              </div>
-              <div class="carte-img-wrapper">
-                <img src="images/SC_Cook4U.PNG" alt="Aperçu du site Cook4U" class="carte-img">
-                <div class="carte-overlay">
-                  <div class="carte-links">
-                    <a href="https://github.com/PhanDev34000/cook4u" target="_blank" class="carte-lien">GitHub</a>
-                  </div>
-                </div>
-              </div>
-              <div class="carte-body">
-                <p class="carte-description">Plateforme de vente de plats "fait maison". <em>En cours de développement.</em></p>
-                <div class="carte-tech">
-                  <span>PHP</span><span>JavaScript</span>
-                </div>
-              </div>
-            </div>
-
-            <!-- Projet n°9 -->
-            <div class="carte-projet">
-              <div class="carte-header">
-                <span class="carte-numero">09</span>
-                <h2 class="carte-titre">Corbin-Photo</h2>
-                <div class="carte-badge"><img src="icones/wordpress.png" alt="WordPress" class="carte-badge-img"></div>
-              </div>
-              <div class="carte-img-wrapper">
-                <img src="images/SC_CorbinP.PNG" alt="Aperçu du site Corbin Photo" class="carte-img">
-                <div class="carte-overlay">
-                  <div class="carte-links">
-                    <a href="https://corbin-photo.fr/" target="_blank" class="carte-lien carte-lien--primary">Visiter →</a>
-                  </div>
-                </div>
-              </div>
-              <div class="carte-body">
-                <p class="carte-description">Site vitrine pour une société de photo scolaire.</p>
-                <div class="carte-tech">
-                  <span>WordPress</span><span>Divi Pro</span>
-                </div>
-              </div>
-            </div>
-
-            <!-- Projet n°10 -->
-            <div class="carte-projet">
-              <div class="carte-header">
-                <span class="carte-numero">10</span>
-                <h2 class="carte-titre">DogPix</h2>
-                <div class="carte-badge"><img src="icones/wordpress.png" alt="WordPress" class="carte-badge-img"></div>
-              </div>
-              <div class="carte-img-wrapper">
-                <img src="images/SC_DogPix.PNG" alt="Aperçu du site DogPix" class="carte-img">
-                <div class="carte-overlay">
-                  <div class="carte-links">
-                    <a href="https://dogpix.fr/" target="_blank" class="carte-lien carte-lien--primary">Visiter →</a>
-                  </div>
-                </div>
-              </div>
-              <div class="carte-body">
-                <p class="carte-description">Site vitrine pour un photographe canin.</p>
-                <div class="carte-tech">
-                  <span>WordPress</span><span>Divi Pro</span>
-                </div>
-              </div>
-            </div>
-
-          </div>
-        </div>
-      </section>
-
-      <!-- Softskill -->
-      <div class="px-4 py-8">
-        <h1 class="font-sans text-black text-3xl mb-8">Softskill :</h1>
-        <div class="flex justify-center gap-6 mt-8">
-          <div id="cadre9" class="p-4 bg-white flex flex-col justify-center items-center"
-            style="transition: transform 0.3s ease, box-shadow 0.3s ease; transform: scale(1); box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);"
-            onmouseover="this.style.transform='scale(1.1)'; this.style.boxShadow='0 8px 12px rgba(0, 0, 0, 0.5)';"
-            onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 4px 8px rgba(0, 0, 0, 0)';">
-            <h3 class="text-center text-lg font-sans">Créativité</h3>
-          </div>          
-          <div id="cadre10" class="p-4 bg-white"
-            style="transition: transform 0.3s ease, box-shadow 0.3s ease; transform: scale(1); box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);"
-            onmouseover="this.style.transform='scale(1.1)'; this.style.boxShadow='0 8px 12px rgba(0, 0, 0, 0.5)';"
-            onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 4px 8px rgba(0, 0, 0, 0)';">
-            <h3 class="text-center text-lg font-sans">Esprit d'équipe</h3>
-          </div>
-          <div id="cadre11" class="p-4 bg-white"
-            style="transition: transform 0.3s ease, box-shadow 0.3s ease; transform: scale(1); box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);"
-            onmouseover="this.style.transform='scale(1.1)'; this.style.boxShadow='0 8px 12px rgba(0, 0, 0, 0.5)';"
-            onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 4px 8px rgba(0, 0, 0, 0)';">
-            <h3 class="text-center text-lg font-sans">Capacité d'adaptation</h3>
-          </div>
-        </div>
-      </div>
-
-      <!-- Contact -->
-      <section id="contact">  
-        <div class="p-8">
-          <h1 class="font-sans text-3xl">Contactez-moi !</h1>
-          <form action="envoi_contact.php" method="POST" style="max-width: 40rem; border-radius:10px;" class="p-8 mt-8 mx-auto" id="cadreF">
-              <div class="flex flex-col gap-6">
-              <div class="flex gap-4">
-                <input type="text" name="prenom" placeholder="Prénom" class="p-2 w-full sm:w-1/2" style="border-radius: 5px;">
-                <input type="text" name="nom" placeholder="Nom" class="p-2 w-full sm:w-1/2 rounded-lg" style="border-radius: 5px;">
-              </div>
-              <input type="text" name="societe" placeholder="Société" class="p-2 w-full rounded-lg">
-              <input type="email" name="email" placeholder="Email" class="p-2 w-full rounded-lg" style="border-radius: 5px;">
-              <textarea name="message" placeholder="Tapez votre message" cols="70" rows="10" class="p-2 w-full rounded-lg" style="border-radius: 5px;"></textarea>
-              <div class="g-recaptcha" data-sitekey="6LfrM0AqAAAAAN0xKfH_b2da-73yWlsknoLUXf4W" style="margin:0 auto;"></div><br>
-              <input type="submit" name="submit" value="Envoyer" class="py-2 px-4 cursor-pointer text-sm mx-auto"
-                style="border-radius: 10px; transform: scale(1); transition: transform 0.3s ease"
-                onmouseover="this.style.transform='scale(1.1)';" onmouseout="this.style.transform='scale(1)';" id="bouton">
-              </div>
-          </form>              
-        </div>          
-      </section>
-    </main>
-
-    <!-- Footer -->
-    <footer>
-      <div class="flex justify-between items-center mx-auto max-w-4xl">
-        <div class="text-white text-center mt-4">
-          <h5 class="font-bold">Basée à Montpellier</h5>          
-          <h5 class="mt-3"><strong>Email :</strong> vernierestephane@gmail.com</h5>        
-          <h5 class="mb-4">Site développé par Stéphane VERNIERE</h5>
-        </div>
+    <div class="flex flex-cadre justify-center space-x-4">
+      <!-- Partie Contact -->
+      <div id="cadre" class="flex flex-col items-center p-6 bg-white"
+          style="transition: transform 0.3s ease, box-shadow 0.3s ease; transform: scale(1); box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);" 
+          onmouseover="this.style.transform='scale(1.1)'; this.style.boxShadow='0 8px 12px rgba(0, 0, 0, 0.5)';"
+          onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 4px 8px rgba(0, 0, 0, 0)';">
         <div class="text-center">
-          <a href="index.html">
-            <img id="footer-logo" src="images/Logo.png" alt="logo Stéphane Vernière" class="mx-auto">
+            <h2 class="font-sans text-black text-2xl mb-2" id="titre">Contact :</h2>
+            <div class="flex flex-col items-center">
+                <h3 class="text-black">Basé à Montpellier</h3>
+                <div class="flex flex-col items-center gap-4 mt-4">
+                    <div class="flex items-center gap-2">
+                        <img src="images/mail.png" alt="icone d'un email" class="w-6 h-6">
+                        <h4 class="text-black">vernierestephane@gmail.com</h4>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <img src="images/phone.png" alt="icone d'un téléphone" class="w-6 h-6">
+                        <h4 class="text-black">06 61 19 97 54</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </div>
+      <!-- Partie Liens -->
+      <div id="cadre2" class="max-w-xs flex flex-col items-center gap-6 p-6 bg-white"
+          style="transition: transform 0.3s ease, box-shadow 0.3s ease; transform: scale(1); box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);"
+          onmouseover="this.style.transform='scale(1.1)'; this.style.boxShadow='0 8px 12px rgba(0, 0, 0, 0.5)';"
+          onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 4px 8px rgba(0, 0, 0, 0)';">
+        <h2 class="font-sans text-black text-2xl mb-4" id="titre">Liens :</h2>
+        <div class="flex justify-center gap-8">
+          <div class="flex flex-col items-center">
+            <a href="https://www.linkedin.com/in/stephane-verniere-devmontpellier/" target="_blank">
+              <img src="images/linkedin.png" alt="logo linkedin" class="mx-auto w-8 h-8">
+              <h4 class="text-black mt-2">LinkedIn</h4>
+            </a> 
+          </div>
+          <div class="flex flex-col items-center">
+            <a href="https://github.com/PhanDev34000/portfolio" target="_blank">
+              <img src="images/github.png" alt="logo github" class="mx-auto w-8 h-8">              
+              <h4 class="text-black mt-2">GitHub</h4>
+            </a>
+          </div>
+          <div class="flex flex-col items-center">
+            <a href="visuels/CV.pdf" download>
+              <img src="images/file.png" alt="icone de téléchargement pour uploader mon CV" class="w-8 h-8">              
+              <h4 class="text-black mt-2">CV</h4>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mon Parcours -->
+    <section id="parcours">
+      <div class="flex justify-center p-12">
+        <div class="max-w-4xl w-full p-6 bg-white rounded-lg" id="cadre3">
+          <div class="text-center">
+            <h2 class="font-sans text-black text-2xl mb-4" id="titre">Mon parcours :</h2>
+            <div class="flex justify-center gap-6">
+              <div class="flex flex-col items-center">
+                <img src="images/diplome.png" alt="Diplôme" class="w-12 h-12 mb-2">
+                <h4 class="text-black">Master de Biologie</h4>
+                <h5 class="text-customprimary" style="margin-bottom: 3rem;">2002</h5>
+              </div>
+              <div class="flex flex-col items-center">
+                <img src="images/photographe.png" alt="Photographe" class="w-8 h-12 mb-2">
+                <h4 class="text-black">Photographe</h4>
+                <h5 class="text-customprimary" style="margin-bottom: 3rem;">2004-2022</h5>
+              </div>
+              <div class="flex flex-col items-center">
+                <img src="images/ADRAR.png" alt="Formation Développeur Web" class="w-18 h-14">
+                <h4 class="text-black">Développeur Web & Web mobile</h4>
+                <h5 class="text-customprimary" style="margin-bottom: 3rem;">Oct 2023 - Juillet 2024</h5>
+              </div>
+              <div class="flex flex-col items-center">
+                <img src="images/Studi.png" alt="Bachelor Développeur Angular" class="w-16 h-20">
+                <h4 class="text-black">Bachelor Développeur Angular</h4>
+                <h5 class="text-customprimary" style="margin-bottom: 3rem;">Oct 2024 - Janvier 2026</h5>
+              </div>
+              <div class="flex flex-col items-center">
+                <img src="images/dev.png" alt="Développeur Web Jr" class="w-16 h-14">
+                <h4 class="text-black">Développeur Web Jr</h4>
+                <h5 class="text-customprimary">Disponible</h5>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Compétences -->
+    <section id="competences">
+      <div class="px-4 py-8">
+        <h1 class="font-sans text-black text-3xl mb-8">Compétences :</h1>
+        <div id="cadre8" class="flex flex-wrap gap-10 items-stretch max-w-7xl mx-auto p-6 mt-8 bg-white rounded-lg">
+          <div class="flex-1 min-w-[200px]">
+            <h2 class="font-sans text-black text-xl mb-4" id="titre">Front-End</h2>
+            <div class="flex flex-wrap gap-2 justify-center">
+              <img src="icones/html.png" alt="logo html" class="w-12 h-12">
+              <img src="icones/css.png" alt="logo css" class="w-12 h-12">
+              <div class="w-full"></div>
+              <img src="icones/js.png" alt="logo javascript" class="w-12 h-12">
+              <img src="icones/angular.png" alt="logo angular" class="w-12 h-12">
+            </div>
+          </div>
+          <div class="flex-1 min-w-[200px]">
+            <h2 class="font-sans text-black text-xl mb-4" id="titre">Back-End</h2>
+            <div class="flex flex-wrap gap-2 justify-center">
+              <img src="icones/node.png" alt="logo node.js" class="w-14 h-14">
+              <img src="icones/expressN.png" alt="logo Express" class="w-16 h-12">
+              <img src="icones/mongodb.png" alt="logo Mongodb" class="w-12 h-12"> 
+              <div class="w-full"></div>
+              <img src="icones/php.png" alt="logo php" class="h-10 w-auto">             
+              <img src="icones/api.png" alt="logo Api" class="w-12 h-12">
+            </div>
+          </div>
+          <div class="flex-1 min-w-[200px]">
+            <h2 class="font-sans text-black text-xl mb-4" id="titre">Conception et Versionning</h2>
+            <div class="flex flex-wrap gap-4 justify-center">
+              <img src="icones/figma.png" alt="logo figma" class="w-12 h-12">
+              <div class="w-full"></div>
+              <img src="icones/githubN.png" alt="logo github" class="w-12 h-12">
+              <img src="icones/git.png" alt="logo git" class="w-12 h-12">
+            </div>
+          </div>
+          <div class="flex-1 min-w-[200px]">
+            <h2 class="font-sans text-black text-xl mb-4" id="titre">Frameworks</h2>
+            <div class="flex flex-wrap gap-4 justify-center">
+              <img src="icones/TailwindCss.png" alt="logo TailwindCSS" class="w-22 h-10">
+              <div class="w-full"></div>
+              <img src="icones/Bootstrap.png" alt="logo Bootstrap" class="w-10 h-10">
+            </div>
+          </div>          
+        </div>
+      </div>
+    </section>
+
+    <!-- ==============================
+         PORTEFOLIO
+    ============================== -->
+    <section id="portefolio">
+      <div class="px-4 py-8">
+        <h1 class="font-sans text-black text-3xl mb-8">Portefolio :</h1>
+
+        <div class="projet-grille">
+
+          <!-- Projet n°1 -->
+          <div class="carte-projet">
+            <div class="carte-header">
+              <span class="carte-numero">01</span>
+              <h2 class="carte-titre">Stéphane Vernière Photographe</h2>
+              <div class="carte-badge"><img src="icones/mean.png" alt="MEAN Stack" class="carte-badge-img"></div>
+            </div>
+            <div class="carte-img-wrapper">
+              <img src="images/SC_SV.PNG" alt="Aperçu du site Stéphane Vernière" class="carte-img">
+              <div class="carte-overlay">
+                <div class="carte-links">
+                  <a href="https://github.com/PhanDev34000/stephaneverniere.fr" target="_blank" class="carte-lien">GitHub</a>
+                  <a href="https://stephaneverniere.fr/" target="_blank" class="carte-lien carte-lien--primary">Visiter →</a>
+                </div>
+              </div>
+            </div>
+            <div class="carte-body">
+              <p class="carte-description">Site vitrine pour l'activité de photographe avec espace administrateur et client, téléchargement de galeries.</p>
+              <div class="carte-tech">
+                <span>TypeScript</span><span>JWT</span><span>Angular Material</span><span>📁 Espace admin</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Projet n°2 -->
+          <div class="carte-projet">
+            <div class="carte-header">
+              <span class="carte-numero">02</span>
+              <h2 class="carte-titre">Cinéphoria</h2>
+              <div class="carte-badge"><img src="icones/mean.png" alt="MEAN Stack" class="carte-badge-img"></div>
+            </div>
+            <div class="carte-img-wrapper">
+              <img src="images/SC_Cinephoria.PNG" alt="Aperçu du site Cinephoria" class="carte-img">
+              <div class="carte-overlay">
+                <div class="carte-links">
+                  <a href="https://github.com/PhanDev34000/cinephoria" target="_blank" class="carte-lien">GitHub</a>
+                </div>
+              </div>
+            </div>
+            <div class="carte-body">
+              <p class="carte-description">Site pour un cinéma : affichage des films, réservation, espace clients, espace admin, QR code mobile.</p>
+              <div class="carte-tech">
+                <span>TypeScript</span><span>JWT</span><span>QR Code</span><span>🎟️ Réservation</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Projet n°3 -->
+          <div class="carte-projet">
+            <div class="carte-header">
+              <span class="carte-numero">03</span>
+              <h2 class="carte-titre">Task Manager</h2>
+              <div class="carte-badge"><img src="icones/mean.png" alt="MEAN Stack" class="carte-badge-img"></div>
+            </div>
+            <div class="carte-img-wrapper">
+              <img src="images/SC_TaskManager.PNG" alt="Aperçu du site TaskManager" class="carte-img">
+              <div class="carte-overlay">
+                <div class="carte-links">
+                  <a href="https://github.com/PhanDev34000/task-manager" target="_blank" class="carte-lien">GitHub Front</a>
+                  <a href="https://github.com/PhanDev34000/task-manager-api" target="_blank" class="carte-lien">GitHub Back</a>
+                  <a href="https://task-manager-app-ten-jet.vercel.app/login" target="_blank" class="carte-lien carte-lien--primary">Visiter →</a>
+                </div>
+              </div>
+            </div>
+            <div class="carte-body">
+              <p class="carte-description">Gestionnaire de tâches interactif : connexion, multi-utilisateurs, drag & drop, formulaires réactifs.</p>
+              <div class="carte-tech">
+                <span>TypeScript</span><span>RxJS</span><span>↕️ Drag & Drop</span><span>Multi-users</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Projet n°4 -->
+          <div class="carte-projet">
+            <div class="carte-header">
+              <span class="carte-numero">04</span>
+              <h2 class="carte-titre">Galerie App</h2>
+              <div class="carte-badge"><img src="icones/mean.png" alt="MEAN Stack" class="carte-badge-img"></div>
+            </div>
+            <div class="carte-img-wrapper">
+              <img src="images/SC_GalerieApp.PNG" alt="Aperçu du site Galerie App" class="carte-img">
+              <div class="carte-overlay">
+                <div class="carte-links">
+                  <a href="https://github.com/PhanDev34000/gallery-app" target="_blank" class="carte-lien">GitHub Front</a>
+                  <a href="https://github.com/PhanDev34000/gallery-api" target="_blank" class="carte-lien">GitHub Back</a>
+                  <a href="https://gallery-app-five-iota.vercel.app" target="_blank" class="carte-lien carte-lien--primary">Visiter →</a>
+                </div>
+              </div>
+            </div>
+            <div class="carte-body">
+              <p class="carte-description">Partage de galeries photos : upload, sélection de favoris, téléchargement ZIP et envoi par email.</p>
+              <div class="carte-tech">
+                <span>TypeScript</span><span>JWT</span><span>ngx-dropzone</span><span>📦 Export ZIP</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Projet n°5 -->
+          <div class="carte-projet">
+            <div class="carte-header">
+              <span class="carte-numero">05</span>
+              <h2 class="carte-titre">Social Media Planner</h2>
+              <div class="carte-badge"><img src="icones/angular.png" alt="Angular" class="carte-badge-img"></div>
+            </div>
+            <div class="carte-img-wrapper">
+              <img src="images/SC_MSP.PNG" alt="Aperçu du site Social Media Planner" class="carte-img">
+              <div class="carte-overlay">
+                <div class="carte-links">
+                  <a href="https://github.com/PhanDev34000/Social-media-planner" target="_blank" class="carte-lien">GitHub</a>
+                  <a href="https://social-media-planner-wine.vercel.app" target="_blank" class="carte-lien carte-lien--primary">Visiter →</a>
+                </div>
+              </div>
+            </div>
+            <div class="carte-body">
+              <p class="carte-description">Planificateur de publications réseaux sociaux avec CRUD, calendrier visuel, notifications et statistiques.</p>
+              <div class="carte-tech">
+                <span>TypeScript</span><span>RxJS</span><span>SCSS</span><span>📅 Calendrier</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Projet n°6 -->
+          <div class="carte-projet">
+            <div class="carte-header">
+              <span class="carte-numero">06</span>
+              <h2 class="carte-titre">Margaux Julien</h2>
+              <div class="carte-badge"><img src="icones/php.png" alt="PHP" class="carte-badge-img"></div>
+            </div>
+            <div class="carte-img-wrapper">
+              <img src="images/SC_MargauxJ.PNG" alt="Aperçu du site Margaux Julien Ecologue" class="carte-img">
+              <div class="carte-overlay">
+                <div class="carte-links">
+                  <a href="https://github.com/PhanDev34000/Margaux_Julien" target="_blank" class="carte-lien">GitHub</a>
+                </div>
+              </div>
+            </div>
+            <div class="carte-body">
+              <p class="carte-description">Site vitrine pour Margaux Julien, Écologue.</p>
+              <div class="carte-tech">
+                <span>JavaScript</span><span>CSS3</span><span>🌿 Site vitrine</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Projet n°7 -->
+          <div class="carte-projet">
+            <div class="carte-header">
+              <span class="carte-numero">07</span>
+              <h2 class="carte-titre">Verniere-dev</h2>
+              <div class="carte-badge"><img src="icones/php.png" alt="PHP" class="carte-badge-img"></div>
+            </div>
+            <div class="carte-img-wrapper">
+              <img src="images/SC_verniere-dev.PNG" alt="Aperçu du site Verniere-dev" class="carte-img">
+              <div class="carte-overlay">
+                <div class="carte-links">
+                  <a href="https://github.com/PhanDev34000/verniere-dev" target="_blank" class="carte-lien">GitHub</a>
+                </div>
+              </div>
+            </div>
+            <div class="carte-body">
+              <p class="carte-description">Site vitrine de développeur Full Stack pour Stéphane Vernière.</p>
+              <div class="carte-tech">
+                <span>JavaScript</span><span>Tailwind</span><span>💼 Portfolio</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Projet n°8 -->
+          <div class="carte-projet">
+            <div class="carte-header">
+              <span class="carte-numero">08</span>
+              <h2 class="carte-titre">Cook4U</h2>
+              <div class="carte-badge"><img src="icones/php.png" alt="PHP" class="carte-badge-img"></div>
+            </div>
+            <div class="carte-img-wrapper">
+              <img src="images/SC_Cook4U.PNG" alt="Aperçu du site Cook4U" class="carte-img">
+              <div class="carte-overlay">
+                <div class="carte-links">
+                  <a href="https://github.com/PhanDev34000/cook4u" target="_blank" class="carte-lien">GitHub</a>
+                </div>
+              </div>
+            </div>
+            <div class="carte-body">
+              <p class="carte-description">Plateforme de vente de plats "fait maison". <em>En cours de développement.</em></p>
+              <div class="carte-tech">
+                <span>JavaScript</span><span>MySQL</span><span>🍽️ E-commerce</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Projet n°9 -->
+          <div class="carte-projet">
+            <div class="carte-header">
+              <span class="carte-numero">09</span>
+              <h2 class="carte-titre">Corbin-Photo</h2>
+              <div class="carte-badge"><img src="icones/wordpress.png" alt="WordPress" class="carte-badge-img"></div>
+            </div>
+            <div class="carte-img-wrapper">
+              <img src="images/SC_CorbinP.PNG" alt="Aperçu du site Corbin Photo" class="carte-img">
+              <div class="carte-overlay">
+                <div class="carte-links">
+                  <a href="https://corbin-photo.fr/" target="_blank" class="carte-lien carte-lien--primary">Visiter →</a>
+                </div>
+              </div>
+            </div>
+            <div class="carte-body">
+              <p class="carte-description">Site vitrine pour une société de photo scolaire.</p>
+              <div class="carte-tech">
+                <span>Divi Pro</span><span>WooCommerce</span><span>📸 Photo scolaire</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Projet n°10 -->
+          <div class="carte-projet">
+            <div class="carte-header">
+              <span class="carte-numero">10</span>
+              <h2 class="carte-titre">DogPix</h2>
+              <div class="carte-badge"><img src="icones/wordpress.png" alt="WordPress" class="carte-badge-img"></div>
+            </div>
+            <div class="carte-img-wrapper">
+              <img src="images/SC_DogPix.PNG" alt="Aperçu du site DogPix" class="carte-img">
+              <div class="carte-overlay">
+                <div class="carte-links">
+                  <a href="https://dogpix.fr/" target="_blank" class="carte-lien carte-lien--primary">Visiter →</a>
+                </div>
+              </div>
+            </div>
+            <div class="carte-body">
+              <p class="carte-description">Site vitrine pour un photographe canin.</p>
+              <div class="carte-tech">
+                <span>Divi Pro</span><span>Elementor</span><span>🐶 Photo canine</span>
+              </div>
+            </div>
+          </div>
+
+        </div><!-- fin .projet-grille -->
+      </div>
+    </section>
+
+    <!-- Softskill -->
+    <div class="px-4 py-8">
+      <h1 class="font-sans text-black text-3xl mb-8">Softskill :</h1>
+      <div class="flex justify-center gap-6 mt-8">
+        <div id="cadre9" class="p-4 bg-white flex flex-col justify-center items-center"
+          style="transition: transform 0.3s ease, box-shadow 0.3s ease; transform: scale(1); box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);"
+          onmouseover="this.style.transform='scale(1.1)'; this.style.boxShadow='0 8px 12px rgba(0, 0, 0, 0.5)';"
+          onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 4px 8px rgba(0, 0, 0, 0)';">
+          <h3 class="text-center text-lg font-sans">Créativité</h3>
+        </div>          
+        <div id="cadre10" class="p-4 bg-white"
+          style="transition: transform 0.3s ease, box-shadow 0.3s ease; transform: scale(1); box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);"
+          onmouseover="this.style.transform='scale(1.1)'; this.style.boxShadow='0 8px 12px rgba(0, 0, 0, 0.5)';"
+          onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 4px 8px rgba(0, 0, 0, 0)';">
+          <h3 class="text-center text-lg font-sans">Esprit d'équipe</h3>
+        </div>
+        <div id="cadre11" class="p-4 bg-white"
+          style="transition: transform 0.3s ease, box-shadow 0.3s ease; transform: scale(1); box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);"
+          onmouseover="this.style.transform='scale(1.1)'; this.style.boxShadow='0 8px 12px rgba(0, 0, 0, 0.5)';"
+          onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 4px 8px rgba(0, 0, 0, 0)';">
+          <h3 class="text-center text-lg font-sans">Capacité d'adaptation</h3>
+        </div>
+      </div>
+    </div>
+
+    <!-- Contact -->
+    <section id="contact">  
+      <div class="p-8">
+        <h1 class="font-sans text-3xl">Contactez-moi !</h1>
+        <form action="envoi_contact.php" method="POST" style="max-width: 40rem; border-radius:10px;" class="p-8 mt-8 mx-auto" id="cadreF">
+            <div class="flex flex-col gap-6">
+            <div class="flex gap-4">
+              <input type="text" name="prenom" placeholder="Prénom" class="p-2 w-full sm:w-1/2" style="border-radius: 5px;">
+              <input type="text" name="nom" placeholder="Nom" class="p-2 w-full sm:w-1/2 rounded-lg" style="border-radius: 5px;">
+            </div>
+            <input type="text" name="societe" placeholder="Société" class="p-2 w-full rounded-lg">
+            <input type="email" name="email" placeholder="Email" class="p-2 w-full rounded-lg" style="border-radius: 5px;">
+            <textarea name="message" placeholder="Tapez votre message" cols="70" rows="10" class="p-2 w-full rounded-lg" style="border-radius: 5px;"></textarea>
+            <div class="g-recaptcha" data-sitekey="6LfrM0AqAAAAAN0xKfH_b2da-73yWlsknoLUXf4W" style="margin:0 auto;"></div><br>
+            <input type="submit" name="submit" value="Envoyer" class="py-2 px-4 cursor-pointer text-sm mx-auto"
+              style="border-radius: 10px; transform: scale(1); transition: transform 0.3s ease"
+              onmouseover="this.style.transform='scale(1.1)';" onmouseout="this.style.transform='scale(1)';" id="bouton">
+            </div>
+        </form>              
+      </div>          
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="flex justify-between items-center mx-auto max-w-4xl">
+      <div class="text-white text-center mt-4">
+        <h5 class="font-bold">Basée à Montpellier</h5>          
+        <h5 class="mt-3"><strong>Email :</strong> vernierestephane@gmail.com</h5>        
+        <h5 class="mb-4">Site développé par Stéphane VERNIERE</h5>
+      </div>
+      <div class="text-center">
+        <a href="index.html">
+          <img id="footer-logo" src="images/Logo.png" alt="logo Stéphane Vernière" class="mx-auto">
+        </a>
+      </div>
+      <div class="text-center text-white">
+        <h4 class="font-bold mb-2">Cliquez pour consulter</h4>
+        <div class="space-y-4">
+          <a href="https://github.com/PhanDev34000/portfolio" target="_blank">
+            <img src="images/github_b.png" alt="logo github" class="mx-auto" id="logo-github">
+          </a>
+          <a href="https://www.linkedin.com/in/stephane-verniere-devmontpellier/" target="_blank">
+            <img src="images/linkedin_b.png" alt="logo linkedin" class="mx-auto" id="logo-linkedin">
           </a>
         </div>
-        <div class="text-center text-white">
-          <h4 class="font-bold mb-2">Cliquez pour consulter</h4>
-          <div class="space-y-4">
-            <a href="https://github.com/PhanDev34000/portfolio" target="_blank">
-              <img src="images/github_b.png" alt="logo github" class="mx-auto" id="logo-github">
-            </a>
-            <a href="https://www.linkedin.com/in/stephane-verniere-devmontpellier/" target="_blank">
-              <img src="images/linkedin_b.png" alt="logo linkedin" class="mx-auto" id="logo-linkedin">
-            </a>
-          </div>
-        </div>
       </div>
-    </footer>
-    
-    <script src="nav.js"></script>
-    <script src="toggle.js"></script>
+    </div>
+  </footer>
+  
+  <script src="nav.js"></script>
+  <script src="toggle.js"></script>
   </body>
 </html>
