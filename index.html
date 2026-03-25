@@ -275,194 +275,273 @@
       </div>
     </section>
     
-<!-- Portefolio  -->
-    <section id="portefolio">
-      <div class="px-4 py-8">
-        <h1 class="font-sans text-black text-3xl">Portefolio :</h1>
-
-        <!-- Grille des projets -->
-        <div class="flex flex-wrap justify-center gap-4 max-w-7xl mx-auto pt-8">
-          
-          <!-- Projet n°1 -->
-          <div id="cadre4" class="bg-white p-4 flex flex-col items-center w-full md:w-[calc(50%-1rem)]" style="transition: transform 0.3s ease, box-shadow 0.3s ease; transform: scale(1); box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);"
-          onmouseover="this.style.transform='scale(1.1)'; this.style.boxShadow='0 8px 12px rgba(0, 0, 0, 0.5)';"
-          onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 4px 8px rgba(0, 0, 0, 0)';">
-            <h2 class="font-sans text-black text-2xl mb-4" id="titre">Projet n°1</h2>
-            <div class="tech-badges-container">
-              <img src="icones/mean.png" alt="MEAN Stack" class="h-8 w-auto mb-2">
-            </div>
-            <img src="images/SC_SV.PNG" alt="Aperçu du site Stéphane Vernière" class="w-full max-w-xs rounded-md mb-4">
-            <div class="text-center">
-              <h3 class="mb-4"><strong>Nom du Projet :</strong><br> Stéphane Vernière Photographe</h3>
-              <h3 class="mb-4"><strong>Présentation :</strong><br> Site vitrine pour l'activité de photographe avec espace administrateur et client, téléchargement de galeries</h3>
-              <h3 class="mb-4"><strong>Technologie :</strong> MongoDB - Express - Angular - Node.js</h3>
-              <h3 class="mb-4"><strong>GitHub :</strong> <a href="https://github.com/PhanDev34000/stephaneverniere.fr" target="_blank">Ici</a></h3>
-              <h3><strong>Visitez-le :</strong> <a href="https://stephaneverniere.fr/" target="_blank">Ici</a></h3>
-            </div>
-          </div>    
-          
-          <!-- Projet n°2 -->
-          <div id="cadre4" class="bg-white p-4 flex flex-col items-center w-full md:w-[calc(50%-1rem)]" style="transition: transform 0.3s ease, box-shadow 0.3s ease; transform: scale(1); box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);"
-          onmouseover="this.style.transform='scale(1.1)'; this.style.boxShadow='0 8px 12px rgba(0, 0, 0, 0.5)';"
-          onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 4px 8px rgba(0, 0, 0, 0)';">
-            <h2 class="font-sans text-black text-2xl mb-4" id="titre">Projet n°2</h2>
-            <div class="tech-badges-container">
-              <img src="icones/mean.png" alt="MEAN Stack" class="h-8 w-auto mb-2">
-            </div>
-            <img src="images/SC_Cinephoria.PNG" alt="Aperçu du site Cinephoria" class="w-full max-w-xs rounded-md mb-4">
-            <div class="text-center">
-              <h3 class="mb-4"><strong>Nom du Projet :</strong><br> Cinéphoria</h3>
-              <h3 class="mb-4"><strong>Présentation :</strong><br> Site pour un cinéma : affichage des films/ réservation/ espace clients/ espace admin/ QR code mobile</h3>
-              <h3 class="mb-4"><strong>Technologie :</strong> MongoDB - Express - Angular - Node.js</h3>
-              <h3 class="mb-4"><strong>GitHub :</strong> <a href="https://github.com/PhanDev34000/cinephoria" target="_blank">Ici</a></h3>
+<!-- Portefolio -->
+<section id="portefolio">
+  <div class="px-4 py-8">
+    <h1 class="font-sans text-black text-3xl mb-2">Portefolio :</h1>
+ 
+    <!-- Grille des projets : 3 par ligne sur desktop -->
+    <div class="projet-grille">
+ 
+      <!-- Projet n°1 -->
+      <div class="carte-projet">
+        <div class="carte-header">
+          <span class="carte-numero">01</span>
+          <h2 class="carte-titre">Stéphane Vernière Photographe</h2>
+          <div class="carte-badge">
+            <img src="icones/mean.png" alt="MEAN Stack" class="h-7 w-auto">
+          </div>
+        </div>
+        <div class="carte-img-wrapper">
+          <img src="images/SC_SV.PNG" alt="Aperçu du site Stéphane Vernière" class="carte-img">
+          <div class="carte-overlay">
+            <div class="carte-links">
+              <a href="https://github.com/PhanDev34000/stephaneverniere.fr" target="_blank" class="carte-lien">GitHub</a>
+              <a href="https://stephaneverniere.fr/" target="_blank" class="carte-lien carte-lien--primary">Visiter →</a>
             </div>
           </div>
-
-          <!-- Projet n°3 -->
-          <div id="cadre4" class="bg-white p-4 flex flex-col items-center w-full md:w-[calc(50%-1rem)]" style="transition: transform 0.3s ease, box-shadow 0.3s ease; transform: scale(1); box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);"
-          onmouseover="this.style.transform='scale(1.1)'; this.style.boxShadow='0 8px 12px rgba(0, 0, 0, 0.5)';"
-          onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 4px 8px rgba(0, 0, 0, 0)';">
-            <h2 class="font-sans text-black text-2xl mb-4" id="titre">Projet n°3</h2>
-            <div class="tech-badges-container">
-              <img src="icones/mean.png" alt="MEAN Stack" class="h-8 w-auto mb-2">
-            </div>            
-            <img src="images/SC_TaskManager.PNG" alt="Aperçu du site TaskManager" class="w-full max-w-xs rounded-md mb-4">
-            <img src="images/SC_TaskManager_1.PNG" alt="Aperçu du site TaskManager" class="w-full max-w-xs rounded-md mb-4">
-            <div class="text-center">
-              <h3 class="mb-4"><strong>Nom du Projet :</strong><br> Task Manager</h3>
-              <h3 class="mb-4"><strong>Présentation :</strong><br> Gestionnaire des tâches interactif : connexion, multi-utilisateurs, drag & drop, formulaires réactifs</h3>
-              <h3 class="mb-4"><strong>Technologie :</strong> MongoDB - Express - Angular - Node.js</h3>
-              <h3 class="mb-4"><strong>GitHub Code Front End :</strong> <a href="https://github.com/PhanDev34000/task-manager" target="_blank">Ici</a></h3>
-              <h3 class="mb-4"><strong>GitHub Code Back End :</strong> <a href="https://github.com/PhanDev34000/task-manager-api" target="_blank">Ici</a></h3>
-              <h3 class="mb-4"><strong>Visitez-le :</strong> <a href="https://task-manager-app-ten-jet.vercel.app/login" target="_blank">Ici</a></h3>
-            </div>
+        </div>
+        <div class="carte-body">
+          <p class="carte-description">Site vitrine pour l'activité de photographe avec espace administrateur et client, téléchargement de galeries.</p>
+          <div class="carte-tech">
+            <span>MongoDB</span><span>Express</span><span>Angular</span><span>Node.js</span>
           </div>
-
-          <!-- Projet n°4 -->
-          <div id="cadre4" class="bg-white p-4 flex flex-col items-center w-full md:w-[calc(50%-1rem)]" style="transition: transform 0.3s ease, box-shadow 0.3s ease; transform: scale(1); box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);"
-          onmouseover="this.style.transform='scale(1.1)'; this.style.boxShadow='0 8px 12px rgba(0, 0, 0, 0.5)';"
-          onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 4px 8px rgba(0, 0, 0, 0)';">
-            <h2 class="font-sans text-black text-2xl mb-4" id="titre">Projet n°4</h2>
-            <div class="tech-badges-container">
-              <img src="icones/mean.png" alt="Logo Angular" class="h-8 w-auto mb-2">
-            </div>            
-            <img src="images/SC_GalerieApp.PNG" alt="Aperçu du site Galerie App" class="w-full max-w-xs rounded-md mb-4">
-            <img src="images/SC_GalerieApp_1.PNG" alt="Aperçu du site Galerie App" class="w-full max-w-xs rounded-md mb-4">
-            <div class="text-center">
-              <h3 class="mb-4"><strong>Nom du Projet :</strong><br> Galerie App</h3>
-              <h3 class="mb-4"><strong>Présentation :</strong><br> Application de partage de galeries photos entre photographes et clients : Upload de photos, sélection de favoris, téléchargement ZIP et envoi par email. </h3>
-              <h3 class="mb-4"><strong>Technologie :</strong> MEAN • TypeScript • Angular Material • JWT • ngx-dropzone  ...</h3>
-              <h3 class="mb-4"><strong>GitHub Code Front End :</strong> <a href="https://github.com/PhanDev34000/gallery-app" target="_blank">Ici</a></h3>
-              <h3 class="mb-4"><strong>GitHub Code Back End :</strong> <a href="https://github.com/PhanDev34000/gallery-api" target="_blank">Ici</a></h3>
-              <h3 class="mb-4"><strong>Visitez-le :</strong> <a href=" https://gallery-app-five-iota.vercel.app" target="_blank">Ici</a></h3>
-            </div>
-          </div>
-
-          <!-- Projet n°5 -->
-          <div id="cadre4" class="bg-white p-4 flex flex-col items-center w-full md:w-[calc(50%-1rem)]" style="transition: transform 0.3s ease, box-shadow 0.3s ease; transform: scale(1); box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);"
-          onmouseover="this.style.transform='scale(1.1)'; this.style.boxShadow='0 8px 12px rgba(0, 0, 0, 0.5)';"
-          onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 4px 8px rgba(0, 0, 0, 0)';">
-            <h2 class="font-sans text-black text-2xl mb-4" id="titre">Projet n°5</h2>
-            <div class="tech-badges-container">
-              <img src="icones/angular.png" alt="Logo Angular" class="h-10 w-auto mb-2">
-            </div>            
-            <img src="images/SC_MSP.PNG" alt="Aperçu du site Social Media Planner" class="w-full max-w-xs rounded-md mb-4">
-            <div class="text-center">
-              <h3 class="mb-4"><strong>Nom du Projet :</strong><br> Social Media Planner</h3>
-              <h3 class="mb-4"><strong>Présentation :</strong><br> Planificateur de publications pour réseaux sociaux avec CRUD, calendrier visuel, système de notifications et statistiques.</h3>
-              <h3 class="mb-4"><strong>Technologie :</strong> Angular 19 • TypeScript • RxJS • SCSS • localStorage</h3>
-              <h3 class="mb-4"><strong>GitHub :</strong> <a href="https://github.com/PhanDev34000/Social-media-planner" target="_blank">Ici</a></h3>
-              <h3 class="mb-4"><strong>Visitez-le :</strong> <a href="https://social-media-planner-wine.vercel.app" target="_blank">Ici</a></h3>
-            </div>
-          </div>
-          
-          <!-- Projet n°6 -->
-          <div id="cadre4" class="bg-white p-4 flex flex-col items-center w-full md:w-[calc(50%-1rem)]" style="transition: transform 0.3s ease, box-shadow 0.3s ease; transform: scale(1); box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);"
-          onmouseover="this.style.transform='scale(1.1)'; this.style.boxShadow='0 8px 12px rgba(0, 0, 0, 0.5)';"
-          onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 4px 8px rgba(0, 0, 0, 0)';">
-            <h2 class="font-sans text-black text-2xl mb-4" id="titre">Projet n°6</h2>
-            <div class="tech-badges-container">
-              <img src="icones/php.png" alt="logo PHP" class="h-10 w-auto mb-2">
-            </div>
-            <img src="images/SC_MargauxJ.PNG" alt="Aperçu du site Margaux Julien Ecologue" class="w-full max-w-xs rounded-md mb-4">
-            <div class="text-center">
-              <h3 class="mb-4"><strong>Nom du Projet :</strong><br> Margaux Julien</h3>
-              <h3 class="mb-4"><strong>Présentation :</strong><br> Site vitrine pour Margaux Julien Ecologue</h3>
-              <h3 class="mb-4"><strong>Technologie :</strong> PHP - JS</h3>
-              <h3 class="mb-4"><strong>GitHub :</strong> <a href="https://github.com/PhanDev34000/Margaux_Julien" target="_blank">Ici</a></h3>
-            </div>
-          </div>
-
-          <!-- Projet n°7 -->
-          <div id="cadre4" class="bg-white p-4 flex flex-col items-center w-full md:w-[calc(50%-1rem)]" style="transition: transform 0.3s ease, box-shadow 0.3s ease; transform: scale(1); box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);"
-          onmouseover="this.style.transform='scale(1.1)'; this.style.boxShadow='0 8px 12px rgba(0, 0, 0, 0.5)';"
-          onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 4px 8px rgba(0, 0, 0, 0)';">
-            <h2 class="font-sans text-black text-2xl mb-4" id="titre">Projet n°7</h2>
-            <div class="tech-badges-container">
-              <img src="icones/php.png" alt="logo PHP" class="h-10 w-auto mb-2">
-            </div>
-            <img src="images/SC_verniere-dev.PNG" alt="Aperçu du site de Stéphane Vernière, développeur full stack" class="w-full max-w-xs rounded-md mb-4">
-            <div class="text-center">
-              <h3 class="mb-4"><strong>Nom du Projet :</strong><br> Verniere-dev</h3>
-              <h3 class="mb-4"><strong>Présentation :</strong><br> Site vitrine de développeur Full Stack pour Stéphane Vernière</h3>
-              <h3 class="mb-4"><strong>Technologie :</strong> PHP - JS</h3>
-              <h3 class="mb-4"><strong>GitHub :</strong> <a href="https://github.com/PhanDev34000/verniere-dev" target="_blank">Ici</a></h3>
-            </div>
-          </div>      
-          
-           <!-- Projet n°8 -->
-          <div id="cadre5" class="bg-white rounded-lg p-4 flex flex-col items-center w-full md:w-[calc(50%-1rem)]" style="transition: transform 0.3s ease, box-shadow 0.3s ease; transform: scale(1); box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);"
-          onmouseover="this.style.transform='scale(1.1)'; this.style.boxShadow='0 8px 12px rgba(0, 0, 0, 0.5)';"
-          onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 4px 8px rgba(0, 0, 0, 0)';">
-            <h2 class="font-sans text-black text-2xl mb-4" id="titre">Projet n°8</h2>
-            <div class="tech-badges-container">
-              <img src="icones/php.png" alt="logo PHP" class="h-10 w-auto mb-2">
-            </div>
-            <img src="images/SC_Cook4U.PNG" alt="Aperçu du site Cook4U" class="w-full max-w-xs rounded-md mb-4">
-            <div>
-              <h3 class="mb-4"><strong>Nom du Projet :</strong><br> Cook4U</h3>
-              <h3 class="mb-4"><strong>Présentation :</strong></br> Plateforme de vente de plats "fait Maison".</br> Site en cours de développement.</h3>
-              <h3 class="mb-4"><strong>Technologie :</strong> PHP - JS</h3>
-              <h3 class="mb-4"><strong>GitHub :</strong> <a href="https://github.com/PhanDev34000/cook4u" target="_blank">Ici</a></h3>       
-            </div>
-          </div> 
-        
-          <!-- Projet n°9 -->
-          <div id="cadre6" class="bg-white rounded-lg p-4 flex flex-col items-center w-full md:w-[calc(50%-1rem)]" style="transition: transform 0.3s ease, box-shadow 0.3s ease; transform: scale(1); box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);"
-          onmouseover="this.style.transform='scale(1.1)'; this.style.boxShadow='0 8px 12px rgba(0, 0, 0, 0.5)';"
-          onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 4px 8px rgba(0, 0, 0, 0)';">
-            <h2 class="font-sans text-black text-2xl mb-4" id="titre">Projet n°9</h2>
-            <div class="tech-badges-container">
-              <img src="icones/wordpress.png" alt="logo Wordpress" class="h-12 w-auto mb-2">
-            </div>
-            <img src="images/SC_CorbinP.PNG" alt="Aperçu du site Corbin Photo" class="w-full max-w-xs rounded-md mb-4">
-            <div class="text-center">
-              <h3 class="mb-4"><strong>Nom du Projet :</strong></br> Corbin-Photo</h3>
-              <h3 class="mb-4"><strong>Présentation :</strong></br> Site vitrine pour une société de photo scolaire</h3>
-              <h3 class="mb-4"><strong>Technologie :</strong> WordPress  Thème Divi Pro</h3>
-              <h3 class="mb-4"><strong>Visitez-le :</strong> <a href="https://corbin-photo.fr/" target="_blank">Ici</a></h3>
-            </div>
-          </div>
-
-          <!-- Projet n°10 -->
-          <div id="cadre7" class="bg-white rounded-lg p-4 flex flex-col items-center w-full md:w-[calc(50%-1rem)]" style="transition: transform 0.3s ease, box-shadow 0.3s ease; transform: scale(1); box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);"
-          onmouseover="this.style.transform='scale(1.1)'; this.style.boxShadow='0 8px 12px rgba(0, 0, 0, 0.5)';"
-          onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 4px 8px rgba(0, 0, 0, 0)';">
-            <h2 class="font-sans text-black text-2xl mb-4" id="titre">Projet n°10</h2>
-            <div class="tech-badges-container">
-              <img src="icones/wordpress.png" alt="logo Wordpress" class="h-12 w-auto mb-2">
-            </div>
-            <img src="images/SC_DogPix.PNG" alt="Aperçu du site Dogpix, photo canine" class="w-full max-w-xs rounded-md mb-4">
-            <div class="text-center">
-              <h3 class="mb-4"><strong>Nom du Projet :</strong><br> DogPix</h3>
-              <h3 class="mb-4"><strong>Présentation :</strong></br> Site vitrine pour un photographe Canin</h3>
-              <h3 class="mb-4"><strong>Technologie :</strong> WordPress  Thème Divi Pro</h3>
-              <h3 class="mb-4"><strong>Visitez-le :</strong> <a href="https://dogpix.fr/" target="_blank">Ici</a></h3>
-            </div>
-          </div> <br>                          
         </div>
       </div>
-    </section>
+ 
+      <!-- Projet n°2 -->
+      <div class="carte-projet">
+        <div class="carte-header">
+          <span class="carte-numero">02</span>
+          <h2 class="carte-titre">Cinéphoria</h2>
+          <div class="carte-badge">
+            <img src="icones/mean.png" alt="MEAN Stack" class="h-7 w-auto">
+          </div>
+        </div>
+        <div class="carte-img-wrapper">
+          <img src="images/SC_Cinephoria.PNG" alt="Aperçu du site Cinephoria" class="carte-img">
+          <div class="carte-overlay">
+            <div class="carte-links">
+              <a href="https://github.com/PhanDev34000/cinephoria" target="_blank" class="carte-lien">GitHub</a>
+            </div>
+          </div>
+        </div>
+        <div class="carte-body">
+          <p class="carte-description">Site pour un cinéma : affichage des films, réservation, espace clients, espace admin, QR code mobile.</p>
+          <div class="carte-tech">
+            <span>MongoDB</span><span>Express</span><span>Angular</span><span>Node.js</span>
+          </div>
+        </div>
+      </div>
+ 
+      <!-- Projet n°3 -->
+      <div class="carte-projet">
+        <div class="carte-header">
+          <span class="carte-numero">03</span>
+          <h2 class="carte-titre">Task Manager</h2>
+          <div class="carte-badge">
+            <img src="icones/mean.png" alt="MEAN Stack" class="h-7 w-auto">
+          </div>
+        </div>
+        <div class="carte-img-wrapper">
+          <img src="images/SC_TaskManager.PNG" alt="Aperçu du site TaskManager" class="carte-img">
+          <div class="carte-overlay">
+            <div class="carte-links">
+              <a href="https://github.com/PhanDev34000/task-manager" target="_blank" class="carte-lien">GitHub Front</a>
+              <a href="https://github.com/PhanDev34000/task-manager-api" target="_blank" class="carte-lien">GitHub Back</a>
+              <a href="https://task-manager-app-ten-jet.vercel.app/login" target="_blank" class="carte-lien carte-lien--primary">Visiter →</a>
+            </div>
+          </div>
+        </div>
+        <div class="carte-body">
+          <p class="carte-description">Gestionnaire de tâches interactif : connexion, multi-utilisateurs, drag & drop, formulaires réactifs.</p>
+          <div class="carte-tech">
+            <span>MongoDB</span><span>Express</span><span>Angular</span><span>Node.js</span>
+          </div>
+        </div>
+      </div>
+ 
+      <!-- Projet n°4 -->
+      <div class="carte-projet">
+        <div class="carte-header">
+          <span class="carte-numero">04</span>
+          <h2 class="carte-titre">Galerie App</h2>
+          <div class="carte-badge">
+            <img src="icones/mean.png" alt="MEAN Stack" class="h-7 w-auto">
+          </div>
+        </div>
+        <div class="carte-img-wrapper">
+          <img src="images/SC_GalerieApp.PNG" alt="Aperçu du site Galerie App" class="carte-img">
+          <div class="carte-overlay">
+            <div class="carte-links">
+              <a href="https://github.com/PhanDev34000/gallery-app" target="_blank" class="carte-lien">GitHub Front</a>
+              <a href="https://github.com/PhanDev34000/gallery-api" target="_blank" class="carte-lien">GitHub Back</a>
+              <a href="https://gallery-app-five-iota.vercel.app" target="_blank" class="carte-lien carte-lien--primary">Visiter →</a>
+            </div>
+          </div>
+        </div>
+        <div class="carte-body">
+          <p class="carte-description">Partage de galeries photos entre photographes et clients : upload, favoris, téléchargement ZIP, envoi email.</p>
+          <div class="carte-tech">
+            <span>MEAN</span><span>TypeScript</span><span>Angular Material</span><span>JWT</span>
+          </div>
+        </div>
+      </div>
+ 
+      <!-- Projet n°5 -->
+      <div class="carte-projet">
+        <div class="carte-header">
+          <span class="carte-numero">05</span>
+          <h2 class="carte-titre">Social Media Planner</h2>
+          <div class="carte-badge">
+            <img src="icones/angular.png" alt="Angular" class="h-8 w-auto">
+          </div>
+        </div>
+        <div class="carte-img-wrapper">
+          <img src="images/SC_MSP.PNG" alt="Aperçu du site Social Media Planner" class="carte-img">
+          <div class="carte-overlay">
+            <div class="carte-links">
+              <a href="https://github.com/PhanDev34000/Social-media-planner" target="_blank" class="carte-lien">GitHub</a>
+              <a href="https://social-media-planner-wine.vercel.app" target="_blank" class="carte-lien carte-lien--primary">Visiter →</a>
+            </div>
+          </div>
+        </div>
+        <div class="carte-body">
+          <p class="carte-description">Planificateur de publications réseaux sociaux avec CRUD, calendrier visuel, notifications et statistiques.</p>
+          <div class="carte-tech">
+            <span>Angular 19</span><span>TypeScript</span><span>RxJS</span><span>SCSS</span>
+          </div>
+        </div>
+      </div>
+ 
+      <!-- Projet n°6 -->
+      <div class="carte-projet">
+        <div class="carte-header">
+          <span class="carte-numero">06</span>
+          <h2 class="carte-titre">Margaux Julien</h2>
+          <div class="carte-badge">
+            <img src="icones/php.png" alt="PHP" class="h-8 w-auto">
+          </div>
+        </div>
+        <div class="carte-img-wrapper">
+          <img src="images/SC_MargauxJ.PNG" alt="Aperçu du site Margaux Julien Ecologue" class="carte-img">
+          <div class="carte-overlay">
+            <div class="carte-links">
+              <a href="https://github.com/PhanDev34000/Margaux_Julien" target="_blank" class="carte-lien">GitHub</a>
+            </div>
+          </div>
+        </div>
+        <div class="carte-body">
+          <p class="carte-description">Site vitrine pour Margaux Julien, Écologue.</p>
+          <div class="carte-tech">
+            <span>PHP</span><span>JavaScript</span>
+          </div>
+        </div>
+      </div>
+ 
+      <!-- Projet n°7 -->
+      <div class="carte-projet">
+        <div class="carte-header">
+          <span class="carte-numero">07</span>
+          <h2 class="carte-titre">Verniere-dev</h2>
+          <div class="carte-badge">
+            <img src="icones/php.png" alt="PHP" class="h-8 w-auto">
+          </div>
+        </div>
+        <div class="carte-img-wrapper">
+          <img src="images/SC_verniere-dev.PNG" alt="Aperçu du site Verniere-dev" class="carte-img">
+          <div class="carte-overlay">
+            <div class="carte-links">
+              <a href="https://github.com/PhanDev34000/verniere-dev" target="_blank" class="carte-lien">GitHub</a>
+            </div>
+          </div>
+        </div>
+        <div class="carte-body">
+          <p class="carte-description">Site vitrine de développeur Full Stack pour Stéphane Vernière.</p>
+          <div class="carte-tech">
+            <span>PHP</span><span>JavaScript</span>
+          </div>
+        </div>
+      </div>
+ 
+      <!-- Projet n°8 -->
+      <div class="carte-projet">
+        <div class="carte-header">
+          <span class="carte-numero">08</span>
+          <h2 class="carte-titre">Cook4U</h2>
+          <div class="carte-badge">
+            <img src="icones/php.png" alt="PHP" class="h-8 w-auto">
+          </div>
+        </div>
+        <div class="carte-img-wrapper">
+          <img src="images/SC_Cook4U.PNG" alt="Aperçu du site Cook4U" class="carte-img">
+          <div class="carte-overlay">
+            <div class="carte-links">
+              <a href="https://github.com/PhanDev34000/cook4u" target="_blank" class="carte-lien">GitHub</a>
+            </div>
+          </div>
+        </div>
+        <div class="carte-body">
+          <p class="carte-description">Plateforme de vente de plats "fait maison". <em>En cours de développement.</em></p>
+          <div class="carte-tech">
+            <span>PHP</span><span>JavaScript</span>
+          </div>
+        </div>
+      </div>
+ 
+      <!-- Projet n°9 -->
+      <div class="carte-projet">
+        <div class="carte-header">
+          <span class="carte-numero">09</span>
+          <h2 class="carte-titre">Corbin-Photo</h2>
+          <div class="carte-badge">
+            <img src="icones/wordpress.png" alt="WordPress" class="h-10 w-auto">
+          </div>
+        </div>
+        <div class="carte-img-wrapper">
+          <img src="images/SC_CorbinP.PNG" alt="Aperçu du site Corbin Photo" class="carte-img">
+          <div class="carte-overlay">
+            <div class="carte-links">
+              <a href="https://corbin-photo.fr/" target="_blank" class="carte-lien carte-lien--primary">Visiter →</a>
+            </div>
+          </div>
+        </div>
+        <div class="carte-body">
+          <p class="carte-description">Site vitrine pour une société de photo scolaire.</p>
+          <div class="carte-tech">
+            <span>WordPress</span><span>Divi Pro</span>
+          </div>
+        </div>
+      </div>
+ 
+      <!-- Projet n°10 -->
+      <div class="carte-projet">
+        <div class="carte-header">
+          <span class="carte-numero">10</span>
+          <h2 class="carte-titre">DogPix</h2>
+          <div class="carte-badge">
+            <img src="icones/wordpress.png" alt="WordPress" class="h-10 w-auto">
+          </div>
+        </div>
+        <div class="carte-img-wrapper">
+          <img src="images/SC_DogPix.PNG" alt="Aperçu du site DogPix" class="carte-img">
+          <div class="carte-overlay">
+            <div class="carte-links">
+              <a href="https://dogpix.fr/" target="_blank" class="carte-lien carte-lien--primary">Visiter →</a>
+            </div>
+          </div>
+        </div>
+        <div class="carte-body">
+          <p class="carte-description">Site vitrine pour un photographe canin.</p>
+          <div class="carte-tech">
+            <span>WordPress</span><span>Divi Pro</span>
+          </div>
+        </div>
+      </div>
+ 
+    </div><!-- fin .projet-grille -->
+  </div>
+</section>
       
 <!--   Softskill     -->    
       
