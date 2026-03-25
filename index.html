@@ -8,6 +8,204 @@
     <link href="style.css" rel="stylesheet">
     <link href="output.css" rel="stylesheet">
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+    <!-- CSS Portfolio — chargé après Tailwind pour avoir priorité -->
+    <style>
+      .projet-grille {
+        display: grid !important;
+        grid-template-columns: repeat(3, 1fr) !important;
+        gap: 1.5rem !important;
+        max-width: 1200px !important;
+        margin: 0 auto !important;
+        padding: 0 1rem !important;
+      }
+
+      .carte-projet {
+        background: white !important;
+        border: 3px solid #1F3A93 !important;
+        border-radius: 12px !important;
+        overflow: hidden !important;
+        display: flex !important;
+        flex-direction: column !important;
+        transition: transform 0.3s ease, box-shadow 0.3s ease !important;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.15) !important;
+        width: 100% !important;
+      }
+
+      .carte-projet:hover {
+        transform: translateY(-6px) !important;
+        box-shadow: 0 12px 24px rgba(31,58,147,0.25) !important;
+      }
+
+      .carte-header {
+        display: flex !important;
+        align-items: center !important;
+        gap: 0.75rem !important;
+        padding: 0.75rem 1rem 0.5rem !important;
+        border-bottom: 1px solid #e5e9f5 !important;
+      }
+
+      .carte-numero {
+        font-family: 'Oxygen Mono', monospace !important;
+        font-size: 0.75rem !important;
+        color: #1F3A93 !important;
+        opacity: 0.6 !important;
+        flex-shrink: 0 !important;
+      }
+
+      .carte-titre {
+        font-family: 'Electrolize', sans-serif !important;
+        font-size: 0.9rem !important;
+        font-weight: 600 !important;
+        color: #1F3A93 !important;
+        flex: 1 !important;
+        text-align: left !important;
+        margin: 0 !important;
+      }
+
+      .carte-badge {
+        flex-shrink: 0 !important;
+      }
+
+      .carte-badge-img {
+        height: 28px !important;
+        width: auto !important;
+      }
+
+      .carte-img-wrapper {
+        position: relative !important;
+        overflow: hidden !important;
+        aspect-ratio: 16 / 9 !important;
+      }
+
+      .carte-img {
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: cover !important;
+        display: block !important;
+        transition: transform 0.4s ease !important;
+        max-width: none !important;
+        border-radius: 0 !important;
+        margin: 0 !important;
+      }
+
+      .carte-projet:hover .carte-img {
+        transform: scale(1.04) !important;
+      }
+
+      .carte-overlay {
+        position: absolute !important;
+        top: 0 !important;
+        left: 0 !important;
+        right: 0 !important;
+        bottom: 0 !important;
+        background: rgba(31,58,147,0.85) !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        opacity: 0 !important;
+        transition: opacity 0.3s ease !important;
+      }
+
+      .carte-projet:hover .carte-overlay {
+        opacity: 1 !important;
+      }
+
+      .carte-links {
+        display: flex !important;
+        flex-wrap: wrap !important;
+        gap: 0.5rem !important;
+        justify-content: center !important;
+        padding: 0.5rem !important;
+      }
+
+      .carte-lien {
+        padding: 0.4rem 0.9rem !important;
+        border: 2px solid white !important;
+        border-radius: 20px !important;
+        color: white !important;
+        font-size: 0.8rem !important;
+        font-family: 'Electrolize', sans-serif !important;
+        text-decoration: none !important;
+        transition: background 0.2s ease !important;
+        background: transparent !important;
+      }
+
+      .carte-lien:hover {
+        background: rgba(255,255,255,0.2) !important;
+      }
+
+      .carte-lien--primary {
+        background: white !important;
+        color: #1F3A93 !important;
+      }
+
+      .carte-lien--primary:hover {
+        background: #e8ecf8 !important;
+        color: #1F3A93 !important;
+      }
+
+      .carte-body {
+        padding: 0.75rem 1rem 1rem !important;
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 0.5rem !important;
+        flex: 1 !important;
+      }
+
+      .carte-description {
+        font-size: 0.82rem !important;
+        color: #444 !important;
+        line-height: 1.5 !important;
+        margin: 0 !important;
+        text-align: left !important;
+      }
+
+      .carte-tech {
+        display: flex !important;
+        flex-wrap: wrap !important;
+        gap: 0.4rem !important;
+        margin-top: auto !important;
+        padding-top: 0.5rem !important;
+      }
+
+      .carte-tech span {
+        font-size: 0.7rem !important;
+        font-family: 'Oxygen Mono', monospace !important;
+        background: #eef1fb !important;
+        color: #1F3A93 !important;
+        border-radius: 4px !important;
+        padding: 0.2rem 0.5rem !important;
+        border: 1px solid #c5cff0 !important;
+      }
+
+      /* Dark mode cartes */
+      .dark .carte-projet {
+        background: #1a1a2e !important;
+        border-color: rgb(148,147,147) !important;
+      }
+      .dark .carte-titre { color: #93b4ff !important; }
+      .dark .carte-numero { color: #93b4ff !important; }
+      .dark .carte-description { color: #ccc !important; }
+      .dark .carte-tech span {
+        background: #2a2a4a !important;
+        color: #93b4ff !important;
+        border-color: #3a3a6a !important;
+      }
+      .dark .carte-header { border-bottom-color: #2a2a4a !important; }
+
+      /* Responsive */
+      @media screen and (max-width: 1024px) {
+        .projet-grille {
+          grid-template-columns: repeat(2, 1fr) !important;
+        }
+      }
+      @media screen and (max-width: 600px) {
+        .projet-grille {
+          grid-template-columns: 1fr !important;
+        }
+      }
+    </style>
     <title>Portefolio SV</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
