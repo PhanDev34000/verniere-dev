@@ -11,105 +11,270 @@ form {
   background-color: #93b4ff;
   margin-top: -3rem;
 }
+
 section {
-    padding-top: 2.5rem; 
-  }  
+  padding-top: 2.5rem; 
+}  
 
-  .contact:hover {
-    transform: scale(1.1);
-    transition: transform 0.3s ease;
-  }
+.contact:hover {
+  transform: scale(1.1);
+  transition: transform 0.3s ease;
+}
 
-  input:focus, textarea:focus {
-    border: 3px solid black; /* Cadre noir */
-    outline: auto; 
-  }
-  
-  #bouton:hover {
-    border: 2px solid black;
-  }
+input:focus, textarea:focus {
+  border: 3px solid black;
+  outline: auto; 
+}
 
- #theme-toggle {
+#bouton:hover {
+  border: 2px solid black;
+}
+
+#theme-toggle {
   background-color: #93b4ff;
- }
+}
 
-/* Bouton Switch sous vidéo   */
-  .switch {
-    position: relative;
-    display: inline-block;
-    width: 60px;
-    height: 34px;
-    margin-bottom: 2rem;
-  }
-  
-  .switch input {
-    opacity: 0;
-    width: 0;
-    height: 0;
-  }
-  
-  .slider {
-    position: absolute;
-    cursor: pointer;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: white;
-    transition: .4s;
-  }
-  
-  .slider:before {
-    position: absolute;
-    content: "";
-    height: 26px;
-    width: 26px;
-    left: 4px;
-    bottom: 4px;
-    background-color: #1F3A93;
-    transition: .4s;
-  }
-  
-  input:checked + .slider {
-    background-color: white;
-  }
-  
-  input:focus + .slider {
-    box-shadow: 0 0 1px white;
-  }
-  
-  input:checked + .slider:before {
-    transform: translateX(26px);
-  }
-  
-  .slider.round {
-    border-radius: 34px;
-  }
-  
-  .slider.round:before {
-    border-radius: 50%;
-  }
+/* Bouton Switch sous vidéo */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+  margin-bottom: 2rem;
+}
 
-  #cadreV {
-    border: 3px solid #1F3A93;
-  }
-  
-  #cadreF {
-    border: 3px solid white;
-  }
-  
-  #cadre, #cadre2, #cadre3, #cadre4, #cadre5, #cadre6, #cadre7, #cadre8, #cadre9, #cadre10, #cadre11 {
-    border: 3px solid #1F3A93;
-    border-radius: 10px;
-  }
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
 
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: white;
+  transition: .4s;
+}
 
-/* Styles pour le DARK MODE*/
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: #1F3A93;
+  transition: .4s;
+}
 
+input:checked + .slider {
+  background-color: white;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px white;
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+#cadreV {
+  border: 3px solid #1F3A93;
+}
+
+#cadreF {
+  border: 3px solid white;
+}
+
+#cadre, #cadre2, #cadre3, #cadre8, #cadre9, #cadre10, #cadre11 {
+  border: 3px solid #1F3A93;
+  border-radius: 10px;
+}
+
+/* =============================================
+   SECTION PORTFOLIO — Grille 3 colonnes
+   ============================================= */
+
+.projet-grille {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.carte-projet {
+  background: white;
+  border: 3px solid #1F3A93;
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.carte-projet:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 24px rgba(31, 58, 147, 0.25);
+}
+
+.carte-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem 1rem 0.5rem;
+  border-bottom: 1px solid #e5e9f5;
+}
+
+.carte-numero {
+  font-family: 'Oxygen Mono', monospace;
+  font-size: 0.75rem;
+  color: #1F3A93;
+  opacity: 0.5;
+  flex-shrink: 0;
+}
+
+.carte-titre {
+  font-family: 'Electrolize', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #1F3A93;
+  flex: 1;
+  text-align: left;
+  margin: 0;
+}
+
+.carte-badge {
+  flex-shrink: 0;
+}
+
+.carte-badge-img {
+  height: 28px;
+  width: auto;
+}
+
+.carte-img-wrapper {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 16 / 9;
+}
+
+.carte-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.carte-projet:hover .carte-img {
+  transform: scale(1.04);
+}
+
+.carte-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(31, 58, 147, 0.82);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.carte-projet:hover .carte-overlay {
+  opacity: 1;
+}
+
+.carte-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: center;
+  padding: 0.5rem;
+}
+
+.carte-lien {
+  padding: 0.4rem 0.9rem;
+  border: 2px solid white;
+  border-radius: 20px;
+  color: white;
+  font-size: 0.8rem;
+  font-family: 'Electrolize', sans-serif;
+  text-decoration: none;
+  transition: background 0.2s ease;
+}
+
+.carte-lien:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.carte-lien--primary {
+  background: white;
+  color: #1F3A93;
+}
+
+.carte-lien--primary:hover {
+  background: #e8ecf8;
+  color: #1F3A93;
+}
+
+.carte-body {
+  padding: 0.75rem 1rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  flex: 1;
+}
+
+.carte-description {
+  font-size: 0.82rem;
+  color: #444;
+  line-height: 1.5;
+  margin: 0;
+  text-align: left;
+}
+
+.carte-tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: auto;
+}
+
+.carte-tech span {
+  font-size: 0.7rem;
+  font-family: 'Oxygen Mono', monospace;
+  background: #eef1fb;
+  color: #1F3A93;
+  border-radius: 4px;
+  padding: 0.2rem 0.5rem;
+  border: 1px solid #c5cff0;
+}
+
+/* =============================================
+   DARK MODE
+   ============================================= */
 
 .dark h1, .dark h2 {
   color: white;
 }
+
 .dark h4, .dark h5, .dark a {
   color: black;
 }
@@ -146,7 +311,9 @@ section {
   line-height: 4rem;
 }
 
-.dark #cadre, .dark #cadre2, .dark #cadre3, .dark #cadre4, .dark #cadre5, .dark #cadre6, .dark #cadre7, .dark #cadre8, .dark #cadre9, .dark #cadre10, .dark #cadre11, .dark #cadreV, .dark #cadreF {
+.dark #cadre, .dark #cadre2, .dark #cadre3,
+.dark #cadre8, .dark #cadre9, .dark #cadre10, .dark #cadre11,
+.dark #cadreV, .dark #cadreF {
   border: 3px solid rgb(148, 147, 147);
 }
 
@@ -159,306 +326,122 @@ section {
 }
 
 .dark #message-container {
-  color:white;
-}
-
-/*  Media Screen   */
-@media screen and (max-width: 780px) {
-  #parcours {
-    padding: 0 15px; /* Ajoute un peu de padding autour du contenu */
-  }
-
-  /* Assurez-vous que la largeur maximale du cadre s'ajuste bien à l'écran */
-  #cadre3 {
-    padding: 12px;
-    max-width: 100%; /* Rend le cadre 100% de la largeur du parent */
-  }
-
-  /* Faire en sorte que les éléments se placent les uns sous les autres */
-  #cadre3 .flex {
-    flex-direction: column; /* Empile les éléments en colonne sur petit écran */
-    gap: 20px; /* Ajoute un espace vertical entre chaque élément */
-  }
-
-  /* Redimensionner les images pour éviter qu'elles ne soient trop grandes */
-  #cadre3 img {
-    width: 50px;
-    height: auto; /* Laisser l'image s'adapter proportionnellement */
-  }
-
-  #cadre3 img[alt="Formation Développeur Web"] {
-    width: 100px; /* Ajuster la largeur à 100px */
-    height: auto; /* Garder la proportion */
-  }
-  #cadre3 img[alt="Développeur Web Jr"] {
-    width: 100px; /* Ajuster la largeur à 100px */
-    height: auto; /* Garder la proportion */
-  }
-
-  /* Centrer les titres sur petit écran */
-  #cadre3 h4, #cadre3 h5 {
-    text-align: center;
-  }
-
-    /* Cibler spécifiquement le conteneur parent des deux cadres */
-    .flex-cadre {
-      flex-direction: column; /* Aligner les éléments verticalement */
-      
-    }
-  
-    #cadre {
-      margin: 1rem auto;
-      max-width: 78%;    
-    }
-
-    #cadre img {
-      width: 30px;
-      height: auto;
-    }
-  
-    #cadre2 {     
-      margin: 0 auto; /* Centrer les cadres horizontalement */      
-      width: 100%; /* Assurer que les cadres occupent toute la largeur disponible */
-    }  
-
-    /* Réglage des images à l'intérieur des cadres */
-  #cadre2 img {
-    width: 30px; /* Ajuste la taille des images si nécessaire */
-    height: auto; /* Maintient les proportions des images */
-  }
-
-    /* Assure que le texte est centré dans les cadres */
-  #cadre h2, #cadre h3, #cadre h4, #cadre2 h2, #cadre2 h4 {
-    text-align: center; /* Centre le texte */
-  }
-
-   /* Conteneur de la grille des projets */
-   #portefolio .flex {
-    flex-wrap: wrap; /* Permet aux projets de passer à la ligne */
-    justify-content: center; /* Centre les projets sur petit écran */
-  }
-
-  /* Ajuste la largeur des projets pour avoir 2 par ligne */
-  #portefolio #cadre4,
-  #portefolio #cadre5,
-  #portefolio #cadre6,
-  #portefolio #cadre7 {
-    width: calc(50% - 1rem); /* 50% de la largeur avec un petit espace entre les projets */
-    margin-bottom: 20px; /* Ajoute un espace entre les lignes de projets */
-  }
-
-  /* Optionnel : réduire la taille des images pour s'adapter à la nouvelle disposition */
-  #portefolio img {
-    max-width: 100%; /* S'assure que les images ne dépassent pas leur conteneur */
-    height: auto; /* Garde les proportions de l'image */
-  }
-
-  footer h5, footer h4 {
-    font-size: 0.75rem; /* Taille plus petite pour les petits écrans */
-  }
-
-#cadreF {
-  padding: 6px;
-}
-.dark .navigation li {
-  background: lightgray;
-}
-
-/* --- Grille Portfolio --- */
-.projet-grille {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1.5rem;
-  max-width: 1200px;
-  margin: 2rem auto 0;
-  padding: 0 0.5rem;
-}
- 
-/* Carte */
-.carte-projet {
-  background: white;
-  border: 3px solid #1F3A93;
-  border-radius: 12px;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
-}
- 
-.carte-projet:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 12px 24px rgba(31, 58, 147, 0.25);
-}
- 
-/* Header de la carte */
-.carte-header {
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-  padding: 0.75rem 1rem 0.5rem;
-  border-bottom: 1px solid #e5e9f5;
-}
- 
-.carte-numero {
-  font-family: 'Oxygen Mono', monospace;
-  font-size: 0.75rem;
-  color: #1F3A93;
-  opacity: 0.5;
-  flex-shrink: 0;
-}
- 
-.carte-titre {
-  font-family: 'Electrolize', sans-serif;
-  font-size: 0.95rem;
-  font-weight: 600;
-  color: #1F3A93;
-  flex: 1;
-  text-align: left;
-  margin: 0;
-}
- 
-.carte-badge {
-  flex-shrink: 0;
-}
- 
-/* Image avec overlay au hover */
-.carte-img-wrapper {
-  position: relative;
-  overflow: hidden;
-  aspect-ratio: 16/9;
-}
- 
-.carte-img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-  transition: transform 0.4s ease;
-}
- 
-.carte-projet:hover .carte-img {
-  transform: scale(1.04);
-}
- 
-.carte-overlay {
-  position: absolute;
-  inset: 0;
-  background: rgba(31, 58, 147, 0.82);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-}
- 
-.carte-projet:hover .carte-overlay {
-  opacity: 1;
-}
- 
-.carte-links {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-  justify-content: center;
-  padding: 0.5rem;
-}
- 
-.carte-lien {
-  padding: 0.4rem 0.9rem;
-  border: 2px solid white;
-  border-radius: 20px;
-  color: white !important;
-  font-size: 0.8rem;
-  font-family: 'Electrolize', sans-serif;
-  text-decoration: none;
-  transition: background 0.2s ease;
-}
- 
-.carte-lien:hover {
-  background: rgba(255,255,255,0.2);
-}
- 
-.carte-lien--primary {
-  background: white;
-  color: #1F3A93 !important;
-}
- 
-.carte-lien--primary:hover {
-  background: #e8ecf8;
-}
- 
-/* Corps de la carte */
-.carte-body {
-  padding: 0.75rem 1rem 1rem;
-  display: flex;
-  flex-direction: column;
-  gap: 0.6rem;
-  flex: 1;
-}
- 
-.carte-description {
-  font-size: 0.82rem;
-  color: #444;
-  line-height: 1.5;
-  margin: 0;
-}
- 
-.carte-tech {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.4rem;
-  margin-top: auto;
-}
- 
-.carte-tech span {
-  font-size: 0.7rem;
-  font-family: 'Oxygen Mono', monospace;
-  background: #eef1fb;
-  color: #1F3A93;
-  border-radius: 4px;
-  padding: 0.2rem 0.5rem;
-  border: 1px solid #c5cff0;
-}
- 
-/* Dark mode */
-.dark .carte-projet {
-  background: #1a1a2e;
-  border-color: rgb(148,147,147);
-}
- 
-.dark .carte-titre {
   color: white;
 }
- 
+
+/* Dark mode — cartes portfolio */
+.dark .carte-projet {
+  background: #1a1a2e;
+  border-color: rgb(148, 147, 147);
+}
+
+.dark .carte-titre {
+  color: #93b4ff;
+}
+
 .dark .carte-numero {
   color: #93b4ff;
 }
- 
+
 .dark .carte-description {
   color: #ccc;
 }
- 
+
 .dark .carte-tech span {
   background: #2a2a4a;
   color: #93b4ff;
   border-color: #3a3a6a;
 }
- 
-/* Responsive : 2 colonnes sur tablette */
+
+.dark .carte-header {
+  border-bottom-color: #2a2a4a;
+}
+
+/* =============================================
+   RESPONSIVE
+   ============================================= */
+
 @media screen and (max-width: 1024px) {
   .projet-grille {
     grid-template-columns: repeat(2, 1fr);
   }
 }
- 
-/* Responsive : 1 colonne sur mobile */
-@media screen and (max-width: 600px) {
+
+@media screen and (max-width: 780px) {
+  #parcours {
+    padding: 0 15px;
+  }
+
+  #cadre3 {
+    padding: 12px;
+    max-width: 100%;
+  }
+
+  #cadre3 .flex {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  #cadre3 img {
+    width: 50px;
+    height: auto;
+  }
+
+  #cadre3 img[alt="Formation Développeur Web"] {
+    width: 100px;
+    height: auto;
+  }
+
+  #cadre3 img[alt="Développeur Web Jr"] {
+    width: 100px;
+    height: auto;
+  }
+
+  #cadre3 h4, #cadre3 h5 {
+    text-align: center;
+  }
+
+  .flex-cadre {
+    flex-direction: column;
+  }
+
+  #cadre {
+    margin: 1rem auto;
+    max-width: 78%;    
+  }
+
+  #cadre img {
+    width: 30px;
+    height: auto;
+  }
+
+  #cadre2 {     
+    margin: 0 auto;
+    width: 100%;
+  }  
+
+  #cadre2 img {
+    width: 30px;
+    height: auto;
+  }
+
+  #cadre h2, #cadre h3, #cadre h4, #cadre2 h2, #cadre2 h4 {
+    text-align: center;
+  }
+
   .projet-grille {
     grid-template-columns: 1fr;
   }
-}
- 
 
-}
+  footer h5, footer h4 {
+    font-size: 0.75rem;
+  }
 
+  #cadreF {
+    padding: 6px;
+  }
+
+  .dark .navigation li {
+    background: lightgray;
+  }
+}
