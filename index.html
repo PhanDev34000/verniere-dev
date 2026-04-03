@@ -12,14 +12,14 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Electrolize&family=Oxygen+Mono&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
-
+ 
     <!-- CSS Portfolio — chargé après Tailwind pour avoir priorité absolue -->
     <style>
-
+ 
       /* =============================================
          TITRES DE SECTION — soulignement dégradé
          ============================================= */
-
+ 
       .titre-section {
         font-family: 'Nunito', sans-serif !important;
         font-weight: 800 !important;
@@ -30,7 +30,7 @@
         padding-bottom: 0.4rem !important;
         margin-bottom: 2rem !important;
       }
-
+ 
       .titre-section::after {
         content: '' !important;
         position: absolute !important;
@@ -41,7 +41,7 @@
         border-radius: 4px !important;
         background: linear-gradient(to right, #1F3A93, #93b4ff) !important;
       }
-
+ 
       .titre-hero {
         font-family: 'Nunito', sans-serif !important;
         font-weight: 800 !important;
@@ -52,7 +52,7 @@
         padding-bottom: 0.4rem !important;
         margin-bottom: 0.5rem !important;
       }
-
+ 
       .titre-hero::after {
         content: '' !important;
         position: absolute !important;
@@ -64,27 +64,27 @@
         border-radius: 4px !important;
         background: linear-gradient(to right, #1F3A93, #93b4ff, #1F3A93) !important;
       }
-
+ 
       .sous-titre-hero {
         font-family: 'Nunito', sans-serif !important;
         font-weight: 600 !important;
         font-size: 1.1rem !important;
-        color: #1F3A93 !important;
+        color: #555 !important;
         letter-spacing: 0.05em !important;
       }
-
+ 
       .dark .titre-section { color: white !important; }
       .dark .titre-hero { color: white !important; }
       .dark .sous-titre-hero { color: #aaa !important; }
-
+ 
       /* =============================================
          CATEGORIES PORTFOLIO
          ============================================= */
-
+ 
       .portfolio-categorie {
         margin-bottom: 3rem !important;
       }
-
+ 
       .categorie-header {
         display: flex !important;
         align-items: center !important;
@@ -92,17 +92,17 @@
         margin-bottom: 1.5rem !important;
         position: relative !important;
       }
-
+ 
       .categorie-ligne {
         flex: 1 !important;
         height: 2px !important;
         background: linear-gradient(to right, #1F3A93, transparent) !important;
       }
-
+ 
       .categorie-ligne--right {
         background: linear-gradient(to left, #1F3A93, transparent) !important;
       }
-
+ 
       .categorie-label {
         display: flex !important;
         align-items: center !important;
@@ -118,16 +118,16 @@
         border-radius: 30px !important;
         white-space: nowrap !important;
       }
-
+ 
       .categorie-label img {
         height: 22px !important;
         width: auto !important;
       }
-
+ 
       /* =============================================
          GRILLE PROJETS
          ============================================= */
-
+ 
       .projet-grille {
         display: grid !important;
         grid-template-columns: repeat(3, 1fr) !important;
@@ -136,12 +136,12 @@
         margin: 0 auto !important;
         padding: 0 !important;
       }
-
+ 
       .projet-grille--2col {
         grid-template-columns: repeat(2, 1fr) !important;
         max-width: 800px !important;
       }
-
+ 
       .carte-projet {
         background: white !important;
         border: 3px solid #1F3A93 !important;
@@ -153,12 +153,12 @@
         box-shadow: 0 4px 8px rgba(0,0,0,0.15) !important;
         width: 100% !important;
       }
-
+ 
       .carte-projet:hover {
         transform: translateY(-6px) !important;
         box-shadow: 0 12px 24px rgba(31,58,147,0.25) !important;
       }
-
+ 
       .carte-header {
         display: flex !important;
         align-items: center !important;
@@ -166,7 +166,7 @@
         padding: 0.75rem 1rem 0.5rem !important;
         border-bottom: 1px solid #e5e9f5 !important;
       }
-
+ 
       .carte-numero {
         font-family: 'Oxygen Mono', monospace !important;
         font-size: 0.75rem !important;
@@ -174,7 +174,7 @@
         opacity: 0.5 !important;
         flex-shrink: 0 !important;
       }
-
+ 
       .carte-titre {
         font-family: 'Nunito', sans-serif !important;
         font-size: 0.95rem !important;
@@ -185,20 +185,20 @@
         margin: 0 !important;
         line-height: 1.3 !important;
       }
-
+ 
       .carte-badge { flex-shrink: 0 !important; }
-
+ 
       .carte-badge-img {
         height: 28px !important;
         width: auto !important;
       }
-
+ 
       .carte-img-wrapper {
         position: relative !important;
         overflow: hidden !important;
         aspect-ratio: 16 / 9 !important;
       }
-
+ 
       .carte-img {
         width: 100% !important;
         height: 100% !important;
@@ -209,9 +209,9 @@
         border-radius: 0 !important;
         margin: 0 !important;
       }
-
+ 
       .carte-projet:hover .carte-img { transform: scale(1.04) !important; }
-
+ 
       .carte-overlay {
         position: absolute !important;
         top: 0 !important; left: 0 !important;
@@ -223,9 +223,9 @@
         opacity: 0 !important;
         transition: opacity 0.3s ease !important;
       }
-
+ 
       .carte-projet:hover .carte-overlay { opacity: 1 !important; }
-
+ 
       .carte-links {
         display: flex !important;
         flex-wrap: wrap !important;
@@ -233,7 +233,7 @@
         justify-content: center !important;
         padding: 0.5rem !important;
       }
-
+ 
       .carte-lien {
         padding: 0.4rem 0.9rem !important;
         border: 2px solid white !important;
@@ -246,19 +246,19 @@
         transition: background 0.2s ease !important;
         background: transparent !important;
       }
-
+ 
       .carte-lien:hover { background: rgba(255,255,255,0.2) !important; }
-
+ 
       .carte-lien--primary {
         background: white !important;
         color: #1F3A93 !important;
       }
-
+ 
       .carte-lien--primary:hover {
         background: #e8ecf8 !important;
         color: #1F3A93 !important;
       }
-
+ 
       .carte-body {
         padding: 0.75rem 1rem 1rem !important;
         display: flex !important;
@@ -266,7 +266,7 @@
         gap: 0.5rem !important;
         flex: 1 !important;
       }
-
+ 
       .carte-description {
         font-size: 0.82rem !important;
         color: #444 !important;
@@ -275,7 +275,7 @@
         text-align: left !important;
         font-family: 'Nunito', sans-serif !important;
       }
-
+ 
       .carte-tech {
         display: flex !important;
         flex-wrap: wrap !important;
@@ -283,7 +283,7 @@
         margin-top: auto !important;
         padding-top: 0.6rem !important;
       }
-
+ 
       .carte-tech span {
         font-size: 0.72rem !important;
         font-family: 'Nunito', sans-serif !important;
@@ -294,11 +294,11 @@
         padding: 0.2rem 0.65rem !important;
         border: 1px solid #c5cff0 !important;
       }
-
+ 
       /* =============================================
          FORMULAIRE DE CONTACT STYLISÉ
          ============================================= */
-
+ 
       .contact-wrapper {
         max-width: 860px !important;
         margin: 2.5rem auto 0 !important;
@@ -308,7 +308,7 @@
         overflow: hidden !important;
         box-shadow: 0 8px 32px rgba(31,58,147,0.18) !important;
       }
-
+ 
       .contact-info-panel {
         background: #1F3A93 !important;
         color: white !important;
@@ -318,7 +318,7 @@
         gap: 2rem !important;
         justify-content: center !important;
       }
-
+ 
       .contact-info-panel h3 {
         font-family: 'Nunito', sans-serif !important;
         font-size: 1.3rem !important;
@@ -327,7 +327,7 @@
         margin: 0 0 0.5rem 0 !important;
         line-height: 1.3 !important;
       }
-
+ 
       .contact-info-panel p {
         font-family: 'Nunito', sans-serif !important;
         font-size: 0.85rem !important;
@@ -335,38 +335,38 @@
         margin: 0 !important;
         line-height: 1.6 !important;
       }
-
+ 
       .contact-info-item {
         display: flex !important;
         align-items: center !important;
         gap: 0.75rem !important;
       }
-
+ 
       .contact-info-item img {
         width: 20px !important;
         height: 20px !important;
         filter: brightness(0) invert(1) !important;
         flex-shrink: 0 !important;
       }
-
+ 
       .contact-info-item span {
         font-family: 'Nunito', sans-serif !important;
         font-size: 0.82rem !important;
         color: rgba(255,255,255,0.9) !important;
       }
-
+ 
       .contact-info-divider {
         width: 40px !important;
         height: 2px !important;
         background: rgba(255,255,255,0.3) !important;
         border-radius: 2px !important;
       }
-
+ 
       .contact-form-panel {
         background: white !important;
         padding: 2.5rem 2rem !important;
       }
-
+ 
       .contact-form-panel form {
         background: transparent !important;
         border: none !important;
@@ -375,21 +375,21 @@
         max-width: none !important;
         border-radius: 0 !important;
       }
-
+ 
       .contact-form-row {
         display: grid !important;
         grid-template-columns: 1fr 1fr !important;
         gap: 1rem !important;
         margin-bottom: 1rem !important;
       }
-
+ 
       .contact-field {
         display: flex !important;
         flex-direction: column !important;
         gap: 0.3rem !important;
         margin-bottom: 1rem !important;
       }
-
+ 
       .contact-field label {
         font-family: 'Nunito', sans-serif !important;
         font-size: 0.78rem !important;
@@ -398,7 +398,7 @@
         text-transform: uppercase !important;
         letter-spacing: 0.05em !important;
       }
-
+ 
       .contact-field input,
       .contact-field textarea {
         font-family: 'Nunito', sans-serif !important;
@@ -413,19 +413,19 @@
         width: 100% !important;
         box-sizing: border-box !important;
       }
-
+ 
       .contact-field input:focus,
       .contact-field textarea:focus {
         border-color: #1F3A93 !important;
         background: white !important;
         box-shadow: 0 0 0 3px rgba(31,58,147,0.08) !important;
       }
-
+ 
       .contact-field textarea {
         resize: vertical !important;
         min-height: 120px !important;
       }
-
+ 
       .contact-submit {
         display: flex !important;
         justify-content: flex-end !important;
@@ -433,7 +433,7 @@
         align-items: center !important;
         gap: 1rem !important;
       }
-
+ 
       .contact-submit input[type="submit"] {
         font-family: 'Nunito', sans-serif !important;
         font-weight: 700 !important;
@@ -448,12 +448,12 @@
         margin: 0 !important;
         width: auto !important;
       }
-
+ 
       .contact-submit input[type="submit"]:hover {
         background: #162d7a !important;
         transform: translateY(-2px) !important;
       }
-
+ 
       /* Dark mode */
       .dark .carte-projet { background: #1a1a2e !important; border-color: rgb(148,147,147) !important; }
       .dark .carte-titre { color: #93b4ff !important; }
@@ -471,11 +471,11 @@
       .dark .contact-field textarea { background: #2a2a4a !important; border-color: #3a3a6a !important; color: #eee !important; }
       .dark .contact-field input:focus,
       .dark .contact-field textarea:focus { border-color: #93b4ff !important; }
-
+ 
       /* =============================================
          BANDEAU CONTACT & LIENS
          ============================================= */
-
+ 
       .bandeau-cl {
         display: grid !important;
         grid-template-columns: 1fr 1fr !important;
@@ -486,7 +486,7 @@
         overflow: hidden !important;
         box-shadow: 0 8px 32px rgba(31,58,147,0.18) !important;
       }
-
+ 
       /* Panneau gauche — Contact */
       .bandeau-contact {
         background: #1F3A93 !important;
@@ -497,7 +497,7 @@
         justify-content: center !important;
         align-items: center !important;
       }
-
+ 
       .bandeau-contact-titre {
         font-family: 'Nunito', sans-serif !important;
         font-size: 1.1rem !important;
@@ -507,33 +507,33 @@
         letter-spacing: 0.04em !important;
         text-transform: uppercase !important;
       }
-
+ 
       .bandeau-contact-item {
         display: flex !important;
         align-items: center !important;
         gap: 0.75rem !important;
       }
-
+ 
       .bandeau-contact-item img {
         width: 18px !important;
         height: 18px !important;
         filter: brightness(0) invert(1) !important;
         flex-shrink: 0 !important;
       }
-
+ 
       .bandeau-contact-item span {
         font-family: 'Nunito', sans-serif !important;
         font-size: 0.85rem !important;
         color: rgba(255,255,255,0.9) !important;
       }
-
+ 
       .bandeau-divider {
         width: 36px !important;
         height: 2px !important;
         background: rgba(255,255,255,0.25) !important;
         border-radius: 2px !important;
       }
-
+ 
       /* Panneau droit — Liens */
       .bandeau-liens {
         background: white !important;
@@ -544,7 +544,7 @@
         justify-content: center !important;
         align-items: center !important;
       }
-
+ 
       .bandeau-liens-titre {
         font-family: 'Nunito', sans-serif !important;
         font-size: 1.1rem !important;
@@ -555,14 +555,14 @@
         text-transform: uppercase !important;
         text-align: center !important;
       }
-
+ 
       .bandeau-liens-grid {
         display: flex !important;
         gap: 1rem !important;
         flex-wrap: wrap !important;
         justify-content: center !important;
       }
-
+ 
       .bandeau-lien-item {
         display: flex !important;
         align-items: center !important;
@@ -573,18 +573,18 @@
         text-decoration: none !important;
         transition: background 0.2s ease, transform 0.2s ease !important;
       }
-
+ 
       .bandeau-lien-item:hover {
         background: #1F3A93 !important;
         transform: translateY(-2px) !important;
       }
-
+ 
       .bandeau-lien-item img {
         width: 20px !important;
         height: 20px !important;
         transition: filter 0.2s ease !important;
       }
-
+ 
       .bandeau-lien-item span {
         font-family: 'Nunito', sans-serif !important;
         font-size: 0.82rem !important;
@@ -592,15 +592,15 @@
         color: #1F3A93 !important;
         transition: color 0.2s ease !important;
       }
-
+ 
       .bandeau-lien-item:hover span {
         color: white !important;
       }
-
+ 
       .bandeau-lien-item:hover img {
         filter: brightness(0) invert(1) !important;
       }
-
+ 
       /* Dark mode bandeau */
       .dark .bandeau-liens { background: #1a1a2e !important; }
       .dark .bandeau-liens-titre { color: #93b4ff !important; }
@@ -608,11 +608,11 @@
       .dark .bandeau-lien-item span { color: #93b4ff !important; }
       .dark .bandeau-lien-item:hover { background: #93b4ff !important; }
       .dark .bandeau-lien-item:hover span { color: #1a1a2e !important; }
-
+ 
       /* =============================================
          TIMELINE PARCOURS
          ============================================= */
-
+ 
       .timeline-wrapper {
         max-width: 1000px !important;
         margin: 0 auto 2rem !important;
@@ -621,7 +621,7 @@
         border-radius: 16px !important;
         box-shadow: 0 8px 32px rgba(31,58,147,0.12) !important;
       }
-
+ 
       .timeline-titre {
         font-family: 'Nunito', sans-serif !important;
         font-size: 2rem !important;
@@ -633,7 +633,7 @@
         position: relative !important;
         padding-bottom: 0.4rem !important;
       }
-
+ 
       .timeline-titre::after {
         content: '' !important;
         position: absolute !important;
@@ -645,7 +645,7 @@
         border-radius: 4px !important;
         background: linear-gradient(to right, #1F3A93, #93b4ff, #1F3A93) !important;
       }
-
+ 
       .timeline {
         position: relative !important;
         display: flex !important;
@@ -653,7 +653,7 @@
         align-items: flex-start !important;
         padding: 0 1rem !important;
       }
-
+ 
       /* Ligne horizontale centrale */
       .timeline::before {
         content: '' !important;
@@ -666,7 +666,7 @@
         border-radius: 3px !important;
         z-index: 0 !important;
       }
-
+ 
       .timeline-item {
         display: flex !important;
         flex-direction: column !important;
@@ -675,7 +675,7 @@
         position: relative !important;
         z-index: 1 !important;
       }
-
+ 
       /* Point sur la ligne */
       .timeline-point {
         width: 56px !important;
@@ -691,28 +691,28 @@
         transition: transform 0.25s ease, box-shadow 0.25s ease !important;
         overflow: hidden !important;
       }
-
+ 
       .timeline-item:hover .timeline-point {
         transform: scale(1.12) !important;
         box-shadow: 0 6px 20px rgba(31,58,147,0.35) !important;
       }
-
+ 
       .timeline-point img {
         width: 34px !important;
         height: 34px !important;
         object-fit: contain !important;
       }
-
+ 
       /* Point spécial pour le dernier (disponible) */
       .timeline-item--actif .timeline-point {
         background: #1F3A93 !important;
         border-color: #1F3A93 !important;
       }
-
+ 
       .timeline-item--actif .timeline-point img {
         filter: brightness(0) invert(1) !important;
       }
-
+ 
       .timeline-label {
         font-family: 'Nunito', sans-serif !important;
         font-size: 0.8rem !important;
@@ -723,7 +723,7 @@
         margin-bottom: 0.3rem !important;
         max-width: 120px !important;
       }
-
+ 
       .timeline-date {
         font-family: 'Oxygen Mono', monospace !important;
         font-size: 0.68rem !important;
@@ -731,7 +731,7 @@
         text-align: center !important;
         font-weight: 600 !important;
       }
-
+ 
       .timeline-item--actif .timeline-date {
         color: #1F3A93 !important;
         font-weight: 700 !important;
@@ -739,7 +739,7 @@
         padding: 0.15rem 0.5rem !important;
         border-radius: 20px !important;
       }
-
+ 
       /* Dark mode timeline */
       .dark .timeline-wrapper { background: #1a1a2e !important; box-shadow: 0 8px 32px rgba(0,0,0,0.3) !important; }
       .dark .timeline-titre { color: #93b4ff !important; }
@@ -747,7 +747,7 @@
       .dark .timeline-label { color: #93b4ff !important; }
       .dark .timeline::before { background: linear-gradient(to right, #93b4ff, #1F3A93, #93b4ff) !important; }
       .dark .timeline-item--actif .timeline-point { background: #93b4ff !important; }
-
+ 
       /* Responsive timeline */
       @media screen and (max-width: 700px) {
         .timeline { flex-direction: column !important; align-items: flex-start !important; gap: 1.5rem !important; padding-left: 2rem !important; }
@@ -756,11 +756,11 @@
         .timeline-label { text-align: left !important; max-width: none !important; }
         .timeline-date { text-align: left !important; }
       }
-
+ 
       /* =============================================
          CARTES COMPÉTENCES
          ============================================= */
-
+ 
       .competences-grille {
         display: grid !important;
         grid-template-columns: repeat(4, 1fr) !important;
@@ -769,7 +769,7 @@
         margin: 0 auto !important;
         padding: 0 1rem !important;
       }
-
+ 
       .competence-carte {
         background: white !important;
         border: 3px solid #1F3A93 !important;
@@ -782,12 +782,12 @@
         transition: transform 0.3s ease, box-shadow 0.3s ease !important;
         box-shadow: 0 4px 8px rgba(0,0,0,0.1) !important;
       }
-
+ 
       .competence-carte:hover {
         transform: translateY(-6px) !important;
         box-shadow: 0 12px 24px rgba(31,58,147,0.2) !important;
       }
-
+ 
       .competence-carte-titre {
         font-family: 'Nunito', sans-serif !important;
         font-size: 0.85rem !important;
@@ -801,7 +801,7 @@
         width: 100% !important;
         margin: 0 !important;
       }
-
+ 
       .competence-logos {
         display: flex !important;
         flex-wrap: wrap !important;
@@ -810,22 +810,22 @@
         align-items: center !important;
         flex: 1 !important;
       }
-
+ 
       .competence-logos img {
         width: 44px !important;
         height: 44px !important;
         object-fit: contain !important;
         transition: transform 0.2s ease !important;
       }
-
+ 
       .competence-logos img:hover {
         transform: scale(1.15) !important;
       }
-
+ 
       /* Dark mode cartes compétences */
       .dark .competence-carte { background: #1a1a2e !important; border-color: rgb(148,147,147) !important; }
       .dark .competence-carte-titre { color: #93b4ff !important; border-bottom-color: #2a2a4a !important; }
-
+ 
       /* Responsive compétences */
       @media screen and (max-width: 1024px) {
         .competences-grille { grid-template-columns: repeat(2, 1fr) !important; }
@@ -833,11 +833,11 @@
       @media screen and (max-width: 600px) {
         .competences-grille { grid-template-columns: repeat(2, 1fr) !important; }
       }
-
+ 
       /* =============================================
          SOFTSKILLS
          ============================================= */
-
+ 
       .softskill-grille {
         display: grid !important;
         grid-template-columns: repeat(3, 1fr) !important;
@@ -846,7 +846,7 @@
         margin: 0 auto !important;
         padding: 0 1rem !important;
       }
-
+ 
       .softskill-carte {
         background: white !important;
         border: 3px solid #1F3A93 !important;
@@ -859,17 +859,17 @@
         transition: transform 0.3s ease, box-shadow 0.3s ease !important;
         box-shadow: 0 4px 8px rgba(0,0,0,0.1) !important;
       }
-
+ 
       .softskill-carte:hover {
         transform: translateY(-6px) !important;
         box-shadow: 0 12px 24px rgba(31,58,147,0.2) !important;
       }
-
+ 
       .softskill-emoji {
         font-size: 2rem !important;
         line-height: 1 !important;
       }
-
+ 
       .softskill-nom {
         font-family: 'Nunito', sans-serif !important;
         font-size: 0.95rem !important;
@@ -878,7 +878,7 @@
         text-align: center !important;
         margin: 0 !important;
       }
-
+ 
       .softskill-desc {
         font-family: 'Nunito', sans-serif !important;
         font-size: 0.78rem !important;
@@ -887,17 +887,17 @@
         line-height: 1.4 !important;
         margin: 0 !important;
       }
-
+ 
       /* Dark mode softskills */
       .dark .softskill-carte { background: #1a1a2e !important; border-color: rgb(148,147,147) !important; }
       .dark .softskill-nom { color: #93b4ff !important; }
       .dark .softskill-desc { color: #aaa !important; }
-
+ 
       /* Responsive softskills */
       @media screen and (max-width: 600px) {
         .softskill-grille { grid-template-columns: 1fr !important; }
       }
-
+ 
       /* Responsive */
       @media screen and (max-width: 1024px) {
         .projet-grille { grid-template-columns: repeat(2, 1fr) !important; }
@@ -913,7 +913,7 @@
     </style>
   </head>
   <body>
-
+ 
   <!-- En-Tête -->
   <header class="flex items-center justify-between px-5">
       <img id="header-logo" src="images/Logo.png" alt="logo Stéphane Vernière Développeur" class="h-15">
@@ -934,7 +934,7 @@
           <span id="theme-toggle-light-icon">☀️</span>
       </button>
   </header>
-
+ 
   <!-- 1er bloc -->
   <main class="text-center pt-10" style="background-image: url('/images/CodeAP.png'); background-repeat: repeat;">
     <section id="accueil">
@@ -951,7 +951,7 @@
           <video width="150" height="150" src="visuels/perso.mp4" loop autoplay muted frameborder="0"
             class="rounded-full overflow-hidden" style="margin-bottom: 2rem;" id="cadreV"></video>
         </div>
-        <div id="message-container" class="text-blue-800 text-lg mb-4"></div>
+        <div id="message-container" class="text-black text-lg mb-4"></div>
         <script>
           const messages = ["Référence à un film !", "Vous l'avez ?", "Switcher le bouton pour voir l'original !"];
           let currentIndex = 0;
@@ -990,10 +990,10 @@
             });
         </script>
     </section>
-
+ 
     <!-- Bandeau Contact & Liens -->
     <div class="bandeau-cl">
-
+ 
       <!-- Panneau Contact -->
       <div class="bandeau-contact">
         <div>
@@ -1013,72 +1013,72 @@
           <span>Basé à Montpellier</span>
         </div>
       </div>
-
+ 
       <!-- Panneau Liens -->
       <div class="bandeau-liens">
         <p class="bandeau-liens-titre">Retrouvez-moi</p>
         <div class="bandeau-divider" style="background: rgba(31,58,147,0.2) !important;"></div>
         <div class="bandeau-liens-grid">
           <a href="https://www.linkedin.com/in/stephane-verniere-devmontpellier/" target="_blank" class="bandeau-lien-item">
-            <img src="images/linkedin.png" alt="LinkedIn">
+            <img src="images/linkedin.png" alt="LinkedIn" id="img-linkedin-bandeau">
             <span>LinkedIn</span>
           </a>
           <a href="https://github.com/PhanDev34000/portfolio" target="_blank" class="bandeau-lien-item">
-            <img src="images/github.png" alt="GitHub">
+            <img src="images/github.png" alt="GitHub" id="img-github-bandeau">
             <span>GitHub</span>
           </a>
           <a href="visuels/CV.pdf" download class="bandeau-lien-item">
-            <img src="images/file.png" alt="CV">
+            <img src="images/file.png" alt="CV" id="img-cv">
             <span>Télécharger mon CV</span>
           </a>
         </div>
       </div>
-
+ 
     </div>
-
+ 
     <!-- Mon Parcours -->
     <section id="parcours">
       <div class="px-4 py-8">
         <div class="timeline-wrapper">
           <p class="timeline-titre">Mon Parcours</p>
           <div class="timeline">
-
+ 
             <!-- Étape 1 -->
             <div class="timeline-item">
               <div class="timeline-point">
-                <img src="images/diplome.png" alt="Diplôme">
+                <img src="images/diplome.png" alt="Diplôme" id="img-diplome">
               </div>
               <p class="timeline-label">Master de Biologie</p>
               <p class="timeline-date">2002</p>
             </div>
-
+ 
             <!-- Étape 2 -->
             <div class="timeline-item">
               <div class="timeline-point">
-                <img src="images/photographe.png" alt="Photographe">
+                <img src="images/photographe.png" alt="Photographe" id="img-photographe">
               </div>
               <p class="timeline-label">Photographe</p>
               <p class="timeline-date">2004 – 2022</p>
             </div>
-
+ 
             <!-- Étape 3 -->
             <div class="timeline-item">
               <div class="timeline-point">
-                <img src="images/ADRAR.png" alt="Formation ADRAR">
+                <img src="images/ADRAR.png" alt="Formation ADRAR" id="img-adrar">
               </div>
               <p class="timeline-label">Développeur Web & Web mobile</p>
               <p class="timeline-date">Oct 2023 – Juil 2024</p>
             </div>
-
+ 
             <!-- Étape 4 -->
             <div class="timeline-item">
               <div class="timeline-point">
-                <img src="images/Studi.png" alt="Studi">
+                <img src="images/Studi.png" alt="Studi" id="img-studi">
               </div>
               <p class="timeline-label">Bachelor Développeur Angular</p>
               <p class="timeline-date">Oct 2024 – Jan 2026</p>
             </div>
-
+ 
             <!-- Étape 5 — actuelle -->
             <div class="timeline-item timeline-item--actif">
               <div class="timeline-point">
@@ -1087,18 +1087,18 @@
               <p class="timeline-label">Développeur Web Jr</p>
               <p class="timeline-date">✦ Disponible</p>
             </div>
-
+ 
           </div>
         </div>
       </div>
     </section>
-
+ 
     <!-- Compétences -->
     <section id="competences">
       <div class="px-4 py-8">
         <h1 class="titre-section">Compétences</h1>
         <div class="competences-grille">
-
+ 
           <!-- Carte Front-End -->
           <div class="competence-carte">
             <p class="competence-carte-titre">Front-End</p>
@@ -1109,29 +1109,29 @@
               <img src="icones/angular.png" alt="Angular">
             </div>
           </div>
-
+ 
           <!-- Carte Back-End -->
           <div class="competence-carte">
             <p class="competence-carte-titre">Back-End</p>
             <div class="competence-logos">
-              <img src="icones/node.png" alt="Node.js">
-              <img src="icones/expressN.png" alt="Express" style="width:52px !important; height:36px !important;">
-              <img src="icones/mongodb.png" alt="MongoDB">
+              <img src="icones/node.png" alt="Node.js" id="icone-node">
+              <img src="icones/expressN.png" alt="Express" id="icone-express" style="width:52px !important; height:36px !important;">
+              <img src="icones/mongodb.png" alt="MongoDB" id="icone-mongodb">
               <img src="icones/php.png" alt="PHP" style="height:36px !important; width:auto !important;">
-              <img src="icones/api.png" alt="REST API">
+              <img src="icones/api.png" alt="REST API" id="icone-api">
             </div>
           </div>
-
+ 
           <!-- Carte Conception & Versionning -->
           <div class="competence-carte">
             <p class="competence-carte-titre">Conception & Versionning</p>
             <div class="competence-logos">
               <img src="icones/figma.png" alt="Figma">
-              <img src="icones/githubN.png" alt="GitHub">
+              <img src="icones/githubN.png" alt="GitHub" id="icone-github">
               <img src="icones/git.png" alt="Git">
             </div>
           </div>
-
+ 
           <!-- Carte CMS -->
           <div class="competence-carte">
             <p class="competence-carte-titre">CMS</p>
@@ -1139,18 +1139,18 @@
               <img src="icones/wordpress.png" alt="WordPress" style="width:56px !important; height:56px !important;">
             </div>
           </div>
-
+ 
         </div>
       </div>
     </section>
-
+ 
     <!-- ==============================
          PORTEFOLIO
     ============================== -->
     <section id="portefolio">
       <div class="px-4 py-8" style="max-width:1240px; margin:0 auto;">
         <h1 class="titre-section">Portefolio</h1>
-
+ 
         <!-- ── CATÉGORIE ANGULAR ── -->
         <div class="portfolio-categorie">
           <div class="categorie-header">
@@ -1161,9 +1161,9 @@
             </div>
             <div class="categorie-ligne categorie-ligne--right"></div>
           </div>
-
+ 
           <div class="projet-grille">
-
+ 
             <!-- Projet n°1 — Manager de Devis (NOUVEAU) -->
             <div class="carte-projet">
               <div class="carte-header">
@@ -1188,7 +1188,7 @@
                 </div>
               </div>
             </div>
-
+ 
             <!-- Projet n°2 — Galerie App -->
             <div class="carte-projet">
               <div class="carte-header">
@@ -1213,7 +1213,7 @@
                 </div>
               </div>
             </div>
-
+ 
             <!-- Projet n°3 — Task Manager -->
             <div class="carte-projet">
               <div class="carte-header">
@@ -1238,7 +1238,7 @@
                 </div>
               </div>
             </div>
-
+ 
             <!-- Projet n°4 — Social Media Planner -->
             <div class="carte-projet">
               <div class="carte-header">
@@ -1262,7 +1262,7 @@
                 </div>
               </div>
             </div>
-
+ 
             <!-- Projet n°5 — Stéphane Vernière Photographe -->
             <div class="carte-projet">
               <div class="carte-header">
@@ -1286,7 +1286,7 @@
                 </div>
               </div>
             </div>
-
+ 
             <!-- Projet n°6 — Cinéphoria -->
             <div class="carte-projet">
               <div class="carte-header">
@@ -1309,10 +1309,10 @@
                 </div>
               </div>
             </div>
-
+ 
           </div><!-- fin grille Angular -->
         </div><!-- fin catégorie Angular -->
-
+ 
         <!-- ── CATÉGORIE PHP ── -->
         <div class="portfolio-categorie">
           <div class="categorie-header">
@@ -1323,9 +1323,9 @@
             </div>
             <div class="categorie-ligne categorie-ligne--right"></div>
           </div>
-
+ 
           <div class="projet-grille">
-
+ 
             <!-- Projet n°7 — Margaux Julien -->
             <div class="carte-projet">
               <div class="carte-header">
@@ -1348,7 +1348,7 @@
                 </div>
               </div>
             </div>
-
+ 
             <!-- Projet n°8 — Verniere-dev -->
             <div class="carte-projet">
               <div class="carte-header">
@@ -1371,7 +1371,7 @@
                 </div>
               </div>
             </div>
-
+ 
             <!-- Projet n°9 — Cook4U -->
             <div class="carte-projet">
               <div class="carte-header">
@@ -1394,10 +1394,10 @@
                 </div>
               </div>
             </div>
-
+ 
           </div><!-- fin grille PHP -->
         </div><!-- fin catégorie PHP -->
-
+ 
         <!-- ── CATÉGORIE WORDPRESS ── -->
         <div class="portfolio-categorie">
           <div class="categorie-header">
@@ -1408,9 +1408,9 @@
             </div>
             <div class="categorie-ligne categorie-ligne--right"></div>
           </div>
-
+ 
           <div class="projet-grille projet-grille--2col">
-
+ 
             <!-- Projet n°10 — Corbin-Photo -->
             <div class="carte-projet">
               <div class="carte-header">
@@ -1433,7 +1433,7 @@
                 </div>
               </div>
             </div>
-
+ 
             <!-- Projet n°11 — DogPix -->
             <div class="carte-projet">
               <div class="carte-header">
@@ -1456,39 +1456,39 @@
                 </div>
               </div>
             </div>
-
+ 
           </div><!-- fin grille WordPress -->
         </div><!-- fin catégorie WordPress -->
-
+ 
       </div>
     </section>
-
+ 
     <!-- Softskill -->
     <div class="px-4 py-8">
       <h1 class="titre-section">Softskills</h1>
       <div class="softskill-grille">
-
+ 
         <div class="softskill-carte">
           <span class="softskill-emoji">🎨</span>
           <p class="softskill-nom">Créativité</p>
           <p class="softskill-desc">Trouver des solutions originales et concevoir des interfaces soignées</p>
         </div>
-
+ 
         <div class="softskill-carte">
           <span class="softskill-emoji">🤝</span>
           <p class="softskill-nom">Esprit d'équipe</p>
           <p class="softskill-desc">Collaborer efficacement, partager les connaissances et s'entraider</p>
         </div>
-
+ 
         <div class="softskill-carte">
           <span class="softskill-emoji">🔄</span>
           <p class="softskill-nom">Capacité d'adaptation</p>
           <p class="softskill-desc">S'adapter rapidement aux nouveaux outils, langages et contextes</p>
         </div>
-
+ 
       </div>
     </div>
-
+ 
     <!-- ==============================
          CONTACT — version stylisée
     ============================== -->
@@ -1496,9 +1496,9 @@
       <div class="p-8">
         <h1 class="titre-section">Contactez-moi</h1>
         <p style="font-family:'Nunito',sans-serif; color:#1F3A93; font-size:1rem; margin-bottom:0;">Une question, une opportunité ? Écrivez-moi directement.</p>
-
+ 
         <div class="contact-wrapper">
-
+ 
           <!-- Panneau gauche info -->
           <div class="contact-info-panel">
             <div>
@@ -1532,7 +1532,7 @@
               </a>
             </div>
           </div>
-
+ 
           <!-- Panneau droit formulaire -->
           <div class="contact-form-panel">
             <form action="envoi_contact.php" method="POST">
@@ -1564,14 +1564,14 @@
               </div>
             </form>
           </div>
-
+ 
         </div><!-- fin contact-wrapper -->
       </div>          
     </section>
   </main>
-
+ 
   <!-- Footer -->
-  <footer>
+  <footer>    
       <div class="text-center">
         <a href="index.html">
           <img id="footer-logo" src="images/Logo.png" alt="logo Stéphane Vernière" class="mx-auto">
