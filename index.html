@@ -15,13 +15,131 @@
 
     <!-- CSS Portfolio — chargé après Tailwind pour avoir priorité absolue -->
     <style>
+
+      /* =============================================
+         TITRES DE SECTION — soulignement dégradé
+         ============================================= */
+
+      .titre-section {
+        font-family: 'Nunito', sans-serif !important;
+        font-weight: 800 !important;
+        font-size: 2rem !important;
+        color: #1F3A93 !important;
+        display: inline-block !important;
+        position: relative !important;
+        padding-bottom: 0.4rem !important;
+        margin-bottom: 2rem !important;
+      }
+
+      .titre-section::after {
+        content: '' !important;
+        position: absolute !important;
+        bottom: 0 !important;
+        left: 0 !important;
+        width: 100% !important;
+        height: 4px !important;
+        border-radius: 4px !important;
+        background: linear-gradient(to right, #1F3A93, #93b4ff) !important;
+      }
+
+      .titre-hero {
+        font-family: 'Nunito', sans-serif !important;
+        font-weight: 800 !important;
+        font-size: 2.2rem !important;
+        color: #1F3A93 !important;
+        display: inline-block !important;
+        position: relative !important;
+        padding-bottom: 0.4rem !important;
+        margin-bottom: 0.5rem !important;
+      }
+
+      .titre-hero::after {
+        content: '' !important;
+        position: absolute !important;
+        bottom: 0 !important;
+        left: 50% !important;
+        transform: translateX(-50%) !important;
+        width: 60% !important;
+        height: 4px !important;
+        border-radius: 4px !important;
+        background: linear-gradient(to right, #1F3A93, #93b4ff, #1F3A93) !important;
+      }
+
+      .sous-titre-hero {
+        font-family: 'Nunito', sans-serif !important;
+        font-weight: 600 !important;
+        font-size: 1.1rem !important;
+        color: #1F3A93 !important;
+        letter-spacing: 0.05em !important;
+      }
+
+      .dark .titre-section { color: white !important; }
+      .dark .titre-hero { color: white !important; }
+      .dark .sous-titre-hero { color: #aaa !important; }
+
+      /* =============================================
+         CATEGORIES PORTFOLIO
+         ============================================= */
+
+      .portfolio-categorie {
+        margin-bottom: 3rem !important;
+      }
+
+      .categorie-header {
+        display: flex !important;
+        align-items: center !important;
+        gap: 1rem !important;
+        margin-bottom: 1.5rem !important;
+        position: relative !important;
+      }
+
+      .categorie-ligne {
+        flex: 1 !important;
+        height: 2px !important;
+        background: linear-gradient(to right, #1F3A93, transparent) !important;
+      }
+
+      .categorie-ligne--right {
+        background: linear-gradient(to left, #1F3A93, transparent) !important;
+      }
+
+      .categorie-label {
+        display: flex !important;
+        align-items: center !important;
+        gap: 0.6rem !important;
+        background: #1F3A93 !important;
+        color: white !important;
+        font-family: 'Nunito', sans-serif !important;
+        font-weight: 700 !important;
+        font-size: 0.95rem !important;
+        letter-spacing: 0.08em !important;
+        text-transform: uppercase !important;
+        padding: 0.45rem 1.2rem !important;
+        border-radius: 30px !important;
+        white-space: nowrap !important;
+      }
+
+      .categorie-label img {
+        height: 22px !important;
+        width: auto !important;
+      }
+
+      /* =============================================
+         GRILLE PROJETS
+         ============================================= */
+
       .projet-grille {
         display: grid !important;
         grid-template-columns: repeat(3, 1fr) !important;
         gap: 1.5rem !important;
         max-width: 1200px !important;
         margin: 0 auto !important;
-        padding: 0 1rem !important;
+        padding: 0 !important;
+      }
+
+      .projet-grille--2col {
+        grid-template-columns: repeat(2, 1fr) !important;
+        max-width: 800px !important;
       }
 
       .carte-projet {
@@ -177,6 +295,165 @@
         border: 1px solid #c5cff0 !important;
       }
 
+      /* =============================================
+         FORMULAIRE DE CONTACT STYLISÉ
+         ============================================= */
+
+      .contact-wrapper {
+        max-width: 860px !important;
+        margin: 2.5rem auto 0 !important;
+        display: grid !important;
+        grid-template-columns: 1fr 2fr !important;
+        border-radius: 16px !important;
+        overflow: hidden !important;
+        box-shadow: 0 8px 32px rgba(31,58,147,0.18) !important;
+      }
+
+      .contact-info-panel {
+        background: #1F3A93 !important;
+        color: white !important;
+        padding: 2.5rem 1.8rem !important;
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 2rem !important;
+        justify-content: center !important;
+      }
+
+      .contact-info-panel h3 {
+        font-family: 'Nunito', sans-serif !important;
+        font-size: 1.3rem !important;
+        font-weight: 700 !important;
+        color: white !important;
+        margin: 0 0 0.5rem 0 !important;
+        line-height: 1.3 !important;
+      }
+
+      .contact-info-panel p {
+        font-family: 'Nunito', sans-serif !important;
+        font-size: 0.85rem !important;
+        color: rgba(255,255,255,0.75) !important;
+        margin: 0 !important;
+        line-height: 1.6 !important;
+      }
+
+      .contact-info-item {
+        display: flex !important;
+        align-items: center !important;
+        gap: 0.75rem !important;
+      }
+
+      .contact-info-item img {
+        width: 20px !important;
+        height: 20px !important;
+        filter: brightness(0) invert(1) !important;
+        flex-shrink: 0 !important;
+      }
+
+      .contact-info-item span {
+        font-family: 'Nunito', sans-serif !important;
+        font-size: 0.82rem !important;
+        color: rgba(255,255,255,0.9) !important;
+      }
+
+      .contact-info-divider {
+        width: 40px !important;
+        height: 2px !important;
+        background: rgba(255,255,255,0.3) !important;
+        border-radius: 2px !important;
+      }
+
+      .contact-form-panel {
+        background: white !important;
+        padding: 2.5rem 2rem !important;
+      }
+
+      .contact-form-panel form {
+        background: transparent !important;
+        border: none !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        max-width: none !important;
+        border-radius: 0 !important;
+      }
+
+      .contact-form-row {
+        display: grid !important;
+        grid-template-columns: 1fr 1fr !important;
+        gap: 1rem !important;
+        margin-bottom: 1rem !important;
+      }
+
+      .contact-field {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 0.3rem !important;
+        margin-bottom: 1rem !important;
+      }
+
+      .contact-field label {
+        font-family: 'Nunito', sans-serif !important;
+        font-size: 0.78rem !important;
+        font-weight: 700 !important;
+        color: #1F3A93 !important;
+        text-transform: uppercase !important;
+        letter-spacing: 0.05em !important;
+      }
+
+      .contact-field input,
+      .contact-field textarea {
+        font-family: 'Nunito', sans-serif !important;
+        font-size: 0.88rem !important;
+        padding: 0.6rem 0.9rem !important;
+        border: 2px solid #e5e9f5 !important;
+        border-radius: 8px !important;
+        outline: none !important;
+        transition: border-color 0.2s ease !important;
+        background: #f8f9ff !important;
+        color: #333 !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
+      }
+
+      .contact-field input:focus,
+      .contact-field textarea:focus {
+        border-color: #1F3A93 !important;
+        background: white !important;
+        box-shadow: 0 0 0 3px rgba(31,58,147,0.08) !important;
+      }
+
+      .contact-field textarea {
+        resize: vertical !important;
+        min-height: 120px !important;
+      }
+
+      .contact-submit {
+        display: flex !important;
+        justify-content: flex-end !important;
+        margin-top: 1.2rem !important;
+        align-items: center !important;
+        gap: 1rem !important;
+      }
+
+      .contact-submit input[type="submit"] {
+        font-family: 'Nunito', sans-serif !important;
+        font-weight: 700 !important;
+        font-size: 0.9rem !important;
+        background: #1F3A93 !important;
+        color: white !important;
+        border: none !important;
+        border-radius: 30px !important;
+        padding: 0.7rem 2rem !important;
+        cursor: pointer !important;
+        transition: background 0.2s ease, transform 0.2s ease !important;
+        margin: 0 !important;
+        width: auto !important;
+      }
+
+      .contact-submit input[type="submit"]:hover {
+        background: #162d7a !important;
+        transform: translateY(-2px) !important;
+      }
+
       /* Dark mode */
       .dark .carte-projet { background: #1a1a2e !important; border-color: rgb(148,147,147) !important; }
       .dark .carte-titre { color: #93b4ff !important; }
@@ -184,13 +461,454 @@
       .dark .carte-description { color: #ccc !important; }
       .dark .carte-tech span { background: #2a2a4a !important; color: #93b4ff !important; border-color: #3a3a6a !important; }
       .dark .carte-header { border-bottom-color: #2a2a4a !important; }
+      .dark .categorie-label { background: #2a2a4a !important; }
+      .dark .categorie-ligne { background: linear-gradient(to right, #93b4ff, transparent) !important; }
+      .dark .categorie-ligne--right { background: linear-gradient(to left, #93b4ff, transparent) !important; }
+      .dark .contact-wrapper { box-shadow: 0 8px 32px rgba(0,0,0,0.4) !important; }
+      .dark .contact-form-panel { background: #1a1a2e !important; }
+      .dark .contact-field label { color: #93b4ff !important; }
+      .dark .contact-field input,
+      .dark .contact-field textarea { background: #2a2a4a !important; border-color: #3a3a6a !important; color: #eee !important; }
+      .dark .contact-field input:focus,
+      .dark .contact-field textarea:focus { border-color: #93b4ff !important; }
+
+      /* =============================================
+         BANDEAU CONTACT & LIENS
+         ============================================= */
+
+      .bandeau-cl {
+        display: grid !important;
+        grid-template-columns: 1fr 1fr !important;
+        gap: 0 !important;
+        max-width: 860px !important;
+        margin: 2rem auto 2.5rem !important;
+        border-radius: 16px !important;
+        overflow: hidden !important;
+        box-shadow: 0 8px 32px rgba(31,58,147,0.18) !important;
+      }
+
+      /* Panneau gauche — Contact */
+      .bandeau-contact {
+        background: #1F3A93 !important;
+        padding: 2rem 2rem !important;
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 1.2rem !important;
+        justify-content: center !important;
+        align-items: center !important;
+      }
+
+      .bandeau-contact-titre {
+        font-family: 'Nunito', sans-serif !important;
+        font-size: 1.1rem !important;
+        font-weight: 700 !important;
+        color: white !important;
+        margin: 0 0 0.3rem 0 !important;
+        letter-spacing: 0.04em !important;
+        text-transform: uppercase !important;
+      }
+
+      .bandeau-contact-item {
+        display: flex !important;
+        align-items: center !important;
+        gap: 0.75rem !important;
+      }
+
+      .bandeau-contact-item img {
+        width: 18px !important;
+        height: 18px !important;
+        filter: brightness(0) invert(1) !important;
+        flex-shrink: 0 !important;
+      }
+
+      .bandeau-contact-item span {
+        font-family: 'Nunito', sans-serif !important;
+        font-size: 0.85rem !important;
+        color: rgba(255,255,255,0.9) !important;
+      }
+
+      .bandeau-divider {
+        width: 36px !important;
+        height: 2px !important;
+        background: rgba(255,255,255,0.25) !important;
+        border-radius: 2px !important;
+      }
+
+      /* Panneau droit — Liens */
+      .bandeau-liens {
+        background: white !important;
+        padding: 2rem 2rem !important;
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 1.2rem !important;
+        justify-content: center !important;
+        align-items: center !important;
+      }
+
+      .bandeau-liens-titre {
+        font-family: 'Nunito', sans-serif !important;
+        font-size: 1.1rem !important;
+        font-weight: 700 !important;
+        color: #1F3A93 !important;
+        margin: 0 0 0.3rem 0 !important;
+        letter-spacing: 0.04em !important;
+        text-transform: uppercase !important;
+        text-align: center !important;
+      }
+
+      .bandeau-liens-grid {
+        display: flex !important;
+        gap: 1rem !important;
+        flex-wrap: wrap !important;
+        justify-content: center !important;
+      }
+
+      .bandeau-lien-item {
+        display: flex !important;
+        align-items: center !important;
+        gap: 0.6rem !important;
+        padding: 0.5rem 1rem !important;
+        border: 2px solid #1F3A93 !important;
+        border-radius: 30px !important;
+        text-decoration: none !important;
+        transition: background 0.2s ease, transform 0.2s ease !important;
+      }
+
+      .bandeau-lien-item:hover {
+        background: #1F3A93 !important;
+        transform: translateY(-2px) !important;
+      }
+
+      .bandeau-lien-item img {
+        width: 20px !important;
+        height: 20px !important;
+        transition: filter 0.2s ease !important;
+      }
+
+      .bandeau-lien-item span {
+        font-family: 'Nunito', sans-serif !important;
+        font-size: 0.82rem !important;
+        font-weight: 700 !important;
+        color: #1F3A93 !important;
+        transition: color 0.2s ease !important;
+      }
+
+      .bandeau-lien-item:hover span {
+        color: white !important;
+      }
+
+      .bandeau-lien-item:hover img {
+        filter: brightness(0) invert(1) !important;
+      }
+
+      /* Dark mode bandeau */
+      .dark .bandeau-liens { background: #1a1a2e !important; }
+      .dark .bandeau-liens-titre { color: #93b4ff !important; }
+      .dark .bandeau-lien-item { border-color: #93b4ff !important; }
+      .dark .bandeau-lien-item span { color: #93b4ff !important; }
+      .dark .bandeau-lien-item:hover { background: #93b4ff !important; }
+      .dark .bandeau-lien-item:hover span { color: #1a1a2e !important; }
+
+      /* =============================================
+         TIMELINE PARCOURS
+         ============================================= */
+
+      .timeline-wrapper {
+        max-width: 1000px !important;
+        margin: 0 auto 2rem !important;
+        padding: 2rem 1.5rem !important;
+        background: white !important;
+        border-radius: 16px !important;
+        box-shadow: 0 8px 32px rgba(31,58,147,0.12) !important;
+      }
+
+      .timeline-titre {
+        font-family: 'Nunito', sans-serif !important;
+        font-size: 2rem !important;
+        font-weight: 800 !important;
+        color: #1F3A93 !important;
+        text-align: center !important;
+        margin-bottom: 2.5rem !important;
+        display: inline-block !important;
+        position: relative !important;
+        padding-bottom: 0.4rem !important;
+      }
+
+      .timeline-titre::after {
+        content: '' !important;
+        position: absolute !important;
+        bottom: 0 !important;
+        left: 50% !important;
+        transform: translateX(-50%) !important;
+        width: 70% !important;
+        height: 4px !important;
+        border-radius: 4px !important;
+        background: linear-gradient(to right, #1F3A93, #93b4ff, #1F3A93) !important;
+      }
+
+      .timeline {
+        position: relative !important;
+        display: flex !important;
+        justify-content: space-between !important;
+        align-items: flex-start !important;
+        padding: 0 1rem !important;
+      }
+
+      /* Ligne horizontale centrale */
+      .timeline::before {
+        content: '' !important;
+        position: absolute !important;
+        top: 28px !important;
+        left: 5% !important;
+        right: 5% !important;
+        height: 3px !important;
+        background: linear-gradient(to right, #1F3A93, #93b4ff, #1F3A93) !important;
+        border-radius: 3px !important;
+        z-index: 0 !important;
+      }
+
+      .timeline-item {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        flex: 1 !important;
+        position: relative !important;
+        z-index: 1 !important;
+      }
+
+      /* Point sur la ligne */
+      .timeline-point {
+        width: 56px !important;
+        height: 56px !important;
+        border-radius: 50% !important;
+        background: white !important;
+        border: 3px solid #1F3A93 !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        margin-bottom: 1rem !important;
+        box-shadow: 0 4px 12px rgba(31,58,147,0.2) !important;
+        transition: transform 0.25s ease, box-shadow 0.25s ease !important;
+        overflow: hidden !important;
+      }
+
+      .timeline-item:hover .timeline-point {
+        transform: scale(1.12) !important;
+        box-shadow: 0 6px 20px rgba(31,58,147,0.35) !important;
+      }
+
+      .timeline-point img {
+        width: 34px !important;
+        height: 34px !important;
+        object-fit: contain !important;
+      }
+
+      /* Point spécial pour le dernier (disponible) */
+      .timeline-item--actif .timeline-point {
+        background: #1F3A93 !important;
+        border-color: #1F3A93 !important;
+      }
+
+      .timeline-item--actif .timeline-point img {
+        filter: brightness(0) invert(1) !important;
+      }
+
+      .timeline-label {
+        font-family: 'Nunito', sans-serif !important;
+        font-size: 0.8rem !important;
+        font-weight: 700 !important;
+        color: #1F3A93 !important;
+        text-align: center !important;
+        line-height: 1.3 !important;
+        margin-bottom: 0.3rem !important;
+        max-width: 120px !important;
+      }
+
+      .timeline-date {
+        font-family: 'Oxygen Mono', monospace !important;
+        font-size: 0.68rem !important;
+        color: #93b4ff !important;
+        text-align: center !important;
+        font-weight: 600 !important;
+      }
+
+      .timeline-item--actif .timeline-date {
+        color: #1F3A93 !important;
+        font-weight: 700 !important;
+        background: #eef1fb !important;
+        padding: 0.15rem 0.5rem !important;
+        border-radius: 20px !important;
+      }
+
+      /* Dark mode timeline */
+      .dark .timeline-wrapper { background: #1a1a2e !important; box-shadow: 0 8px 32px rgba(0,0,0,0.3) !important; }
+      .dark .timeline-titre { color: #93b4ff !important; }
+      .dark .timeline-point { background: #2a2a4a !important; border-color: #93b4ff !important; }
+      .dark .timeline-label { color: #93b4ff !important; }
+      .dark .timeline::before { background: linear-gradient(to right, #93b4ff, #1F3A93, #93b4ff) !important; }
+      .dark .timeline-item--actif .timeline-point { background: #93b4ff !important; }
+
+      /* Responsive timeline */
+      @media screen and (max-width: 700px) {
+        .timeline { flex-direction: column !important; align-items: flex-start !important; gap: 1.5rem !important; padding-left: 2rem !important; }
+        .timeline::before { top: 0 !important; bottom: 0 !important; left: 28px !important; right: auto !important; width: 3px !important; height: auto !important; }
+        .timeline-item { flex-direction: row !important; gap: 1rem !important; align-items: center !important; }
+        .timeline-label { text-align: left !important; max-width: none !important; }
+        .timeline-date { text-align: left !important; }
+      }
+
+      /* =============================================
+         CARTES COMPÉTENCES
+         ============================================= */
+
+      .competences-grille {
+        display: grid !important;
+        grid-template-columns: repeat(4, 1fr) !important;
+        gap: 1.2rem !important;
+        max-width: 1100px !important;
+        margin: 0 auto !important;
+        padding: 0 1rem !important;
+      }
+
+      .competence-carte {
+        background: white !important;
+        border: 3px solid #1F3A93 !important;
+        border-radius: 12px !important;
+        padding: 1.5rem 1rem !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        gap: 1.2rem !important;
+        transition: transform 0.3s ease, box-shadow 0.3s ease !important;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1) !important;
+      }
+
+      .competence-carte:hover {
+        transform: translateY(-6px) !important;
+        box-shadow: 0 12px 24px rgba(31,58,147,0.2) !important;
+      }
+
+      .competence-carte-titre {
+        font-family: 'Nunito', sans-serif !important;
+        font-size: 0.85rem !important;
+        font-weight: 700 !important;
+        color: #1F3A93 !important;
+        text-transform: uppercase !important;
+        letter-spacing: 0.06em !important;
+        text-align: center !important;
+        padding-bottom: 0.8rem !important;
+        border-bottom: 2px solid #eef1fb !important;
+        width: 100% !important;
+        margin: 0 !important;
+      }
+
+      .competence-logos {
+        display: flex !important;
+        flex-wrap: wrap !important;
+        gap: 0.8rem !important;
+        justify-content: center !important;
+        align-items: center !important;
+        flex: 1 !important;
+      }
+
+      .competence-logos img {
+        width: 44px !important;
+        height: 44px !important;
+        object-fit: contain !important;
+        transition: transform 0.2s ease !important;
+      }
+
+      .competence-logos img:hover {
+        transform: scale(1.15) !important;
+      }
+
+      /* Dark mode cartes compétences */
+      .dark .competence-carte { background: #1a1a2e !important; border-color: rgb(148,147,147) !important; }
+      .dark .competence-carte-titre { color: #93b4ff !important; border-bottom-color: #2a2a4a !important; }
+
+      /* Responsive compétences */
+      @media screen and (max-width: 1024px) {
+        .competences-grille { grid-template-columns: repeat(2, 1fr) !important; }
+      }
+      @media screen and (max-width: 600px) {
+        .competences-grille { grid-template-columns: repeat(2, 1fr) !important; }
+      }
+
+      /* =============================================
+         SOFTSKILLS
+         ============================================= */
+
+      .softskill-grille {
+        display: grid !important;
+        grid-template-columns: repeat(3, 1fr) !important;
+        gap: 1.2rem !important;
+        max-width: 800px !important;
+        margin: 0 auto !important;
+        padding: 0 1rem !important;
+      }
+
+      .softskill-carte {
+        background: white !important;
+        border: 3px solid #1F3A93 !important;
+        border-radius: 12px !important;
+        padding: 1.8rem 1rem !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        gap: 0.8rem !important;
+        transition: transform 0.3s ease, box-shadow 0.3s ease !important;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1) !important;
+      }
+
+      .softskill-carte:hover {
+        transform: translateY(-6px) !important;
+        box-shadow: 0 12px 24px rgba(31,58,147,0.2) !important;
+      }
+
+      .softskill-emoji {
+        font-size: 2rem !important;
+        line-height: 1 !important;
+      }
+
+      .softskill-nom {
+        font-family: 'Nunito', sans-serif !important;
+        font-size: 0.95rem !important;
+        font-weight: 700 !important;
+        color: #1F3A93 !important;
+        text-align: center !important;
+        margin: 0 !important;
+      }
+
+      .softskill-desc {
+        font-family: 'Nunito', sans-serif !important;
+        font-size: 0.78rem !important;
+        color: #888 !important;
+        text-align: center !important;
+        line-height: 1.4 !important;
+        margin: 0 !important;
+      }
+
+      /* Dark mode softskills */
+      .dark .softskill-carte { background: #1a1a2e !important; border-color: rgb(148,147,147) !important; }
+      .dark .softskill-nom { color: #93b4ff !important; }
+      .dark .softskill-desc { color: #aaa !important; }
+
+      /* Responsive softskills */
+      @media screen and (max-width: 600px) {
+        .softskill-grille { grid-template-columns: 1fr !important; }
+      }
 
       /* Responsive */
       @media screen and (max-width: 1024px) {
         .projet-grille { grid-template-columns: repeat(2, 1fr) !important; }
+        .projet-grille--2col { grid-template-columns: repeat(2, 1fr) !important; max-width: 100% !important; }
       }
-      @media screen and (max-width: 600px) {
-        .projet-grille { grid-template-columns: 1fr !important; }
+      @media screen and (max-width: 700px) {
+        .projet-grille, .projet-grille--2col { grid-template-columns: 1fr !important; }
+        .contact-wrapper { grid-template-columns: 1fr !important; }
+        .contact-form-row { grid-template-columns: 1fr !important; }
+        .contact-info-panel { padding: 1.5rem !important; }
+        .bandeau-cl { grid-template-columns: 1fr !important; }
       }
     </style>
   </head>
@@ -221,8 +939,8 @@
   <main class="text-center pt-10" style="background-image: url('/images/CodeAP.png'); background-repeat: repeat;">
     <section id="accueil">
         <div>
-          <h1 class="font-sans mb-4 text-3xl">Portefolio de Stéphane Vernière</h1>
-          <h2 class="font-sans text-black text-2xl">Développeur Jr - Full-Stack - MEAN</h2>
+          <h1 class="titre-hero mb-4">Portefolio de Stéphane Vernière</h1>
+          <h2 class="sous-titre-hero">Développeur Jr — Full-Stack — MEAN</h2>
           <script src="https://cdn.lordicon.com/lordicon.js"></script>
           <lord-icon id="animated-icon" src="https://cdn.lordicon.com/vlycxjwx.json"
               trigger="in" delay="2500" stroke="light" state="in-reveal"
@@ -233,7 +951,7 @@
           <video width="150" height="150" src="visuels/perso.mp4" loop autoplay muted frameborder="0"
             class="rounded-full overflow-hidden" style="margin-bottom: 2rem;" id="cadreV"></video>
         </div>
-        <div id="message-container" class="text-black text-lg mb-4"></div>
+        <div id="message-container" class="text-blue-800 text-lg mb-4"></div>
         <script>
           const messages = ["Référence à un film !", "Vous l'avez ?", "Switcher le bouton pour voir l'original !"];
           let currentIndex = 0;
@@ -273,91 +991,103 @@
         </script>
     </section>
 
-    <div class="flex flex-cadre justify-center space-x-4">
-      <!-- Partie Contact -->
-      <div id="cadre" class="flex flex-col items-center p-6 bg-white"
-          style="transition: transform 0.3s ease, box-shadow 0.3s ease; transform: scale(1); box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);" 
-          onmouseover="this.style.transform='scale(1.1)'; this.style.boxShadow='0 8px 12px rgba(0, 0, 0, 0.5)';"
-          onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 4px 8px rgba(0, 0, 0, 0)';">
-        <div class="text-center">
-            <h2 class="font-sans text-black text-2xl mb-2" id="titre">Contact :</h2>
-            <div class="flex flex-col items-center">
-                <h3 class="text-black">Basé à Montpellier</h3>
-                <div class="flex flex-col items-center gap-4 mt-4">
-                    <div class="flex items-center gap-2">
-                        <img src="images/mail.png" alt="icone d'un email" class="w-6 h-6">
-                        <h4 class="text-black">vernierestephane@gmail.com</h4>
-                    </div>
-                    <div class="flex items-center gap-2">
-                        <img src="images/phone.png" alt="icone d'un téléphone" class="w-6 h-6">
-                        <h4 class="text-black">06 61 19 97 54</h4>
-                    </div>
-                </div>
-            </div>
+    <!-- Bandeau Contact & Liens -->
+    <div class="bandeau-cl">
+
+      <!-- Panneau Contact -->
+      <div class="bandeau-contact">
+        <div>
+          <p class="bandeau-contact-titre">Contact</p>
+        </div>
+        <div class="bandeau-divider"></div>
+        <div class="bandeau-contact-item">
+          <img src="images/mail.png" alt="email">
+          <span>vernierestephane@gmail.com</span>
+        </div>
+        <div class="bandeau-contact-item">
+          <img src="images/phone.png" alt="téléphone">
+          <span>06 61 19 97 54</span>
+        </div>
+        <div class="bandeau-contact-item">
+          <img src="images/pin.png" alt="localisation">
+          <span>Basé à Montpellier</span>
         </div>
       </div>
-      <!-- Partie Liens -->
-      <div id="cadre2" class="max-w-xs flex flex-col items-center gap-6 p-6 bg-white"
-          style="transition: transform 0.3s ease, box-shadow 0.3s ease; transform: scale(1); box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);"
-          onmouseover="this.style.transform='scale(1.1)'; this.style.boxShadow='0 8px 12px rgba(0, 0, 0, 0.5)';"
-          onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 4px 8px rgba(0, 0, 0, 0)';">
-        <h2 class="font-sans text-black text-2xl mb-4" id="titre">Liens :</h2>
-        <div class="flex justify-center gap-8">
-          <div class="flex flex-col items-center">
-            <a href="https://www.linkedin.com/in/stephane-verniere-devmontpellier/" target="_blank">
-              <img src="images/linkedin.png" alt="logo linkedin" class="mx-auto w-8 h-8">
-              <h4 class="text-black mt-2">LinkedIn</h4>
-            </a> 
-          </div>
-          <div class="flex flex-col items-center">
-            <a href="https://github.com/PhanDev34000/portfolio" target="_blank">
-              <img src="images/github.png" alt="logo github" class="mx-auto w-8 h-8">              
-              <h4 class="text-black mt-2">GitHub</h4>
-            </a>
-          </div>
-          <div class="flex flex-col items-center">
-            <a href="visuels/CV.pdf" download>
-              <img src="images/file.png" alt="icone de téléchargement pour uploader mon CV" class="w-8 h-8">              
-              <h4 class="text-black mt-2">CV</h4>
-            </a>
-          </div>
+
+      <!-- Panneau Liens -->
+      <div class="bandeau-liens">
+        <p class="bandeau-liens-titre">Retrouvez-moi</p>
+        <div class="bandeau-divider" style="background: rgba(31,58,147,0.2) !important;"></div>
+        <div class="bandeau-liens-grid">
+          <a href="https://www.linkedin.com/in/stephane-verniere-devmontpellier/" target="_blank" class="bandeau-lien-item">
+            <img src="images/linkedin.png" alt="LinkedIn">
+            <span>LinkedIn</span>
+          </a>
+          <a href="https://github.com/PhanDev34000/portfolio" target="_blank" class="bandeau-lien-item">
+            <img src="images/github.png" alt="GitHub">
+            <span>GitHub</span>
+          </a>
+          <a href="visuels/CV.pdf" download class="bandeau-lien-item">
+            <img src="images/file.png" alt="CV">
+            <span>Télécharger mon CV</span>
+          </a>
         </div>
       </div>
+
     </div>
 
     <!-- Mon Parcours -->
     <section id="parcours">
-      <div class="flex justify-center p-12">
-        <div class="max-w-4xl w-full p-6 bg-white rounded-lg" id="cadre3">
-          <div class="text-center">
-            <h2 class="font-sans text-black text-2xl mb-4" id="titre">Mon parcours :</h2>
-            <div class="flex justify-center gap-6">
-              <div class="flex flex-col items-center">
-                <img src="images/diplome.png" alt="Diplôme" class="w-12 h-12 mb-2">
-                <h4 class="text-black">Master de Biologie</h4>
-                <h5 class="text-customprimary" style="margin-bottom: 3rem;">2002</h5>
+      <div class="px-4 py-8">
+        <div class="timeline-wrapper">
+          <p class="timeline-titre">Mon Parcours</p>
+          <div class="timeline">
+
+            <!-- Étape 1 -->
+            <div class="timeline-item">
+              <div class="timeline-point">
+                <img src="images/diplome.png" alt="Diplôme">
               </div>
-              <div class="flex flex-col items-center">
-                <img src="images/photographe.png" alt="Photographe" class="w-8 h-12 mb-2">
-                <h4 class="text-black">Photographe</h4>
-                <h5 class="text-customprimary" style="margin-bottom: 3rem;">2004-2022</h5>
-              </div>
-              <div class="flex flex-col items-center">
-                <img src="images/ADRAR.png" alt="Formation Développeur Web" class="w-18 h-14">
-                <h4 class="text-black">Développeur Web & Web mobile</h4>
-                <h5 class="text-customprimary" style="margin-bottom: 3rem;">Oct 2023 - Juillet 2024</h5>
-              </div>
-              <div class="flex flex-col items-center">
-                <img src="images/Studi.png" alt="Bachelor Développeur Angular" class="w-16 h-20">
-                <h4 class="text-black">Bachelor Développeur Angular</h4>
-                <h5 class="text-customprimary" style="margin-bottom: 3rem;">Oct 2024 - Janvier 2026</h5>
-              </div>
-              <div class="flex flex-col items-center">
-                <img src="images/dev.png" alt="Développeur Web Jr" class="w-16 h-14">
-                <h4 class="text-black">Développeur Web Jr</h4>
-                <h5 class="text-customprimary">Disponible</h5>
-              </div>
+              <p class="timeline-label">Master de Biologie</p>
+              <p class="timeline-date">2002</p>
             </div>
+
+            <!-- Étape 2 -->
+            <div class="timeline-item">
+              <div class="timeline-point">
+                <img src="images/photographe.png" alt="Photographe">
+              </div>
+              <p class="timeline-label">Photographe</p>
+              <p class="timeline-date">2004 – 2022</p>
+            </div>
+
+            <!-- Étape 3 -->
+            <div class="timeline-item">
+              <div class="timeline-point">
+                <img src="images/ADRAR.png" alt="Formation ADRAR">
+              </div>
+              <p class="timeline-label">Développeur Web & Web mobile</p>
+              <p class="timeline-date">Oct 2023 – Juil 2024</p>
+            </div>
+
+            <!-- Étape 4 -->
+            <div class="timeline-item">
+              <div class="timeline-point">
+                <img src="images/Studi.png" alt="Studi">
+              </div>
+              <p class="timeline-label">Bachelor Développeur Angular</p>
+              <p class="timeline-date">Oct 2024 – Jan 2026</p>
+            </div>
+
+            <!-- Étape 5 — actuelle -->
+            <div class="timeline-item timeline-item--actif">
+              <div class="timeline-point">
+                <img src="images/dev.png" alt="Développeur Jr">
+              </div>
+              <p class="timeline-label">Développeur Web Jr</p>
+              <p class="timeline-date">✦ Disponible</p>
+            </div>
+
           </div>
         </div>
       </div>
@@ -366,44 +1096,51 @@
     <!-- Compétences -->
     <section id="competences">
       <div class="px-4 py-8">
-        <h1 class="font-sans text-black text-3xl mb-8">Compétences :</h1>
-        <div id="cadre8" class="flex flex-wrap gap-10 items-stretch max-w-7xl mx-auto p-6 mt-8 bg-white rounded-lg">
-          <div class="flex-1 min-w-[200px]">
-            <h2 class="font-sans text-black text-xl mb-4" id="titre">Front-End</h2>
-            <div class="flex flex-wrap gap-2 justify-center">
-              <img src="icones/html.png" alt="logo html" class="w-12 h-12">
-              <img src="icones/css.png" alt="logo css" class="w-12 h-12">
-              <div class="w-full"></div>
-              <img src="icones/js.png" alt="logo javascript" class="w-12 h-12">
-              <img src="icones/angular.png" alt="logo angular" class="w-12 h-12">
+        <h1 class="titre-section">Compétences</h1>
+        <div class="competences-grille">
+
+          <!-- Carte Front-End -->
+          <div class="competence-carte">
+            <p class="competence-carte-titre">Front-End</p>
+            <div class="competence-logos">
+              <img src="icones/html.png" alt="HTML">
+              <img src="icones/css.png" alt="CSS">
+              <img src="icones/js.png" alt="JavaScript">
+              <img src="icones/angular.png" alt="Angular">
             </div>
           </div>
-          <div class="flex-1 min-w-[200px]">
-            <h2 class="font-sans text-black text-xl mb-4" id="titre">Back-End</h2>
-            <div class="flex flex-wrap gap-2 justify-center">
-              <img src="icones/node.png" alt="logo node.js" class="w-14 h-14">
-              <img src="icones/expressN.png" alt="logo Express" class="w-16 h-12">
-              <img src="icones/mongodb.png" alt="logo Mongodb" class="w-12 h-12"> 
-              <div class="w-full"></div>
-              <img src="icones/php.png" alt="logo php" class="h-10 w-auto">             
-              <img src="icones/api.png" alt="logo Api" class="w-12 h-12">
+
+          <!-- Carte Back-End -->
+          <div class="competence-carte">
+            <p class="competence-carte-titre">Back-End</p>
+            <div class="competence-logos">
+              <img src="icones/node.png" alt="Node.js">
+              <img src="icones/expressN.png" alt="Express" style="width:52px !important; height:36px !important;">
+              <img src="icones/mongodb.png" alt="MongoDB">
+              <img src="icones/php.png" alt="PHP" style="height:36px !important; width:auto !important;">
+              <img src="icones/api.png" alt="REST API">
             </div>
           </div>
-          <div class="flex-1 min-w-[200px]">
-            <h2 class="font-sans text-black text-xl mb-4" id="titre">Conception et Versionning</h2>
-            <div class="flex flex-wrap gap-4 justify-center">
-              <img src="icones/figma.png" alt="logo figma" class="w-12 h-12">
-              <div class="w-full"></div>
-              <img src="icones/githubN.png" alt="logo github" class="w-12 h-12">
-              <img src="icones/git.png" alt="logo git" class="w-12 h-12">
+
+          <!-- Carte Conception & Versionning -->
+          <div class="competence-carte">
+            <p class="competence-carte-titre">Conception & Versionning</p>
+            <div class="competence-logos">
+              <img src="icones/figma.png" alt="Figma">
+              <img src="icones/githubN.png" alt="GitHub">
+              <img src="icones/git.png" alt="Git">
             </div>
           </div>
-          <div class="flex-1 min-w-[200px]">
-            <h2 class="font-sans text-black text-xl mb-4" id="titre">CMS</h2>
-            <div class="flex flex-wrap gap-4 justify-center">
-              <img src="icones/wordpress.png" alt="logo Wordpress" class="w-14 h-auto">
-            </div>          
+
+          <!-- Carte CMS -->
+          <div class="competence-carte">
+            <p class="competence-carte-titre">CMS</p>
+            <div class="competence-logos" style="flex: 1; align-items: center;">
+              <img src="icones/wordpress.png" alt="WordPress" style="width:56px !important; height:56px !important;">
+            </div>
           </div>
+
+        </div>
       </div>
     </section>
 
@@ -411,324 +1148,435 @@
          PORTEFOLIO
     ============================== -->
     <section id="portefolio">
-      <div class="px-4 py-8">
-        <h1 class="font-sans text-black text-3xl mb-8">Portefolio :</h1>
+      <div class="px-4 py-8" style="max-width:1240px; margin:0 auto;">
+        <h1 class="titre-section">Portefolio</h1>
 
-        <div class="projet-grille">
-
-          <!-- Projet n°1 -->
-          <div class="carte-projet">
-            <div class="carte-header">
-              <span class="carte-numero">01</span>
-              <h2 class="carte-titre">Stéphane Vernière Photographe</h2>
-              <div class="carte-badge"><img src="icones/mean.png" alt="MEAN Stack" class="carte-badge-img"></div>
+        <!-- ── CATÉGORIE ANGULAR ── -->
+        <div class="portfolio-categorie">
+          <div class="categorie-header">
+            <div class="categorie-ligne"></div>
+            <div class="categorie-label">
+              <img src="icones/angular.png" alt="Angular">
+              Projets Angular
             </div>
-            <div class="carte-img-wrapper">
-              <img src="images/SC_SV.PNG" alt="Aperçu du site Stéphane Vernière" class="carte-img">
-              <div class="carte-overlay">
-                <div class="carte-links">
-                  <a href="https://github.com/PhanDev34000/stephaneverniere.fr" target="_blank" class="carte-lien">GitHub</a>
-                  <a href="https://stephaneverniere.fr/" target="_blank" class="carte-lien carte-lien--primary">Visiter →</a>
+            <div class="categorie-ligne categorie-ligne--right"></div>
+          </div>
+
+          <div class="projet-grille">
+
+            <!-- Projet n°1 — Manager de Devis (NOUVEAU) -->
+            <div class="carte-projet">
+              <div class="carte-header">
+                <span class="carte-numero">01</span>
+                <h2 class="carte-titre">Manager de Devis</h2>
+                <div class="carte-badge"><img src="icones/mean.png" alt="MEAN Stack" class="carte-badge-img"></div>
+              </div>
+              <div class="carte-img-wrapper">
+                <img src="images/SC_Devis.PNG" alt="Aperçu du Manager de Devis" class="carte-img">
+                <div class="carte-overlay">
+                  <div class="carte-links">
+                    <a href="#" target="_blank" class="carte-lien">GitHub Front</a>
+                    <a href="#" target="_blank" class="carte-lien">GitHub Back</a>
+                    <a href="#" target="_blank" class="carte-lien carte-lien--primary">Visiter →</a>
+                  </div>
+                </div>
+              </div>
+              <div class="carte-body">
+                <p class="carte-description">Application de gestion de devis : création, suivi et édition de devis clients avec tableau de bord, statuts et export PDF.</p>
+                <div class="carte-tech">
+                  <span>TypeScript</span><span>JWT</span><span>Angular Material</span><span>📄 Export PDF</span>
                 </div>
               </div>
             </div>
-            <div class="carte-body">
-              <p class="carte-description">Site vitrine pour l'activité de photographe avec espace administrateur et client, téléchargement de galeries.</p>
-              <div class="carte-tech">
-                <span>TypeScript</span><span>JWT</span><span>Angular Material</span><span>📁 Espace admin</span>
-              </div>
-            </div>
-          </div>
 
-          <!-- Projet n°2 -->
-          <div class="carte-projet">
-            <div class="carte-header">
-              <span class="carte-numero">02</span>
-              <h2 class="carte-titre">Cinéphoria</h2>
-              <div class="carte-badge"><img src="icones/mean.png" alt="MEAN Stack" class="carte-badge-img"></div>
-            </div>
-            <div class="carte-img-wrapper">
-              <img src="images/SC_Cinephoria.PNG" alt="Aperçu du site Cinephoria" class="carte-img">
-              <div class="carte-overlay">
-                <div class="carte-links">
-                  <a href="https://github.com/PhanDev34000/cinephoria" target="_blank" class="carte-lien">GitHub</a>
+            <!-- Projet n°2 — Galerie App -->
+            <div class="carte-projet">
+              <div class="carte-header">
+                <span class="carte-numero">02</span>
+                <h2 class="carte-titre">Galerie App</h2>
+                <div class="carte-badge"><img src="icones/mean.png" alt="MEAN Stack" class="carte-badge-img"></div>
+              </div>
+              <div class="carte-img-wrapper">
+                <img src="images/SC_GalerieApp.PNG" alt="Aperçu du site Galerie App" class="carte-img">
+                <div class="carte-overlay">
+                  <div class="carte-links">
+                    <a href="https://github.com/PhanDev34000/gallery-app" target="_blank" class="carte-lien">GitHub Front</a>
+                    <a href="https://github.com/PhanDev34000/gallery-api" target="_blank" class="carte-lien">GitHub Back</a>
+                    <a href="https://gallery-app-five-iota.vercel.app" target="_blank" class="carte-lien carte-lien--primary">Visiter →</a>
+                  </div>
+                </div>
+              </div>
+              <div class="carte-body">
+                <p class="carte-description">Partage de galeries photos : upload, sélection de favoris, téléchargement ZIP et envoi par email.</p>
+                <div class="carte-tech">
+                  <span>TypeScript</span><span>JWT</span><span>ngx-dropzone</span><span>📦 Export ZIP</span>
                 </div>
               </div>
             </div>
-            <div class="carte-body">
-              <p class="carte-description">Site pour un cinéma : affichage des films, réservation, espace clients, espace admin, QR code mobile.</p>
-              <div class="carte-tech">
-                <span>TypeScript</span><span>JWT</span><span>QR Code</span><span>🎟️ Réservation</span>
-              </div>
-            </div>
-          </div>
 
-          <!-- Projet n°3 -->
-          <div class="carte-projet">
-            <div class="carte-header">
-              <span class="carte-numero">03</span>
-              <h2 class="carte-titre">Task Manager</h2>
-              <div class="carte-badge"><img src="icones/mean.png" alt="MEAN Stack" class="carte-badge-img"></div>
-            </div>
-            <div class="carte-img-wrapper">
-              <img src="images/SC_TaskManager.PNG" alt="Aperçu du site TaskManager" class="carte-img">
-              <div class="carte-overlay">
-                <div class="carte-links">
-                  <a href="https://github.com/PhanDev34000/task-manager" target="_blank" class="carte-lien">GitHub Front</a>
-                  <a href="https://github.com/PhanDev34000/task-manager-api" target="_blank" class="carte-lien">GitHub Back</a>
-                  <a href="https://task-manager-app-ten-jet.vercel.app/login" target="_blank" class="carte-lien carte-lien--primary">Visiter →</a>
+            <!-- Projet n°3 — Task Manager -->
+            <div class="carte-projet">
+              <div class="carte-header">
+                <span class="carte-numero">03</span>
+                <h2 class="carte-titre">Task Manager</h2>
+                <div class="carte-badge"><img src="icones/mean.png" alt="MEAN Stack" class="carte-badge-img"></div>
+              </div>
+              <div class="carte-img-wrapper">
+                <img src="images/SC_TaskManager.PNG" alt="Aperçu du site TaskManager" class="carte-img">
+                <div class="carte-overlay">
+                  <div class="carte-links">
+                    <a href="https://github.com/PhanDev34000/task-manager" target="_blank" class="carte-lien">GitHub Front</a>
+                    <a href="https://github.com/PhanDev34000/task-manager-api" target="_blank" class="carte-lien">GitHub Back</a>
+                    <a href="https://task-manager-app-ten-jet.vercel.app/login" target="_blank" class="carte-lien carte-lien--primary">Visiter →</a>
+                  </div>
+                </div>
+              </div>
+              <div class="carte-body">
+                <p class="carte-description">Gestionnaire de tâches interactif : connexion, multi-utilisateurs, drag & drop, formulaires réactifs.</p>
+                <div class="carte-tech">
+                  <span>TypeScript</span><span>RxJS</span><span>↕️ Drag & Drop</span><span>Multi-users</span>
                 </div>
               </div>
             </div>
-            <div class="carte-body">
-              <p class="carte-description">Gestionnaire de tâches interactif : connexion, multi-utilisateurs, drag & drop, formulaires réactifs.</p>
-              <div class="carte-tech">
-                <span>TypeScript</span><span>RxJS</span><span>↕️ Drag & Drop</span><span>Multi-users</span>
-              </div>
-            </div>
-          </div>
 
-          <!-- Projet n°4 -->
-          <div class="carte-projet">
-            <div class="carte-header">
-              <span class="carte-numero">04</span>
-              <h2 class="carte-titre">Galerie App</h2>
-              <div class="carte-badge"><img src="icones/mean.png" alt="MEAN Stack" class="carte-badge-img"></div>
-            </div>
-            <div class="carte-img-wrapper">
-              <img src="images/SC_GalerieApp.PNG" alt="Aperçu du site Galerie App" class="carte-img">
-              <div class="carte-overlay">
-                <div class="carte-links">
-                  <a href="https://github.com/PhanDev34000/gallery-app" target="_blank" class="carte-lien">GitHub Front</a>
-                  <a href="https://github.com/PhanDev34000/gallery-api" target="_blank" class="carte-lien">GitHub Back</a>
-                  <a href="https://gallery-app-five-iota.vercel.app" target="_blank" class="carte-lien carte-lien--primary">Visiter →</a>
+            <!-- Projet n°4 — Social Media Planner -->
+            <div class="carte-projet">
+              <div class="carte-header">
+                <span class="carte-numero">04</span>
+                <h2 class="carte-titre">Social Media Planner</h2>
+                <div class="carte-badge"><img src="icones/angular.png" alt="Angular" class="carte-badge-img"></div>
+              </div>
+              <div class="carte-img-wrapper">
+                <img src="images/SC_MSP.PNG" alt="Aperçu du site Social Media Planner" class="carte-img">
+                <div class="carte-overlay">
+                  <div class="carte-links">
+                    <a href="https://github.com/PhanDev34000/Social-media-planner" target="_blank" class="carte-lien">GitHub</a>
+                    <a href="https://social-media-planner-wine.vercel.app" target="_blank" class="carte-lien carte-lien--primary">Visiter →</a>
+                  </div>
+                </div>
+              </div>
+              <div class="carte-body">
+                <p class="carte-description">Planificateur de publications réseaux sociaux avec CRUD, calendrier visuel, notifications et statistiques.</p>
+                <div class="carte-tech">
+                  <span>TypeScript</span><span>RxJS</span><span>SCSS</span><span>📅 Calendrier</span>
                 </div>
               </div>
             </div>
-            <div class="carte-body">
-              <p class="carte-description">Partage de galeries photos : upload, sélection de favoris, téléchargement ZIP et envoi par email.</p>
-              <div class="carte-tech">
-                <span>TypeScript</span><span>JWT</span><span>ngx-dropzone</span><span>📦 Export ZIP</span>
-              </div>
-            </div>
-          </div>
 
-          <!-- Projet n°5 -->
-          <div class="carte-projet">
-            <div class="carte-header">
-              <span class="carte-numero">05</span>
-              <h2 class="carte-titre">Social Media Planner</h2>
-              <div class="carte-badge"><img src="icones/angular.png" alt="Angular" class="carte-badge-img"></div>
-            </div>
-            <div class="carte-img-wrapper">
-              <img src="images/SC_MSP.PNG" alt="Aperçu du site Social Media Planner" class="carte-img">
-              <div class="carte-overlay">
-                <div class="carte-links">
-                  <a href="https://github.com/PhanDev34000/Social-media-planner" target="_blank" class="carte-lien">GitHub</a>
-                  <a href="https://social-media-planner-wine.vercel.app" target="_blank" class="carte-lien carte-lien--primary">Visiter →</a>
+            <!-- Projet n°5 — Stéphane Vernière Photographe -->
+            <div class="carte-projet">
+              <div class="carte-header">
+                <span class="carte-numero">05</span>
+                <h2 class="carte-titre">Stéphane Vernière Photographe</h2>
+                <div class="carte-badge"><img src="icones/mean.png" alt="MEAN Stack" class="carte-badge-img"></div>
+              </div>
+              <div class="carte-img-wrapper">
+                <img src="images/SC_SV.PNG" alt="Aperçu du site Stéphane Vernière" class="carte-img">
+                <div class="carte-overlay">
+                  <div class="carte-links">
+                    <a href="https://github.com/PhanDev34000/stephaneverniere.fr" target="_blank" class="carte-lien">GitHub</a>
+                    <a href="https://stephaneverniere.fr/" target="_blank" class="carte-lien carte-lien--primary">Visiter →</a>
+                  </div>
+                </div>
+              </div>
+              <div class="carte-body">
+                <p class="carte-description">Site professionnel dédié à la présentation de l'activité de photographe & gestion des livraisons de photos aux clients.</p>
+                <div class="carte-tech">
+                  <span>TypeScript</span><span>JWT</span><span>RxJS</span><span>Angular Material</span><span>📁 Espace admin</span><span>👤 Espace client</span>
                 </div>
               </div>
             </div>
-            <div class="carte-body">
-              <p class="carte-description">Planificateur de publications réseaux sociaux avec CRUD, calendrier visuel, notifications et statistiques.</p>
-              <div class="carte-tech">
-                <span>TypeScript</span><span>RxJS</span><span>SCSS</span><span>📅 Calendrier</span>
-              </div>
-            </div>
-          </div>
 
-          <!-- Projet n°6 -->
-          <div class="carte-projet">
-            <div class="carte-header">
-              <span class="carte-numero">06</span>
-              <h2 class="carte-titre">Margaux Julien</h2>
-              <div class="carte-badge"><img src="icones/php.png" alt="PHP" class="carte-badge-img"></div>
-            </div>
-            <div class="carte-img-wrapper">
-              <img src="images/SC_MargauxJ.PNG" alt="Aperçu du site Margaux Julien Ecologue" class="carte-img">
-              <div class="carte-overlay">
-                <div class="carte-links">
-                  <a href="https://github.com/PhanDev34000/Margaux_Julien" target="_blank" class="carte-lien">GitHub</a>
+            <!-- Projet n°6 — Cinéphoria -->
+            <div class="carte-projet">
+              <div class="carte-header">
+                <span class="carte-numero">06</span>
+                <h2 class="carte-titre">Cinéphoria</h2>
+                <div class="carte-badge"><img src="icones/mean.png" alt="MEAN Stack" class="carte-badge-img"></div>
+              </div>
+              <div class="carte-img-wrapper">
+                <img src="images/SC_Cinephoria.PNG" alt="Aperçu du site Cinephoria" class="carte-img">
+                <div class="carte-overlay">
+                  <div class="carte-links">
+                    <a href="https://github.com/PhanDev34000/cinephoria" target="_blank" class="carte-lien">GitHub</a>
+                  </div>
+                </div>
+              </div>
+              <div class="carte-body">
+                <p class="carte-description">Application web de réservation de séances de cinéma : affichage dynamique des films, réservation (séance, cinéma, salle), espace clients (réservation, QR code), espace admin (crud film, séance, salle, cinéma, incidents)</p>
+                <div class="carte-tech">
+                  <span>TypeScript</span><span>JWT</span><span>QR Code</span><span>🎟️ Réservation</span>
                 </div>
               </div>
             </div>
-            <div class="carte-body">
-              <p class="carte-description">Site vitrine pour Margaux Julien, Écologue.</p>
-              <div class="carte-tech">
-                <span>JavaScript</span><span>CSS3</span><span>🌿 Site vitrine</span>
-              </div>
+
+          </div><!-- fin grille Angular -->
+        </div><!-- fin catégorie Angular -->
+
+        <!-- ── CATÉGORIE PHP ── -->
+        <div class="portfolio-categorie">
+          <div class="categorie-header">
+            <div class="categorie-ligne"></div>
+            <div class="categorie-label">
+              <img src="icones/php.png" alt="PHP">
+              Projets PHP
             </div>
+            <div class="categorie-ligne categorie-ligne--right"></div>
           </div>
 
-          <!-- Projet n°7 -->
-          <div class="carte-projet">
-            <div class="carte-header">
-              <span class="carte-numero">07</span>
-              <h2 class="carte-titre">Verniere-dev</h2>
-              <div class="carte-badge"><img src="icones/php.png" alt="PHP" class="carte-badge-img"></div>
-            </div>
-            <div class="carte-img-wrapper">
-              <img src="images/SC_verniere-dev.PNG" alt="Aperçu du site Verniere-dev" class="carte-img">
-              <div class="carte-overlay">
-                <div class="carte-links">
-                  <a href="https://github.com/PhanDev34000/verniere-dev" target="_blank" class="carte-lien">GitHub</a>
+          <div class="projet-grille">
+
+            <!-- Projet n°7 — Margaux Julien -->
+            <div class="carte-projet">
+              <div class="carte-header">
+                <span class="carte-numero">07</span>
+                <h2 class="carte-titre">Margaux Julien</h2>
+                <div class="carte-badge"><img src="icones/php.png" alt="PHP" class="carte-badge-img"></div>
+              </div>
+              <div class="carte-img-wrapper">
+                <img src="images/SC_MargauxJ.PNG" alt="Aperçu du site Margaux Julien Ecologue" class="carte-img">
+                <div class="carte-overlay">
+                  <div class="carte-links">
+                    <a href="https://github.com/PhanDev34000/Margaux_Julien" target="_blank" class="carte-lien">GitHub</a>
+                  </div>
+                </div>
+              </div>
+              <div class="carte-body">
+                <p class="carte-description">Site professionnelle pour Margaux Julien, Écologue.<br>Présentation - Préstation - Parcours - Contact</p>
+                <div class="carte-tech">
+                  <span>JavaScript</span><span>CSS3</span><span>🌿 Site vitrine</span>
                 </div>
               </div>
             </div>
-            <div class="carte-body">
-              <p class="carte-description">Site vitrine de développeur Full Stack pour Stéphane Vernière.</p>
-              <div class="carte-tech">
-                <span>JavaScript</span><span>Tailwind</span><span>💼 Portfolio</span>
-              </div>
-            </div>
-          </div>
 
-          <!-- Projet n°8 -->
-          <div class="carte-projet">
-            <div class="carte-header">
-              <span class="carte-numero">08</span>
-              <h2 class="carte-titre">Cook4U</h2>
-              <div class="carte-badge"><img src="icones/php.png" alt="PHP" class="carte-badge-img"></div>
-            </div>
-            <div class="carte-img-wrapper">
-              <img src="images/SC_Cook4U.PNG" alt="Aperçu du site Cook4U" class="carte-img">
-              <div class="carte-overlay">
-                <div class="carte-links">
-                  <a href="https://github.com/PhanDev34000/cook4u" target="_blank" class="carte-lien">GitHub</a>
+            <!-- Projet n°8 — Verniere-dev -->
+            <div class="carte-projet">
+              <div class="carte-header">
+                <span class="carte-numero">08</span>
+                <h2 class="carte-titre">Verniere-dev</h2>
+                <div class="carte-badge"><img src="icones/php.png" alt="PHP" class="carte-badge-img"></div>
+              </div>
+              <div class="carte-img-wrapper">
+                <img src="images/SC_verniere-dev.PNG" alt="Aperçu du site Verniere-dev" class="carte-img">
+                <div class="carte-overlay">
+                  <div class="carte-links">
+                    <a href="https://github.com/PhanDev34000/verniere-dev" target="_blank" class="carte-lien">GitHub</a>
+                  </div>
+                </div>
+              </div>
+              <div class="carte-body">
+                <p class="carte-description">Site vitrine pour développeur Full Stack.</p>
+                <div class="carte-tech">
+                  <span>JavaScript</span><span>Tailwind</span><span>💼 Portfolio</span>
                 </div>
               </div>
             </div>
-            <div class="carte-body">
-              <p class="carte-description">Plateforme de vente de plats "fait maison". <em>En cours de développement.</em></p>
-              <div class="carte-tech">
-                <span>JavaScript</span><span>MySQL</span><span>🍽️ E-commerce</span>
-              </div>
-            </div>
-          </div>
 
-          <!-- Projet n°9 -->
-          <div class="carte-projet">
-            <div class="carte-header">
-              <span class="carte-numero">09</span>
-              <h2 class="carte-titre">Corbin-Photo</h2>
-              <div class="carte-badge"><img src="icones/wordpress.png" alt="WordPress" class="carte-badge-img"></div>
-            </div>
-            <div class="carte-img-wrapper">
-              <img src="images/SC_CorbinP.PNG" alt="Aperçu du site Corbin Photo" class="carte-img">
-              <div class="carte-overlay">
-                <div class="carte-links">
-                  <a href="https://corbin-photo.fr/" target="_blank" class="carte-lien carte-lien--primary">Visiter →</a>
+            <!-- Projet n°9 — Cook4U -->
+            <div class="carte-projet">
+              <div class="carte-header">
+                <span class="carte-numero">09</span>
+                <h2 class="carte-titre">Cook4U</h2>
+                <div class="carte-badge"><img src="icones/php.png" alt="PHP" class="carte-badge-img"></div>
+              </div>
+              <div class="carte-img-wrapper">
+                <img src="images/SC_Cook4U.PNG" alt="Aperçu du site Cook4U" class="carte-img">
+                <div class="carte-overlay">
+                  <div class="carte-links">
+                    <a href="https://github.com/PhanDev34000/cook4u" target="_blank" class="carte-lien">GitHub</a>
+                  </div>
+                </div>
+              </div>
+              <div class="carte-body">
+                <p class="carte-description">Plateforme de vente de plats "fait maison".<br><em>Projets pédagogiques en cours de développement.</em></p>
+                <div class="carte-tech">
+                  <span>JavaScript</span><span>MySQL</span><span>🍽️ E-commerce</span>
                 </div>
               </div>
             </div>
-            <div class="carte-body">
-              <p class="carte-description">Site vitrine pour une société de photo scolaire.</p>
-              <div class="carte-tech">
-                <span>Divi Pro</span><span>WooCommerce</span><span>📸 Photo scolaire</span>
-              </div>
+
+          </div><!-- fin grille PHP -->
+        </div><!-- fin catégorie PHP -->
+
+        <!-- ── CATÉGORIE WORDPRESS ── -->
+        <div class="portfolio-categorie">
+          <div class="categorie-header">
+            <div class="categorie-ligne"></div>
+            <div class="categorie-label">
+              <img src="icones/wordpress.png" alt="WordPress">
+              Projets WordPress
             </div>
+            <div class="categorie-ligne categorie-ligne--right"></div>
           </div>
 
-          <!-- Projet n°10 -->
-          <div class="carte-projet">
-            <div class="carte-header">
-              <span class="carte-numero">10</span>
-              <h2 class="carte-titre">DogPix</h2>
-              <div class="carte-badge"><img src="icones/wordpress.png" alt="WordPress" class="carte-badge-img"></div>
-            </div>
-            <div class="carte-img-wrapper">
-              <img src="images/SC_DogPix.PNG" alt="Aperçu du site DogPix" class="carte-img">
-              <div class="carte-overlay">
-                <div class="carte-links">
-                  <a href="https://dogpix.fr/" target="_blank" class="carte-lien carte-lien--primary">Visiter →</a>
+          <div class="projet-grille projet-grille--2col">
+
+            <!-- Projet n°10 — Corbin-Photo -->
+            <div class="carte-projet">
+              <div class="carte-header">
+                <span class="carte-numero">10</span>
+                <h2 class="carte-titre">Corbin-Photo</h2>
+                <div class="carte-badge"><img src="icones/wordpress.png" alt="WordPress" class="carte-badge-img"></div>
+              </div>
+              <div class="carte-img-wrapper">
+                <img src="images/SC_CorbinP.PNG" alt="Aperçu du site Corbin Photo" class="carte-img">
+                <div class="carte-overlay">
+                  <div class="carte-links">
+                    <a href="https://corbin-photo.fr/" target="_blank" class="carte-lien carte-lien--primary">Visiter →</a>
+                  </div>
+                </div>
+              </div>
+              <div class="carte-body">
+                <p class="carte-description">Site vitrine professionnel pour une société de photo scolaire.</p>
+                <div class="carte-tech">
+                  <span>Divi Pro</span><span>📸 Photo scolaire</span><span>🌿 Site vitrine</span>
                 </div>
               </div>
             </div>
-            <div class="carte-body">
-              <p class="carte-description">Site vitrine pour un photographe canin.</p>
-              <div class="carte-tech">
-                <span>Divi Pro</span><span>Elementor</span><span>🐶 Photo canine</span>
+
+            <!-- Projet n°11 — DogPix -->
+            <div class="carte-projet">
+              <div class="carte-header">
+                <span class="carte-numero">11</span>
+                <h2 class="carte-titre">DogPix</h2>
+                <div class="carte-badge"><img src="icones/wordpress.png" alt="WordPress" class="carte-badge-img"></div>
+              </div>
+              <div class="carte-img-wrapper">
+                <img src="images/SC_DogPix.PNG" alt="Aperçu du site DogPix" class="carte-img">
+                <div class="carte-overlay">
+                  <div class="carte-links">
+                    <a href="https://dogpix.fr/" target="_blank" class="carte-lien carte-lien--primary">Visiter →</a>
+                  </div>
+                </div>
+              </div>
+              <div class="carte-body">
+                <p class="carte-description">Site vitrine professionnel pour un photographe canin.</p>
+                <div class="carte-tech">
+                  <span>Divi Pro</span><span>🐶 Photo canine</span><span>🌿 Site vitrine</span>
+                </div>
               </div>
             </div>
-          </div>
 
-        </div><!-- fin .projet-grille -->
+          </div><!-- fin grille WordPress -->
+        </div><!-- fin catégorie WordPress -->
+
       </div>
     </section>
 
     <!-- Softskill -->
     <div class="px-4 py-8">
-      <h1 class="font-sans text-black text-3xl mb-8">Softskill :</h1>
-      <div class="flex justify-center gap-6 mt-8">
-        <div id="cadre9" class="p-4 bg-white flex flex-col justify-center items-center"
-          style="transition: transform 0.3s ease, box-shadow 0.3s ease; transform: scale(1); box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);"
-          onmouseover="this.style.transform='scale(1.1)'; this.style.boxShadow='0 8px 12px rgba(0, 0, 0, 0.5)';"
-          onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 4px 8px rgba(0, 0, 0, 0)';">
-          <h3 class="text-center text-lg font-sans">Créativité</h3>
-        </div>          
-        <div id="cadre10" class="p-4 bg-white"
-          style="transition: transform 0.3s ease, box-shadow 0.3s ease; transform: scale(1); box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);"
-          onmouseover="this.style.transform='scale(1.1)'; this.style.boxShadow='0 8px 12px rgba(0, 0, 0, 0.5)';"
-          onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 4px 8px rgba(0, 0, 0, 0)';">
-          <h3 class="text-center text-lg font-sans">Esprit d'équipe</h3>
+      <h1 class="titre-section">Softskills</h1>
+      <div class="softskill-grille">
+
+        <div class="softskill-carte">
+          <span class="softskill-emoji">🎨</span>
+          <p class="softskill-nom">Créativité</p>
+          <p class="softskill-desc">Trouver des solutions originales et concevoir des interfaces soignées</p>
         </div>
-        <div id="cadre11" class="p-4 bg-white"
-          style="transition: transform 0.3s ease, box-shadow 0.3s ease; transform: scale(1); box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);"
-          onmouseover="this.style.transform='scale(1.1)'; this.style.boxShadow='0 8px 12px rgba(0, 0, 0, 0.5)';"
-          onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 4px 8px rgba(0, 0, 0, 0)';">
-          <h3 class="text-center text-lg font-sans">Capacité d'adaptation</h3>
+
+        <div class="softskill-carte">
+          <span class="softskill-emoji">🤝</span>
+          <p class="softskill-nom">Esprit d'équipe</p>
+          <p class="softskill-desc">Collaborer efficacement, partager les connaissances et s'entraider</p>
         </div>
+
+        <div class="softskill-carte">
+          <span class="softskill-emoji">🔄</span>
+          <p class="softskill-nom">Capacité d'adaptation</p>
+          <p class="softskill-desc">S'adapter rapidement aux nouveaux outils, langages et contextes</p>
+        </div>
+
       </div>
     </div>
 
-    <!-- Contact -->
+    <!-- ==============================
+         CONTACT — version stylisée
+    ============================== -->
     <section id="contact">  
       <div class="p-8">
-        <h1 class="font-sans text-3xl">Contactez-moi !</h1>
-        <form action="envoi_contact.php" method="POST" style="max-width: 40rem; border-radius:10px;" class="p-8 mt-8 mx-auto" id="cadreF">
-            <div class="flex flex-col gap-6">
-            <div class="flex gap-4">
-              <input type="text" name="prenom" placeholder="Prénom" class="p-2 w-full sm:w-1/2" style="border-radius: 5px;">
-              <input type="text" name="nom" placeholder="Nom" class="p-2 w-full sm:w-1/2 rounded-lg" style="border-radius: 5px;">
+        <h1 class="titre-section">Contactez-moi</h1>
+        <p style="font-family:'Nunito',sans-serif; color:#1F3A93; font-size:1rem; margin-bottom:0;">Une question, une opportunité ? Écrivez-moi directement.</p>
+
+        <div class="contact-wrapper">
+
+          <!-- Panneau gauche info -->
+          <div class="contact-info-panel">
+            <div>
+              <h3>Parlons de votre projet</h3>
+              <p>Disponible pour des missions freelance ou un poste en CDI / CDD.</p>
             </div>
-            <input type="text" name="societe" placeholder="Société" class="p-2 w-full rounded-lg">
-            <input type="email" name="email" placeholder="Email" class="p-2 w-full rounded-lg" style="border-radius: 5px;">
-            <textarea name="message" placeholder="Tapez votre message" cols="70" rows="10" class="p-2 w-full rounded-lg" style="border-radius: 5px;"></textarea>
-            <div class="g-recaptcha" data-sitekey="6LfrM0AqAAAAAN0xKfH_b2da-73yWlsknoLUXf4W" style="margin:0 auto;"></div><br>
-            <input type="submit" name="submit" value="Envoyer" class="py-2 px-4 cursor-pointer text-sm mx-auto"
-              style="border-radius: 10px; transform: scale(1); transition: transform 0.3s ease"
-              onmouseover="this.style.transform='scale(1.1)';" onmouseout="this.style.transform='scale(1)';" id="bouton">
+            <div class="contact-info-divider"></div>
+            <div style="display:flex; flex-direction:column; gap:1rem;">
+              <div class="contact-info-item">
+                <img src="images/mail.png" alt="email">
+                <span>vernierestephane@gmail.com</span>
+              </div>
+              <div class="contact-info-item">
+                <img src="images/phone.png" alt="téléphone">
+                <span>06 61 19 97 54</span>
+              </div>
+              <div class="contact-info-item">
+                <img src="images/pin.png" alt="localisation">
+                <span>Basé à Montpellier</span>
+              </div>
             </div>
-        </form>              
+            <div class="contact-info-divider"></div>
+            <div style="display:flex; flex-direction:column; gap:0.75rem;">
+              <a href="https://www.linkedin.com/in/stephane-verniere-devmontpellier/" target="_blank" style="display:flex; align-items:center; gap:0.6rem; text-decoration:none;">
+                <img src="images/linkedin_b.png" alt="LinkedIn" style="width:24px; height:24px; filter:brightness(0) invert(1);">
+                <span style="font-family:'Nunito',sans-serif; font-size:0.82rem; color:rgba(255,255,255,0.9);">LinkedIn</span>
+              </a>
+              <a href="https://github.com/PhanDev34000/portfolio" target="_blank" style="display:flex; align-items:center; gap:0.6rem; text-decoration:none;">
+                <img src="images/github_b.png" alt="GitHub" style="width:24px; height:24px; filter:brightness(0) invert(1);">
+                <span style="font-family:'Nunito',sans-serif; font-size:0.82rem; color:rgba(255,255,255,0.9);">GitHub</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Panneau droit formulaire -->
+          <div class="contact-form-panel">
+            <form action="envoi_contact.php" method="POST">
+              <div class="contact-form-row">
+                <div class="contact-field">
+                  <label for="prenom">Prénom</label>
+                  <input type="text" id="prenom" name="prenom" placeholder="Votre prénom">
+                </div>
+                <div class="contact-field">
+                  <label for="nom">Nom</label>
+                  <input type="text" id="nom" name="nom" placeholder="Votre nom">
+                </div>
+              </div>
+              <div class="contact-field">
+                <label for="societe">Société</label>
+                <input type="text" id="societe" name="societe" placeholder="Votre société (facultatif)">
+              </div>
+              <div class="contact-field">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="votre@email.com">
+              </div>
+              <div class="contact-field">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" placeholder="Décrivez votre projet ou votre demande..."></textarea>
+              </div>
+              <div class="contact-submit">
+                <div class="g-recaptcha" data-sitekey="6LfrM0AqAAAAAN0xKfH_b2da-73yWlsknoLUXf4W"></div>
+                <input type="submit" name="submit" value="Envoyer →">
+              </div>
+            </form>
+          </div>
+
+        </div><!-- fin contact-wrapper -->
       </div>          
     </section>
   </main>
 
   <!-- Footer -->
   <footer>
-    <div class="flex justify-between items-center mx-auto max-w-4xl">
-      <div class="text-white text-center mt-4">
-        <h5 class="font-bold">Basée à Montpellier</h5>          
-        <h5 class="mt-3"><strong>Email :</strong> vernierestephane@gmail.com</h5>        
-        <h5 class="mb-4">Site développé par Stéphane VERNIERE</h5>
-      </div>
       <div class="text-center">
         <a href="index.html">
           <img id="footer-logo" src="images/Logo.png" alt="logo Stéphane Vernière" class="mx-auto">
         </a>
-      </div>
-      <div class="text-center text-white">
-        <h4 class="font-bold mb-2">Cliquez pour consulter</h4>
-        <div class="space-y-4">
-          <a href="https://github.com/PhanDev34000/portfolio" target="_blank">
-            <img src="images/github_b.png" alt="logo github" class="mx-auto" id="logo-github">
-          </a>
-          <a href="https://www.linkedin.com/in/stephane-verniere-devmontpellier/" target="_blank">
-            <img src="images/linkedin_b.png" alt="logo linkedin" class="mx-auto" id="logo-linkedin">
-          </a>
-        </div>
-      </div>
-    </div>
+      </div>     
   </footer>
   
   <script src="nav.js"></script>

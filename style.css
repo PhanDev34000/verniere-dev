@@ -3,10 +3,6 @@ footer {
   background-color: #1F3A93;
 }
 
-form {
-  background-color: #1F3A93;
-}
-
 #bouton {
   background-color: #93b4ff;
   margin-top: -3rem;
@@ -22,8 +18,7 @@ section {
 }
 
 input:focus, textarea:focus {
-  border: 3px solid black;
-  outline: auto; 
+  outline: none;
 }
 
 #bouton:hover {
@@ -105,169 +100,6 @@ input:checked + .slider:before {
 }
 
 /* =============================================
-   SECTION PORTFOLIO — Grille 3 colonnes
-   ============================================= */
-
-.projet-grille {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1.5rem;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0;
-}
-
-.carte-projet {
-  background: white;
-  border: 3px solid #1F3A93;
-  border-radius: 12px;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
-}
-
-.carte-projet:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 12px 24px rgba(31, 58, 147, 0.25);
-}
-
-.carte-header {
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-  padding: 0.75rem 1rem 0.5rem;
-  border-bottom: 1px solid #e5e9f5;
-}
-
-.carte-numero {
-  font-family: 'Oxygen Mono', monospace;
-  font-size: 0.75rem;
-  color: #1F3A93;
-  opacity: 0.5;
-  flex-shrink: 0;
-}
-
-.carte-titre {
-  font-family: 'Electrolize', sans-serif;
-  font-size: 0.95rem;
-  font-weight: 600;
-  color: #1F3A93;
-  flex: 1;
-  text-align: left;
-  margin: 0;
-}
-
-.carte-badge {
-  flex-shrink: 0;
-}
-
-.carte-badge-img {
-  height: 28px;
-  width: auto;
-}
-
-.carte-img-wrapper {
-  position: relative;
-  overflow: hidden;
-  aspect-ratio: 16 / 9;
-}
-
-.carte-img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-  transition: transform 0.4s ease;
-}
-
-.carte-projet:hover .carte-img {
-  transform: scale(1.04);
-}
-
-.carte-overlay {
-  position: absolute;
-  inset: 0;
-  background: rgba(31, 58, 147, 0.82);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-}
-
-.carte-projet:hover .carte-overlay {
-  opacity: 1;
-}
-
-.carte-links {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-  justify-content: center;
-  padding: 0.5rem;
-}
-
-.carte-lien {
-  padding: 0.4rem 0.9rem;
-  border: 2px solid white;
-  border-radius: 20px;
-  color: white;
-  font-size: 0.8rem;
-  font-family: 'Electrolize', sans-serif;
-  text-decoration: none;
-  transition: background 0.2s ease;
-}
-
-.carte-lien:hover {
-  background: rgba(255, 255, 255, 0.2);
-}
-
-.carte-lien--primary {
-  background: white;
-  color: #1F3A93;
-}
-
-.carte-lien--primary:hover {
-  background: #e8ecf8;
-  color: #1F3A93;
-}
-
-.carte-body {
-  padding: 0.75rem 1rem 1rem;
-  display: flex;
-  flex-direction: column;
-  gap: 0.6rem;
-  flex: 1;
-}
-
-.carte-description {
-  font-size: 0.82rem;
-  color: #444;
-  line-height: 1.5;
-  margin: 0;
-  text-align: left;
-}
-
-.carte-tech {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.4rem;
-  margin-top: auto;
-}
-
-.carte-tech span {
-  font-size: 0.7rem;
-  font-family: 'Oxygen Mono', monospace;
-  background: #eef1fb;
-  color: #1F3A93;
-  border-radius: 4px;
-  padding: 0.2rem 0.5rem;
-  border: 1px solid #c5cff0;
-}
-
-/* =============================================
    DARK MODE
    ============================================= */
 
@@ -288,7 +120,7 @@ input:checked + .slider:before {
 }
 
 .dark form {
-  background-color: white;
+  background-color: transparent;
 }
 
 .dark input, .dark textarea {
@@ -329,43 +161,9 @@ input:checked + .slider:before {
   color: white;
 }
 
-/* Dark mode — cartes portfolio */
-.dark .carte-projet {
-  background: #1a1a2e;
-  border-color: rgb(148, 147, 147);
-}
-
-.dark .carte-titre {
-  color: #93b4ff;
-}
-
-.dark .carte-numero {
-  color: #93b4ff;
-}
-
-.dark .carte-description {
-  color: #ccc;
-}
-
-.dark .carte-tech span {
-  background: #2a2a4a;
-  color: #93b4ff;
-  border-color: #3a3a6a;
-}
-
-.dark .carte-header {
-  border-bottom-color: #2a2a4a;
-}
-
 /* =============================================
    RESPONSIVE
    ============================================= */
-
-@media screen and (max-width: 1024px) {
-  .projet-grille {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
 
 @media screen and (max-width: 780px) {
   #parcours {
@@ -429,16 +227,8 @@ input:checked + .slider:before {
     text-align: center;
   }
 
-  .projet-grille {
-    grid-template-columns: 1fr;
-  }
-
   footer h5, footer h4 {
     font-size: 0.75rem;
-  }
-
-  #cadreF {
-    padding: 6px;
   }
 
   .dark .navigation li {
