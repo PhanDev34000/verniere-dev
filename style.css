@@ -235,3 +235,8 @@ input:checked + .slider:before {
     background: lightgray;
   }
 }
+
+#gif {
+  width: 5vw;
+  height: auto;
+}
